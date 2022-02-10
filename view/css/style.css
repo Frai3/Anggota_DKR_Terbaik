@@ -1,0 +1,189 @@
+.btnIndex {
+    position: absolute;
+    background-color: transparent;
+    border: 2px solid #F0F8FF;
+    border-radius: 0.6em;
+    color: #F0F8FF;
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px;
+    padding: 1.3em 2.8em;
+    width: 15%;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.btn:hover, .btn:focus {
+    color: #F0F8FF;
+    outline: 0;
+}
+
+.third {
+    border-color: #3498db;
+    color: #F0F8FF;
+    box-shadow: 0 0 40px 40px #000000 inset, 0 0 0 0 #F0F8FF;
+    transition: all 150ms ease-in-out;
+}
+
+.third:hover {
+    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+}
+
+div.jarakButton{
+    padding-top: 40%;
+    padding-left: 75%;
+    color: #F08080;
+}
+
+ .wrapper {
+     max-width: 350px;
+     min-height: 500px;
+     margin: 80px auto;
+     padding: 40px 30px 30px 30px;
+     background-color: #ecf0f3;
+     border-radius: 15px;
+     box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff
+ }
+
+ .logo {
+     width: 80px;
+     margin: auto
+ }
+
+ .logo img {
+     width: 100%;
+     height: 80px;
+     object-fit: cover;
+     border-radius: 50%;
+     box-shadow: 0px 0px 3px #5f5f5f, 0px 0px 0px 5px #ecf0f3, 8px 8px 15px #a7aaa7, -8px -8px 15px #fff
+ }
+
+ .wrapper .name {
+     font-weight: 600;
+     font-size: 1.4rem;
+     letter-spacing: 1.3px;
+     padding-left: 10px;
+     color: #555
+ }
+
+ .wrapper .form-field input {
+     width: 100%;
+     display: block;
+     border: none;
+     outline: none;
+     background: none;
+     font-size: 1.2rem;
+     color: #666;
+     padding: 10px 15px 10px 10px
+ }
+
+ .wrapper .form-field {
+     padding-left: 10px;
+     margin-bottom: 20px;
+     border-radius: 20px;
+     box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff
+ }
+
+ .wrapper .form-field .fas {
+     color: #555
+ }
+
+ .wrapper .btn {
+     box-shadow: none;
+     width: 100%;
+     height: 40px;
+     background-color: #03A9F4;
+     color: #fff;
+     border-radius: 25px;
+     box-shadow: 3px 3px 3px #b1b1b1, -3px -3px 3px #fff;
+     letter-spacing: 1.3px
+ }
+
+ .wrapper .btn:hover {
+     background-color: #039BE5
+ }
+
+ .wrapper a {
+     text-decoration: none;
+     font-size: 0.8rem;
+     color: #03A9F4
+ }
+
+ .wrapper a:hover {
+     color: #039BE5
+ }
+
+@media(max-width: 380px) {
+    .wrapper {
+        margin: 30px 20px;
+        padding: 40px 15px 15px 15px
+    }
+ }
+ 
+.wrapperFormRegister{
+    position: absolute;
+    width: 40%;
+    height: 85%;
+    left: 31%;
+    top: 11%;
+
+    background: #F05959;
+    border-radius: 59px;
+
+}
+
+.judul{
+    position: absolute;
+    left: 30%;
+    top: 5%;
+
+    font-family: Kalam;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 65px;
+    line-height: 110%;
+    text-align: center;
+
+    color: #000000;
+
+    text-shadow: 0px 4px 40px rgba(255, 255, 255, 0.4);
+
+}
+
+.wrapperButton{
+    position: absolute;
+    width: 260px;
+    background: #FC5858;
+    border-radius: 10px;
+    height: 40px;
+
+    font-family: Kalam;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30pt;
+    line-height: 130%;
+    text-align: center;
+
+    border: 3px solid #212121;
+    text-shadow: 0px 4px 40px rgba(255, 255, 255, 0.4);
+
+}
+
+.formRegister{
+    position: absolute;
+    padding-left: 15%;
+    padding-top: 17%;
+    font-size: 15pt;
+    width: 85%;
+}
+
+.formRegister form button{
+    width: 30%;
+}
