@@ -7,7 +7,7 @@
 
     <style>
     body {
-    background-image: url('gambar/indexBackground.PNG');
+    background-image: url('gambar/Background.PNG');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
@@ -17,9 +17,13 @@
 
     <body>
         <div class="container">
+            <div class='backgroundIndex'>
+                <p>Dewan Kerja Ranting <br /> Kelapa Dua</p>
+                <img src='gambar/DKR.PNG'style="width: 400px; padding: 250px 0 0 0;" />
+            </div>
             <div class="jarakButton" >
-                <a href="login.php" class="btnIndex third" style="Left: 20%;">Login</a>
-                <a href="../controller/lihatNilaiProses.php" class="btnIndex third" style="Left: 40%;">Nilai</a>
+                <a href="login.php" class="btnIndex third" style="Left: 400px;">Login</a>
+                <a href="#" class="btnIndex third" style="Left: 800px;">Nilai</a>
             </div>
         </div>
     </body>

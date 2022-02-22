@@ -8,7 +8,7 @@
     <style>
 
     body {
-    background-image: url('gambar/loginBackground.PNG');
+    background-image: url('gambar/Background.PNG');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
@@ -18,7 +18,6 @@
 
     *{
         margin: 0;
-        padding-top: 3%;
         box-sizing: border-box;
         font-family: 'Poppins', sans-serif
     }
@@ -27,6 +26,14 @@
     </head>
 
     <body>
+        <div class='font'>
+            <div class='col-9'>
+                <p>Dewan Kerja Ranting <br /> Kelapa Dua</p>
+            </div>
+            <div class='col-3'>
+                <img src='gambar/DKR.PNG' />
+            </div>
+        </div>
         <!-- Card Login -->
         <div class="container">
             <div class="wrapper">   

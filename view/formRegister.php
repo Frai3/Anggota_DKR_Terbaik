@@ -18,7 +18,7 @@
     <style>
 
     body {
-        background-image: url('gambar/formRegisterBackground.PNG');
+        background-image: url('gambar/Background.PNG');
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: 100% 100%;
@@ -28,11 +28,18 @@
     </head>
 
     <body>
+    <div class='font'>
+            <div class='col-9'>
+                <p>Registrasi</p>
+            </div>
+            <div class='col-3'>
+                <img src='gambar/DKR.PNG' />
+            </div>
+        </div>
         <div class="container">
             <div class="row">
-                <div class="wrapperFormRegister">
-                    <div class="judul">Biodata</div>
-                    <div class="formRegister">
+                    <div class="formRegister" >
+                        
                         <form action="../controller/inputProses.php" method="get">  <!-- Bikin akses terlebih dahulu -->
                             <div class="form-group">
                                 <label for="nama_user">Nama</label>
@@ -91,7 +98,6 @@
                         </form>
                     </div>
                 </div>
-            </div>
         </div>
     </body> 
 </html>
