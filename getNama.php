@@ -1,7 +1,7 @@
  <?php
 
  	function getNama($username){
-	 	include '../controller/koneksi.php';
+	 	include 'koneksi.php';
 
 	    $queryEditData = mysqli_query($koneksi, "SELECT * FROM `user` WHERE Nama_User <> '$username'");
 		while($data = mysqli_fetch_array($queryEditData)){

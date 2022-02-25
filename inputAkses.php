@@ -6,9 +6,9 @@ function inputAksesAnggotaBaru($ID_Role, $Username, $Password){
   
   $queryGetID = mysqli_query($koneksi, "SELECT COUNT(ID_Akses) as CountID FROM akses");
   while($data = mysqli_fetch_array($queryGetID)){
-      if($data['CountID'] < 10){
+      if($data['CountID'] < 9){
         $ID_Akses="AK00".strval($data['CountID'] + 1);
-      }else if($data['CountID'] < 100){
+      }else if($data['CountID'] >= 9){
         $ID_Akses="AK0".strval($data['CountID'] + 1);
       }else{
         $ID_Akses="AK".strval($data['CountID'] + 1);

@@ -16,7 +16,7 @@ if (isset($_POST['input'])) {
   
   if(empty($Nama_User) or empty($Sekolah) or empty($NoTelp) or empty($Golongan)){
     echo "<script>alert('Masukkan Data Dengan Benar!');
-	 	window.location='formEditData.php';
+	 	window.location='formEditData';
 	 	</script>";;
   }
   else{
@@ -25,11 +25,11 @@ if (isset($_POST['input'])) {
   
     if($_SESSION['Nama_Role'] == 'administrator'){
       echo "<script>alert('Data Berhasil Dirubah!');
-      window.location='indexAdministrator.php';
+      window.location='indexAdministrator';
       </script>";
     }else if($_SESSION['Nama_Role'] == 'user'){
       echo "<script>alert('Data Berhasil Dirubah!');
-      window.location='indexUser.php';
+      window.location='indexUser';
       </script>";
     }
   }

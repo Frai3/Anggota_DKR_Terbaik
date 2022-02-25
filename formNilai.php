@@ -47,7 +47,7 @@ $ID = $_SESSION['ID_User'];
             <div class="row">
                 <div class="judul">Biodata</div>
                 <div class="formRegister">
-                    <form action="inputNilaiProses.php" method="get">    
+                    <form action="inputNilaiProses" method="get">    
                         <div class="form-group">
                             <label for="Nama_User">Nama</label>
                             <select style="width: 100%" name="cmbNama">

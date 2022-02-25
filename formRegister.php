@@ -39,7 +39,7 @@
         <div class="container">
             <div class="row">
                 <div class="formRegister" >
-                    <form action="inputProses.php" method="get">
+                    <form action="inputProses" method="get">
                         <div class="form-group">
                             <label for="nama_user">Nama</label>
                             <input type="text" class="form-control" name="Nama_user" placeholder="Masukkan Nama">

@@ -41,7 +41,7 @@
                     <img src="gambar/DKR.PNG" alt="">
                 </div>
                 <div class="text-center mt-4 name"> Dewan Kerja Ranting <br /> Kelapa Dua </div>
-                <form class="p-3 mt-3" action="loginProses.php" method="get">
+                <form class="p-3 mt-3" action="loginProses" method="get">
                     <div class="form-field d-flex align-items-center">
                         <span class="far fa-user"></span>
                         <input type="text" name="username" placeholder="Username">

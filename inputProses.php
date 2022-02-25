@@ -24,7 +24,7 @@ while($data = mysqli_fetch_array($queryGetID)){
 if($Nama_User == "" or $Sekolah == "" or $NoTelp=="" or $Golongan=="" or $Username=="" or $Password==""){
 	echo "<script>
 		alert('Masukkan Data Dengan Lengkap!');
-		window.location='formRegister.php'
+		window.location='formRegister'
 		</script>";
 }
 else{
@@ -34,7 +34,7 @@ else{
 	//Jalanin fungsi di inputAnggotaBaru
 	inputAnggotaBaru($ID_Role, $Nama_User, $Sekolah, $NoTelp, $Golongan);
 	echo "<script>alert('Data Berhasil Ditambahkan!');
-	 	window.location='indexAdministrator.php';
+	 	window.location='indexAdministrator';
 	 	</script>";
 }
 

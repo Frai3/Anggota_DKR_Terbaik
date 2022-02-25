@@ -2,8 +2,6 @@
 
     // echo date('Y');
     session_start();
-
-    $Username = $_SESSION['Username'];
     
     //Mengambil data nilai US001
     function getNilaiZikri($koneksi, $Periode){

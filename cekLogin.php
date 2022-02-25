@@ -19,7 +19,7 @@ function cek_login($username, $password){
 		
 		echo "<script>
 		alert('Maaf Anda Tidak Memiliki Akses!');
-		window.location='login.php';
+		window.location='login';
 		</script>";
 	}
 }

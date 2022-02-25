@@ -32,7 +32,7 @@ while($data = mysqli_fetch_array($queryGetIDOut)){
 if($Nama_User == "" or $TJPeran == "" or $TepatHadir=="" or $Keaktifan=="" or $Inisiatif=="" or $Sikap=="" or $Komunikasi==""){
 	echo "<script>
 		alert('Masukkan Data Dengan Lengkap!');
-		window.location='formNilai.php'
+		window.location='formNilai'
 		</script>";
 }	
 else{
@@ -41,22 +41,13 @@ else{
 	if($data <= 0){
 		inputNilai($ID_UserIn, $ID_UserOut, $TJPeran, $TepatHadir, $Keaktifan, $Inisiatif, $Sikap, $Komunikasi, $Periode);
 		echo "<script>alert('Data Berhasil Ditambahkan!');
-			 window.location='indexAdministrator.php';
+			 window.location='indexAdministrator';
 			 </script>";
 	}else{
 		echo "<script>alert('Hai ".ucfirst($Username).", Data ".$Nama_User." Sudah Ditambahkan! Harap Masukkan Nama yang Lain');
-		window.location='formNilai.php';
+		window.location='formNilai';
 		</script>";
 	}
-	// while($data = mysqli_fetch_array($queryGetID)){
-	// 	$ID_Exist = $data['ID_Nilai'];
-	// 	if(empty($ID_Exist)){
-	// 	//Jalanin fungsi di inputAnggotaBaru
-		
-	// 	}else{
-			
-	// 	}
-	// }
 }
 
 ?>

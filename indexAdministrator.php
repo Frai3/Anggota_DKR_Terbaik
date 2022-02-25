@@ -41,9 +41,9 @@ $username = $_SESSION['Username'];
             <div class="row">
                 <div class="wrapperCard">
                     <p class="judul">Administrator</p>
-                    <a href="formRegister.php" class="btn wrapperButton" style="height: 70px; left: 18%; top: 25%">Registrasi</a>
-                    <a href="formNilai.php"class="btn wrapperButton" style="height: 70px; left: 18%; top: 50%">Nilai</a>
-                    <a href="formEditData.php" class="btn wrapperButton" style="height: 70px; left: 18%; top: 75%">Edit Data</a>
+                    <a href="formRegister" class="btn wrapperButton" style="height: 70px; left: 18%; top: 25%">Registrasi</a>
+                    <a href="formNilai"class="btn wrapperButton" style="height: 70px; left: 18%; top: 50%">Nilai</a>
+                    <a href="formEditData" class="btn wrapperButton" style="height: 70px; left: 18%; top: 75%">Edit Data</a>
                 </div>
                 <a href="logout.php" class="btn btnDark btn-dark" id='btnLogout'>Logout</a>
             </div>

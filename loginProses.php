@@ -12,19 +12,19 @@ $Password = $_GET['password'];
 if($Username == "" and $Password == ""){
 	echo "<script>
 		alert('Username dan Password Tidak Diisi!');
-		window.location='login.php'
+		window.location='login'
 		</script>";
 }
 elseif($Username == ""){
 	echo "<script>
 		alert('Username Tidak Diisi!');
-		window.location='login.php'
+		window.location='login'
 		</script>";
 }
 elseif($Password == ""){
 	echo "<script>
 		alert('Password Tidak Diisi!');
-		window.location='login.php'
+		window.location='login'
 		</script>";
 }
 else{
@@ -33,11 +33,11 @@ else{
 	$Username = $_SESSION['Username'];
 	if($_SESSION['Nama_Role'] == 'administrator'){
 		echo "<script>alert('Selamat Datang ".ucfirst($Username)."!');
-		window.location='indexAdministrator.php';
+		window.location='indexAdministrator';
 		</script>";
 	}elseif($_SESSION['Nama_Role'] == 'user'){
 		echo "<script>alert('Selamat Datang ".ucfirst($Username)."!');
-		window.location='indexUser.php';
+		window.location='indexUser';
 		</script>";
 	}
 }
