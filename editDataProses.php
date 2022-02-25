@@ -5,7 +5,7 @@ if (isset($_POST['input'])) {
   session_start();
 
   include 'koneksi.php';
-  include '../model/editData.php';
+  include 'editData.php';
 
   //Get data dari form
   $ID_User = $_POST['ID_User'];
@@ -16,7 +16,7 @@ if (isset($_POST['input'])) {
   
   if(empty($Nama_User) or empty($Sekolah) or empty($NoTelp) or empty($Golongan)){
     echo "<script>alert('Masukkan Data Dengan Benar!');
-	 	window.location='../view/formEditData.php';
+	 	window.location='formEditData.php';
 	 	</script>";;
   }
   else{
@@ -25,11 +25,11 @@ if (isset($_POST['input'])) {
   
     if($_SESSION['Nama_Role'] == 'administrator'){
       echo "<script>alert('Data Berhasil Dirubah!');
-      window.location='../view/indexAdministrator.php';
+      window.location='indexAdministrator.php';
       </script>";
     }else if($_SESSION['Nama_Role'] == 'user'){
       echo "<script>alert('Data Berhasil Dirubah!');
-      window.location='../view/indexUser.php';
+      window.location='indexUser.php';
       </script>";
     }
   }

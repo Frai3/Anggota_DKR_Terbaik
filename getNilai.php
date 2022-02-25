@@ -5,8 +5,24 @@
 
     $Username = $_SESSION['Username'];
     
+    //Mengambil data nilai US001
+    function getNilaiZikri($koneksi, $Periode){
+
+        $queryGetNilai = mysqli_query($koneksi, "SELECT TJPeran, TepatHadir, Keaktifan, Inisiatif, Sikap, Komunikasi FROM nilai WHERE ID_UserIn = 'US001' AND Periode = '$Periode'");
+        while($data = mysqli_fetch_array($queryGetNilai)){
+    
+            $_POST['TJPeran'] = $data['TJPeran'];
+            $_POST['TepatHadir'] = $data['TepatHadir'];
+            $_POST['Keaktifan'] = $data['Keaktifan'];
+            $_POST['Inisiatif'] = $data['Inisiatif'];
+            $_POST['Sikap'] = $data['Sikap'];
+            $_POST['Komunikasi'] = $data['Komunikasi'];
+    
+        }
+    }
+
     //Mengambil data nilai US002
-    function getNilaiRaihan($koneksi, $Periode){
+    function getNilaiFillah($koneksi, $Periode){
 
         $queryGetNilai = mysqli_query($koneksi, "SELECT TJPeran, TepatHadir, Keaktifan, Inisiatif, Sikap, Komunikasi FROM nilai WHERE ID_UserIn = 'US002' AND Periode = '$Periode'");
         while($data = mysqli_fetch_array($queryGetNilai)){
@@ -22,7 +38,7 @@
     }
 
     //Mengambil data nilai US003
-    function getNilaiFrai($koneksi, $Periode){
+    function getNilaiMeilizka($koneksi, $Periode){
 
         $queryGetNilai = mysqli_query($koneksi, "SELECT TJPeran, TepatHadir, Keaktifan, Inisiatif, Sikap, Komunikasi FROM nilai WHERE ID_UserIn = 'US003' AND Periode = '$Periode'");
         while($data = mysqli_fetch_array($queryGetNilai)){
@@ -38,7 +54,7 @@
     }
 
     //Mengambil data nilai US004
-    function getNilaiRay($koneksi, $Periode){
+    function getNilaiKendanan($koneksi, $Periode){
 
         $queryGetNilai = mysqli_query($koneksi, "SELECT TJPeran, TepatHadir, Keaktifan, Inisiatif, Sikap, Komunikasi FROM nilai WHERE ID_UserIn = 'US004' AND Periode = '$Periode'");
         while($data = mysqli_fetch_array($queryGetNilai)){
@@ -54,9 +70,73 @@
     }
 
     //Mengambil data nilai US005
-    function getNilaiMark($koneksi, $Periode){
+    function getNilaiAlya($koneksi, $Periode){
 
         $queryGetNilai = mysqli_query($koneksi, "SELECT TJPeran, TepatHadir, Keaktifan, Inisiatif, Sikap, Komunikasi FROM nilai WHERE ID_UserIn = 'US005' AND Periode = '$Periode'");
+        while($data = mysqli_fetch_array($queryGetNilai)){
+    
+            $_POST['TJPeran'] = $data['TJPeran'];
+            $_POST['TepatHadir'] = $data['TepatHadir'];
+            $_POST['Keaktifan'] = $data['Keaktifan'];
+            $_POST['Inisiatif'] = $data['Inisiatif'];
+            $_POST['Sikap'] = $data['Sikap'];
+            $_POST['Komunikasi'] = $data['Komunikasi'];
+    
+        }
+    }
+
+    //Mengambil data nilai US006
+    function getNilaiBayu($koneksi, $Periode){
+
+        $queryGetNilai = mysqli_query($koneksi, "SELECT TJPeran, TepatHadir, Keaktifan, Inisiatif, Sikap, Komunikasi FROM nilai WHERE ID_UserIn = 'US006' AND Periode = '$Periode'");
+        while($data = mysqli_fetch_array($queryGetNilai)){
+    
+            $_POST['TJPeran'] = $data['TJPeran'];
+            $_POST['TepatHadir'] = $data['TepatHadir'];
+            $_POST['Keaktifan'] = $data['Keaktifan'];
+            $_POST['Inisiatif'] = $data['Inisiatif'];
+            $_POST['Sikap'] = $data['Sikap'];
+            $_POST['Komunikasi'] = $data['Komunikasi'];
+    
+        }
+    }
+
+    //Mengambil data nilai US007
+    function getNilaiRegis($koneksi, $Periode){
+
+        $queryGetNilai = mysqli_query($koneksi, "SELECT TJPeran, TepatHadir, Keaktifan, Inisiatif, Sikap, Komunikasi FROM nilai WHERE ID_UserIn = 'US007' AND Periode = '$Periode'");
+        while($data = mysqli_fetch_array($queryGetNilai)){
+    
+            $_POST['TJPeran'] = $data['TJPeran'];
+            $_POST['TepatHadir'] = $data['TepatHadir'];
+            $_POST['Keaktifan'] = $data['Keaktifan'];
+            $_POST['Inisiatif'] = $data['Inisiatif'];
+            $_POST['Sikap'] = $data['Sikap'];
+            $_POST['Komunikasi'] = $data['Komunikasi'];
+    
+        }
+    }
+
+    //Mengambil data nilai US008
+    function getNilaiRevaldy($koneksi, $Periode){
+
+        $queryGetNilai = mysqli_query($koneksi, "SELECT TJPeran, TepatHadir, Keaktifan, Inisiatif, Sikap, Komunikasi FROM nilai WHERE ID_UserIn = 'US008' AND Periode = '$Periode'");
+        while($data = mysqli_fetch_array($queryGetNilai)){
+    
+            $_POST['TJPeran'] = $data['TJPeran'];
+            $_POST['TepatHadir'] = $data['TepatHadir'];
+            $_POST['Keaktifan'] = $data['Keaktifan'];
+            $_POST['Inisiatif'] = $data['Inisiatif'];
+            $_POST['Sikap'] = $data['Sikap'];
+            $_POST['Komunikasi'] = $data['Komunikasi'];
+    
+        }
+    }
+
+    //Mengambil data nilai US009
+    function getNilaiRangga($koneksi, $Periode){
+
+        $queryGetNilai = mysqli_query($koneksi, "SELECT TJPeran, TepatHadir, Keaktifan, Inisiatif, Sikap, Komunikasi FROM nilai WHERE ID_UserIn = 'US009' AND Periode = '$Periode'");
         while($data = mysqli_fetch_array($queryGetNilai)){
     
             $_POST['TJPeran'] = $data['TJPeran'];

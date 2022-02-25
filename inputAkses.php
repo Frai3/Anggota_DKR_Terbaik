@@ -2,7 +2,7 @@
 
 
 function inputAksesAnggotaBaru($ID_Role, $Username, $Password){
-  include '../controller/koneksi.php';
+  include 'koneksi.php';
   
   $queryGetID = mysqli_query($koneksi, "SELECT COUNT(ID_Akses) as CountID FROM akses");
   while($data = mysqli_fetch_array($queryGetID)){

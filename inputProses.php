@@ -3,8 +3,8 @@
 session_start();
 
 include 'koneksi.php';
-include '../model/inputAnggotaBaru.php';
-include '../model/inputAkses.php';
+include 'inputAnggotaBaru.php';
+include 'inputAkses.php';
 
 //Mengambil data dari form login
 $Nama_User = ucfirst($_GET['Nama_user']);
@@ -24,7 +24,7 @@ while($data = mysqli_fetch_array($queryGetID)){
 if($Nama_User == "" or $Sekolah == "" or $NoTelp=="" or $Golongan=="" or $Username=="" or $Password==""){
 	echo "<script>
 		alert('Masukkan Data Dengan Lengkap!');
-		window.location='../view/formRegister.php'
+		window.location='formRegister.php'
 		</script>";
 }
 else{
@@ -34,7 +34,7 @@ else{
 	//Jalanin fungsi di inputAnggotaBaru
 	inputAnggotaBaru($ID_Role, $Nama_User, $Sekolah, $NoTelp, $Golongan);
 	echo "<script>alert('Data Berhasil Ditambahkan!');
-	 	window.location='../view/indexAdministrator.php';
+	 	window.location='indexAdministrator.php';
 	 	</script>";
 }
 

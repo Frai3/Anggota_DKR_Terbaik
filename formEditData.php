@@ -6,7 +6,7 @@ if (!isset($_SESSION)) {
 }
 $Username = $_SESSION['Username'];
 
-include '../model/getData.php';
+include 'getData.php';
 
 getData($Username);
 
@@ -37,9 +37,9 @@ getData($Username);
                 <div class="wrapperFormRegister">
                     <div class="judul">Biodata</div>
                     <div class="formRegister">
-                        <form action="../controller/editDataProses.php" method="post">
+                        <form action="editDataProses.php" method="post">
                         <div class="form-group">
-                                <label for="username">ID</label>
+                                <label for="id">ID</label>
                                 <input type="text" class="form-control" name="ID_User" value="<?php echo $_POST['ID_User']; ?>" readonly>
                             </div>
                             <div class="form-group">

@@ -3,7 +3,7 @@
 session_start();
 
 include 'koneksi.php';
-include '../model/inputNilai.php';
+include 'inputNilai.php';
 
 $Username = $_SESSION['Username'];
 
@@ -32,7 +32,7 @@ while($data = mysqli_fetch_array($queryGetIDOut)){
 if($Nama_User == "" or $TJPeran == "" or $TepatHadir=="" or $Keaktifan=="" or $Inisiatif=="" or $Sikap=="" or $Komunikasi==""){
 	echo "<script>
 		alert('Masukkan Data Dengan Lengkap!');
-		window.location='../view/formNilai.php'
+		window.location='formNilai.php'
 		</script>";
 }	
 else{
@@ -41,11 +41,11 @@ else{
 	if($data <= 0){
 		inputNilai($ID_UserIn, $ID_UserOut, $TJPeran, $TepatHadir, $Keaktifan, $Inisiatif, $Sikap, $Komunikasi, $Periode);
 		echo "<script>alert('Data Berhasil Ditambahkan!');
-			 window.location='../view/indexAdministrator.php';
+			 window.location='indexAdministrator.php';
 			 </script>";
 	}else{
 		echo "<script>alert('Hai ".ucfirst($Username).", Data ".$Nama_User." Sudah Ditambahkan! Harap Masukkan Nama yang Lain');
-		window.location='../view/formNilai.php';
+		window.location='formNilai.php';
 		</script>";
 	}
 	// while($data = mysqli_fetch_array($queryGetID)){

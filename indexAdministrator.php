@@ -3,7 +3,7 @@ if (!isset($_SESSION)) {
     session_start();
     if($_SESSION['Nama_Role'] != 'administrator'){
         echo "<script>alert('Anda Harus Login Terlebih Dahulu!');
-        window.location='../view/login.php';
+        window.location='login.php';
         </script>";
     }
 }
@@ -45,7 +45,7 @@ $username = $_SESSION['Username'];
                     <a href="formNilai.php"class="btn wrapperButton" style="height: 70px; left: 18%; top: 50%">Nilai</a>
                     <a href="formEditData.php" class="btn wrapperButton" style="height: 70px; left: 18%; top: 75%">Edit Data</a>
                 </div>
-                <a href="../controller/logout.php" class="btn btnDark btn-dark" id='btnLogout'>Logout</a>
+                <a href="logout.php" class="btn btnDark btn-dark" id='btnLogout'>Logout</a>
             </div>
         </div>
     </body> 

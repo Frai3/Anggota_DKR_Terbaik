@@ -20,7 +20,8 @@
     font-weight: 700;
 }
 
-.btn:hover, .btn:focus {
+.btn:hover,
+.btn:focus {
     color: #F0F8FF;
     outline: 0;
 }
@@ -36,12 +37,12 @@
     box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
 }
 
-.backgroundIndex img{
+.backgroundIndex img {
     position: relative;
     z-index: 1;
 }
 
-.backgroundIndex p{
+.backgroundIndex p {
     font-family: Kalam;
     font-style: normal;
     font-weight: bold;
@@ -53,89 +54,91 @@
     padding: 350px 0 0 100px;
 }
 
-div.jarakButton{
+div.jarakButton {
     padding-top: 100px;
     padding-left: 750px;
     color: #F08080;
 }
 
- .wrapper {
-     max-width: 350px;
-     min-height: 500px;
-     margin: 80px auto;
-     padding: 40px 30px 30px 30px;
-     background-color: #ecf0f3;
-     border-radius: 15px;
-     box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff
- }
+.wrapper {
+    max-width: 350px;
+    min-height: 500px;
+    margin: 80px auto;
+    padding: 40px 30px 30px 30px;
+    background-color: #ecf0f3;
+    border-radius: 15px;
+    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff
+}
 
- .logo {
-     width: 80px;
-     margin: auto
- }
+.logo {
+    width: 80px;
+    margin: auto
+}
 
- .logo img {
-     width: 100%;
-     height: 80px;
-     object-fit: cover;
-     border-radius: 50%;
-     box-shadow: 0px 0px 3px #5f5f5f, 0px 0px 0px 5px #ecf0f3, 8px 8px 15px #a7aaa7, -8px -8px 15px #fff
- }
+.logo img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0px 0px 3px #5f5f5f, 0px 0px 0px 5px #ecf0f3, 8px 8px 15px #a7aaa7, -8px -8px 15px #fff
+}
 
- .wrapper .name {
-     font-weight: 600;
-     font-size: 1.4rem;
-     letter-spacing: 1.3px;
-     padding-left: 10px;
-     color: #555
- }
+.wrapper .name {
+    font-weight: 600;
+    font-size: 1.4rem;
+    letter-spacing: 1.3px;
+    padding-left: 10px;
+    color: #555
+}
 
- .wrapper .form-field input {
-     width: 100%;
-     display: block;
-     border: none;
-     outline: none;
-     background: none;
-     font-size: 1.2rem;
-     color: #666;
-     padding: 10px 15px 10px 10px
- }
+.wrapper .form-field input {
+    width: 100%;
+    display: block;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.2rem;
+    color: #666;
+    padding: 10px 15px 10px 10px
+}
 
- .wrapper .form-field {
-     padding-left: 10px;
-     margin-bottom: 20px;
-     border-radius: 20px;
-     box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff
- }
+.wrapper .form-field {
+    padding-left: 10px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff
+}
 
- .wrapper .form-field .fas {
-     color: #555
- }
+.wrapper .form-field .fas {
+    color: #555
+}
 
- .wrapper .btn {
-     box-shadow: none;
-     width: 100%;
-     height: 40px;
-     background-color: #03A9F4;
-     color: #fff;
-     border-radius: 25px;
-     box-shadow: 3px 3px 3px #b1b1b1, -3px -3px 3px #fff;
-     letter-spacing: 1.3px
- }
+.wrapper .btn {
+    box-shadow: none;
+    width: 100%;
+    height: 40px;
+    background-color: #03A9F4;
+    color: #fff;
+    border-radius: 25px;
+    box-shadow: 3px 3px 3px #b1b1b1, -3px -3px 3px #fff;
+    letter-spacing: 1.3px
+}
 
- .wrapper .btn:hover {
-     background-color: #039BE5
- }
+.wrapper .btn:hover {
+    background-color: #039BE5
+}
 
- .wrapper a {
-     text-decoration: none;
-     font-size: 0.8rem;
-     color: #03A9F4
- }
+.wrapper a {
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: #03A9F4
+}
 
- .wrapper a:hover {
-     color: #039BE5
- }
+.wrapper a:hover {
+    color: #039BE5
+}
+
+
 /* 
 @media(max-width: 380px) {
     .wrapper {
@@ -144,25 +147,25 @@ div.jarakButton{
     }
  } */
 
-.formRegister{
+.formRegister {
     align-items: center;
-    width: 400%;
+    width: 400px;
     height: 800px;
     padding: 100px 100px 0 100px;
-
     background: #F05959;
     border-radius: 59px;
     font-size: 15pt;
 }
 
-.formRegister form button{
+.formRegister form button {
     width: 100px;
 }
 
-.font{
+.font {
     display: flex;
 }
-.font p{
+
+.font p {
     font-family: Kalam;
     font-style: normal;
     font-weight: bold;
@@ -171,9 +174,9 @@ div.jarakButton{
     padding: 100px 0 0 150px;
 }
 
-.font img{
+.font img {
     width: 300px;
-    padding: 50px 100px 0 0 ;
+    padding: 50px 100px 0 0;
 }
 
 .wrapperCard {
@@ -182,19 +185,16 @@ div.jarakButton{
     height: 539px;
     left: 40%;
     top: 28%;
-
     background: #C4C4C4;
     border-radius: 50px;
-
 }
 
-.wrapperButton{
+.wrapperButton {
     position: absolute;
     width: 260px;
     background: #FC5858;
     border-radius: 10px;
     height: 40px;
-
     font-family: Kalam;
     font-style: normal;
     font-weight: bold;
@@ -204,30 +204,25 @@ div.jarakButton{
     color: black;
     border: 3px solid #212121;
     text-shadow: 0px 4px 40px rgba(255, 255, 255, 0.4);
-
 }
 
-.judul{
+.judul {
     position: absolute;
     width: 279px;
     height: 45px;
     left: 15%;
     top: 10%;
-
     font-family: Kalam;
     font-style: normal;
     font-weight: bold;
     font-size: 45px;
     line-height: 110%;
     text-align: center;
-
     color: #FFFFFF;
-
     text-shadow: 0px 4px 40px rgba(255, 255, 255, 0.4);
-
 }
 
-.btnDark{
+.btnDark {
     position: absolute;
     height: 60px;
     width: 150px;
@@ -241,5 +236,4 @@ div.jarakButton{
     font-weight: bold;
     background: #FC5858;
     border-radius: 10px;
-
 }

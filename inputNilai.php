@@ -3,7 +3,7 @@
 
 function inputNilai($ID_UserIn, $ID_UserOut, $TJPeran, $TepatHadir, $Keaktifan, $Inisiatif, $Sikap, $Komunikasi, $Periode){
 
-  include '../controller/koneksi.php';
+  include 'koneksi.php';
 
   //Memasukkan ID Baru
   $queryGetID = mysqli_query($koneksi, "SELECT COUNT(ID_Nilai) as CountID FROM nilai");

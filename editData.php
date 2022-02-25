@@ -1,7 +1,7 @@
  <?php
 
  	function editData($ID_User, $Nama_User, $Sekolah, $NoTelp, $Golongan){
-	 	include '../controller/koneksi.php';
+	 	include 'koneksi.php';
 		
 		//buat dan jalankan query UPDATE
 		$query  = "UPDATE user SET ";

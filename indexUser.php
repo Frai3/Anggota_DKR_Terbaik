@@ -3,7 +3,7 @@ if (!isset($_SESSION)) {
     session_start();
     if($_SESSION['Nama_Role'] != 'user'){
         echo "<script>alert('Anda Harus Login Terlebih Dahulu!');
-        window.location='../view/login.php';
+        window.location='login.php';
         </script>";
     }
 }
@@ -94,11 +94,11 @@ if (!isset($_SESSION)) {
             <div class="row">
                 <div class="wrapperCard">
                     <p class="judul">User</p>
-                    <a href="#" class="btn wrapperButton" style="height: 70px; left: 18%; top: 35%">Nilai</a>
+                    <a href="formNilai.php" class="btn wrapperButton" style="height: 70px; left: 18%; top: 35%">Nilai</a>
                     <a href="formEditData.php" class="btn wrapperButton" style="height: 70px; left: 18%; top: 60%">Edit Data</a>
                 </div>
             </div>
         </div>
-        <a href="../controller/logout.php" class="btn btnDark btn-dark">Logout</a>
+        <a href="logout.php" class="btn btnDark btn-dark">Logout</a>
     </body> 
 </html>

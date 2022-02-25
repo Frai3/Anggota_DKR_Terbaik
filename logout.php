@@ -7,5 +7,5 @@ session_destroy();
  
 // mengalihkan halaman sambil mengirim pesan logout
 echo "<script>alert('Selamat Tinggal!');
-		window.location='../view/index.php'</script>";
+		window.location='index.php'</script>";
 ?>

@@ -4,7 +4,7 @@
 function inputAnggotaBaru($ID_Role, $Nama_User, $Sekolah, $NoTelp, $Golongan){
 
   $TglUpdate = date('Y-m-d');
-  include '../controller/koneksi.php';
+  include 'koneksi.php';
 
   //Memasukkan ID Baru
   $queryGetID = mysqli_query($koneksi, "SELECT COUNT(ID_User) as CountID FROM user");

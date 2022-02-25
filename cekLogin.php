@@ -2,7 +2,7 @@
 
 function cek_login($username, $password){
 
-	include '../controller/koneksi.php';
+	include 'koneksi.php';
 
 	$cekDatabaseUser = mysqli_query($koneksi, "select a.Username, a.Password, r.Nama_Role, u.ID_User from akses a, role r, user u where a.username='$username' and a.password='$password' and a.ID_Role = r.ID_Role and u.ID_Akses = a.ID_Akses");
 
@@ -19,7 +19,7 @@ function cek_login($username, $password){
 		
 		echo "<script>
 		alert('Maaf Anda Tidak Memiliki Akses!');
-		window.location='../view/login.php';
+		window.location='login.php';
 		</script>";
 	}
 }

@@ -1,7 +1,7 @@
  <?php
 
  	function getData($Username){
-	 	include '../controller/koneksi.php';
+	 	include 'koneksi.php';
 		
 	    $queryEditData = mysqli_query($koneksi, "SELECT * FROM user u, akses a WHERE Username='$Username' and a.ID_Akses = u.ID_Akses");
 		while($data = mysqli_fetch_array($queryEditData)){
