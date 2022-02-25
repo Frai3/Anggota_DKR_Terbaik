@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 10, 2022 at 05:38 PM
+-- Generation Time: Feb 25, 2022 at 06:19 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.27
 
@@ -39,11 +39,15 @@ CREATE TABLE `akses` (
 --
 
 INSERT INTO `akses` (`ID_Akses`, `ID_Role`, `Username`, `Password`) VALUES
-('AK001', 'RL001', 'farhan', 'farhan'),
-('AK002', 'RL002', 'raihan', 'raihan'),
-('AK003', 'RL001', 'frai', 'frai'),
-('AK004', 'RL002', 'ray', 'ray'),
-('AK005', 'RL002', 'mark', 'mark');
+('AK001', 'RL001', 'zikri', 'zikri'),
+('AK002', 'RL001', 'fillah', 'fillah'),
+('AK003', 'RL002', 'meilizke', 'meilizke'),
+('AK004', 'RL002', 'kendanan', 'kendanan'),
+('AK005', 'RL002', 'alya', 'alya'),
+('AK006', 'RL002', 'bayu', 'bayu'),
+('AK007', 'RL002', 'regis', 'regis'),
+('AK008', 'RL002', 'revaldy', 'revaldy'),
+('AK009', 'RL002', 'rangga', 'rangga');
 
 -- --------------------------------------------------------
 
@@ -63,16 +67,6 @@ CREATE TABLE `nilai` (
   `Komunikasi` char(5) NOT NULL,
   `Periode` year(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `nilai`
---
-
-INSERT INTO `nilai` (`ID_Nilai`, `ID_UserIn`, `ID_UserOut`, `TJPeran`, `TepatHadir`, `Keaktifan`, `Inisiatif`, `Sikap`, `Komunikasi`, `Periode`) VALUES
-('NL001', 'US002', 'US001', '90', '90', '90', '90', '90', '90', 2022),
-('NL002', 'US003', 'US001', '80', '80', '80', '80', '80', '80', 2022),
-('NL003', 'US004', 'US001', '70', '70', '70', '70', '70', '70', 2022),
-('NL004', 'US005', 'US001', '60', '60', '60', '60', '60', '60', 2022);
 
 -- --------------------------------------------------------
 
@@ -129,11 +123,15 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`ID_User`, `ID_Role`, `ID_Akses`, `Nama_User`, `Sekolah`, `NoTelp`, `Golongan`, `TglUpdate`) VALUES
-('US001', 'RL001', 'AK001', 'Farhan', 'SMA 1', '08465123515', 'Penegak', '2022-02-08'),
-('US002', 'RL002', 'AK002', 'Raihan', 'SMA 1', '08464213515', 'Penegak', '2022-02-08'),
-('US003', 'RL001', 'AK003', 'Frai', 'SMAN 3', '0846458468', 'Pandega', '2022-02-08'),
-('US004', 'RL002', 'AK004', 'Ray', 'SMA 4', '0846458432', 'Pandega', '2022-02-08'),
-('US005', 'RL002', 'AK005', 'Mark', 'SMA 2', '08464521378', 'Penegak', '2022-02-08');
+('US001', 'RL001', 'AK001', 'Muara Zikri', 'SMA Alfityan', '-', 'Penegak', '2022-02-25'),
+('US002', 'RL001', 'AK001', 'Fillah Munaya', 'SMKN 7 Kab. Tangeran', '-', 'Penegak', '2022-02-25'),
+('US003', 'RL002', 'AK003', 'Meilizke Dwie', '-', '-', 'Penegak', '2022-02-25'),
+('US004', 'RL002', 'AK004', 'Kendanan Wherespati', '-', '-', 'Penegak', '2022-02-25'),
+('US005', 'RL002', 'AK005', 'Alya Dani', '-', '-', 'Penegak', '2022-02-25'),
+('US006', 'RL002', 'AK006', 'Bayu Aryo', '-', '-', 'Penegak', '2022-02-25'),
+('US007', 'RL002', 'AK007', 'Regis Revaldy', '-', '-', 'Penegak', '2022-02-25'),
+('US008', 'RL002', 'AK008', 'Revaldy Putra', '-', '-', 'Penegak', '2022-02-25'),
+('US009', 'RL002', 'AK009', 'Rangga Satria', '-', '-', 'Penegak', '2022-02-25');
 
 --
 -- Indexes for dumped tables
