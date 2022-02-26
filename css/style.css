@@ -138,29 +138,6 @@ div.jarakButton {
     color: #039BE5
 }
 
-
-/* 
-@media(max-width: 380px) {
-    .wrapper {
-        margin: 30px 20px;
-        padding: 40px 15px 15px 15px
-    }
- } */
-
-.formRegister {
-    align-items: center;
-    width: 400px;
-    height: 800px;
-    padding: 100px 100px 0 100px;
-    background: #F05959;
-    border-radius: 59px;
-    font-size: 15pt;
-}
-
-.formRegister form button {
-    width: 100px;
-}
-
 .font {
     display: flex;
 }
@@ -177,16 +154,6 @@ div.jarakButton {
 .font img {
     width: 300px;
     padding: 50px 100px 0 0;
-}
-
-.wrapperCard {
-    position: absolute;
-    width: 393px;
-    height: 539px;
-    left: 40%;
-    top: 28%;
-    background: #C4C4C4;
-    border-radius: 50px;
 }
 
 .wrapperButton {
@@ -227,7 +194,7 @@ div.jarakButton {
     height: 60px;
     width: 150px;
     left: 1500px;
-    top: 800px;
+    top: 1000px;
     line-height: 50px;
     text-align: center;
     color: black;

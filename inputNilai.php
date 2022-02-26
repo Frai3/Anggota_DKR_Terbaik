@@ -8,9 +8,9 @@ function inputNilai($ID_UserIn, $ID_UserOut, $TJPeran, $TepatHadir, $Keaktifan, 
   //Memasukkan ID Baru
   $queryGetID = mysqli_query($koneksi, "SELECT COUNT(ID_Nilai) as CountID FROM nilai");
   while($data = mysqli_fetch_array($queryGetID)){
-      if($data['CountID'] < 10){
+      if($data['CountID'] < 9){
         $ID_Nilai="NL00".strval($data['CountID'] + 1);
-      }else if($data['CountID'] < 100){
+      }else if($data['CountID'] >= 9){
         $ID_Nilai="NL0".strval($data['CountID'] + 1);
       }else{
         $ID_Nilai="NL".strval($data['CountID'] + 1);

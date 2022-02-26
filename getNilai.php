@@ -9,28 +9,28 @@
         $queryGetNilai = mysqli_query($koneksi, "SELECT TJPeran, TepatHadir, Keaktifan, Inisiatif, Sikap, Komunikasi FROM nilai WHERE ID_UserIn = 'US001' AND Periode = '$Periode'");
         while($data = mysqli_fetch_array($queryGetNilai)){
     
-            $_POST['TJPeran'] = $data['TJPeran'];
-            $_POST['TepatHadir'] = $data['TepatHadir'];
-            $_POST['Keaktifan'] = $data['Keaktifan'];
-            $_POST['Inisiatif'] = $data['Inisiatif'];
-            $_POST['Sikap'] = $data['Sikap'];
-            $_POST['Komunikasi'] = $data['Komunikasi'];
+            $_POST['TJPeranZikri'] = $data['TJPeran'];
+            $_POST['TepatHadirZikri'] = $data['TepatHadir'];
+            $_POST['KeaktifanZikri'] = $data['Keaktifan'];
+            $_POST['InisiatifZikri'] = $data['Inisiatif'];
+            $_POST['SikapZikri'] = $data['Sikap'];
+            $_POST['KomunikasiZikri'] = $data['Komunikasi'];
     
         }
     }
-
+    
     //Mengambil data nilai US002
     function getNilaiFillah($koneksi, $Periode){
 
         $queryGetNilai = mysqli_query($koneksi, "SELECT TJPeran, TepatHadir, Keaktifan, Inisiatif, Sikap, Komunikasi FROM nilai WHERE ID_UserIn = 'US002' AND Periode = '$Periode'");
         while($data = mysqli_fetch_array($queryGetNilai)){
     
-            $_POST['TJPeran'] = $data['TJPeran'];
-            $_POST['TepatHadir'] = $data['TepatHadir'];
-            $_POST['Keaktifan'] = $data['Keaktifan'];
-            $_POST['Inisiatif'] = $data['Inisiatif'];
-            $_POST['Sikap'] = $data['Sikap'];
-            $_POST['Komunikasi'] = $data['Komunikasi'];
+            $_POST['TJPeranFillah'] = $data['TJPeran'];
+            $_POST['TepatHadirFillah'] = $data['TepatHadir'];
+            $_POST['KeaktifanFillah'] = $data['Keaktifan'];
+            $_POST['InisiatifFillah'] = $data['Inisiatif'];
+            $_POST['SikapFillah'] = $data['Sikap'];
+            $_POST['KomunikasiFillah'] = $data['Komunikasi'];
     
         }
     }
@@ -41,12 +41,12 @@
         $queryGetNilai = mysqli_query($koneksi, "SELECT TJPeran, TepatHadir, Keaktifan, Inisiatif, Sikap, Komunikasi FROM nilai WHERE ID_UserIn = 'US003' AND Periode = '$Periode'");
         while($data = mysqli_fetch_array($queryGetNilai)){
     
-            $_POST['TJPeran'] = $data['TJPeran'];
-            $_POST['TepatHadir'] = $data['TepatHadir'];
-            $_POST['Keaktifan'] = $data['Keaktifan'];
-            $_POST['Inisiatif'] = $data['Inisiatif'];
-            $_POST['Sikap'] = $data['Sikap'];
-            $_POST['Komunikasi'] = $data['Komunikasi'];
+            $_POST['TJPeranMeilizka'] = $data['TJPeran'];
+            $_POST['TepatHadirMeilizka'] = $data['TepatHadir'];
+            $_POST['KeaktifanMeilizka'] = $data['Keaktifan'];
+            $_POST['InisiatifMeilizka'] = $data['Inisiatif'];
+            $_POST['SikapMeilizka'] = $data['Sikap'];
+            $_POST['KomunikasiMeilizka'] = $data['Komunikasi'];
     
         }
     }
@@ -57,12 +57,12 @@
         $queryGetNilai = mysqli_query($koneksi, "SELECT TJPeran, TepatHadir, Keaktifan, Inisiatif, Sikap, Komunikasi FROM nilai WHERE ID_UserIn = 'US004' AND Periode = '$Periode'");
         while($data = mysqli_fetch_array($queryGetNilai)){
     
-            $_POST['TJPeran'] = $data['TJPeran'];
-            $_POST['TepatHadir'] = $data['TepatHadir'];
-            $_POST['Keaktifan'] = $data['Keaktifan'];
-            $_POST['Inisiatif'] = $data['Inisiatif'];
-            $_POST['Sikap'] = $data['Sikap'];
-            $_POST['Komunikasi'] = $data['Komunikasi'];
+            $_POST['TJPeranKendanan'] = $data['TJPeran'];
+            $_POST['TepatHadirKendanan'] = $data['TepatHadir'];
+            $_POST['KeaktifanKendanan'] = $data['Keaktifan'];
+            $_POST['InisiatifKendanan'] = $data['Inisiatif'];
+            $_POST['SikapKendanan'] = $data['Sikap'];
+            $_POST['KomunikasiKendanan'] = $data['Komunikasi'];
     
         }
     }
@@ -73,12 +73,12 @@
         $queryGetNilai = mysqli_query($koneksi, "SELECT TJPeran, TepatHadir, Keaktifan, Inisiatif, Sikap, Komunikasi FROM nilai WHERE ID_UserIn = 'US005' AND Periode = '$Periode'");
         while($data = mysqli_fetch_array($queryGetNilai)){
     
-            $_POST['TJPeran'] = $data['TJPeran'];
-            $_POST['TepatHadir'] = $data['TepatHadir'];
-            $_POST['Keaktifan'] = $data['Keaktifan'];
-            $_POST['Inisiatif'] = $data['Inisiatif'];
-            $_POST['Sikap'] = $data['Sikap'];
-            $_POST['Komunikasi'] = $data['Komunikasi'];
+            $_POST['TJPeranAlya'] = $data['TJPeran'];
+            $_POST['TepatHadirAlya'] = $data['TepatHadir'];
+            $_POST['KeaktifanAlya'] = $data['Keaktifan'];
+            $_POST['InisiatifAlya'] = $data['Inisiatif'];
+            $_POST['SikapAlya'] = $data['Sikap'];
+            $_POST['KomunikasiAlya'] = $data['Komunikasi'];
     
         }
     }
@@ -89,12 +89,12 @@
         $queryGetNilai = mysqli_query($koneksi, "SELECT TJPeran, TepatHadir, Keaktifan, Inisiatif, Sikap, Komunikasi FROM nilai WHERE ID_UserIn = 'US006' AND Periode = '$Periode'");
         while($data = mysqli_fetch_array($queryGetNilai)){
     
-            $_POST['TJPeran'] = $data['TJPeran'];
-            $_POST['TepatHadir'] = $data['TepatHadir'];
-            $_POST['Keaktifan'] = $data['Keaktifan'];
-            $_POST['Inisiatif'] = $data['Inisiatif'];
-            $_POST['Sikap'] = $data['Sikap'];
-            $_POST['Komunikasi'] = $data['Komunikasi'];
+            $_POST['TJPeranBayu'] = $data['TJPeran'];
+            $_POST['TepatHadirBayu'] = $data['TepatHadir'];
+            $_POST['KeaktifanBayu'] = $data['Keaktifan'];
+            $_POST['InisiatifBayu'] = $data['Inisiatif'];
+            $_POST['SikapBayu'] = $data['Sikap'];
+            $_POST['KomunikasiBayu'] = $data['Komunikasi'];
     
         }
     }
@@ -105,12 +105,12 @@
         $queryGetNilai = mysqli_query($koneksi, "SELECT TJPeran, TepatHadir, Keaktifan, Inisiatif, Sikap, Komunikasi FROM nilai WHERE ID_UserIn = 'US007' AND Periode = '$Periode'");
         while($data = mysqli_fetch_array($queryGetNilai)){
     
-            $_POST['TJPeran'] = $data['TJPeran'];
-            $_POST['TepatHadir'] = $data['TepatHadir'];
-            $_POST['Keaktifan'] = $data['Keaktifan'];
-            $_POST['Inisiatif'] = $data['Inisiatif'];
-            $_POST['Sikap'] = $data['Sikap'];
-            $_POST['Komunikasi'] = $data['Komunikasi'];
+            $_POST['TJPeranRegis'] = $data['TJPeran'];
+            $_POST['TepatHadirRegis'] = $data['TepatHadir'];
+            $_POST['KeaktifanRegis'] = $data['Keaktifan'];
+            $_POST['InisiatifRegis'] = $data['Inisiatif'];
+            $_POST['SikapRegis'] = $data['Sikap'];
+            $_POST['KomunikasiRegis'] = $data['Komunikasi'];
     
         }
     }
@@ -121,12 +121,12 @@
         $queryGetNilai = mysqli_query($koneksi, "SELECT TJPeran, TepatHadir, Keaktifan, Inisiatif, Sikap, Komunikasi FROM nilai WHERE ID_UserIn = 'US008' AND Periode = '$Periode'");
         while($data = mysqli_fetch_array($queryGetNilai)){
     
-            $_POST['TJPeran'] = $data['TJPeran'];
-            $_POST['TepatHadir'] = $data['TepatHadir'];
-            $_POST['Keaktifan'] = $data['Keaktifan'];
-            $_POST['Inisiatif'] = $data['Inisiatif'];
-            $_POST['Sikap'] = $data['Sikap'];
-            $_POST['Komunikasi'] = $data['Komunikasi'];
+            $_POST['TJPeranRevaldy'] = $data['TJPeran'];
+            $_POST['TepatHadirRevaldy'] = $data['TepatHadir'];
+            $_POST['KeaktifanRevaldy'] = $data['Keaktifan'];
+            $_POST['InisiatifRevaldy'] = $data['Inisiatif'];
+            $_POST['SikapRevaldy'] = $data['Sikap'];
+            $_POST['KomunikasiRevaldy'] = $data['Komunikasi'];
     
         }
     }
@@ -137,12 +137,12 @@
         $queryGetNilai = mysqli_query($koneksi, "SELECT TJPeran, TepatHadir, Keaktifan, Inisiatif, Sikap, Komunikasi FROM nilai WHERE ID_UserIn = 'US009' AND Periode = '$Periode'");
         while($data = mysqli_fetch_array($queryGetNilai)){
     
-            $_POST['TJPeran'] = $data['TJPeran'];
-            $_POST['TepatHadir'] = $data['TepatHadir'];
-            $_POST['Keaktifan'] = $data['Keaktifan'];
-            $_POST['Inisiatif'] = $data['Inisiatif'];
-            $_POST['Sikap'] = $data['Sikap'];
-            $_POST['Komunikasi'] = $data['Komunikasi'];
+            $_POST['TJPeranRangga'] = $data['TJPeran'];
+            $_POST['TepatHadirRangga'] = $data['TepatHadir'];
+            $_POST['KeaktifanRangga'] = $data['Keaktifan'];
+            $_POST['InisiatifRangga'] = $data['Inisiatif'];
+            $_POST['SikapRangga'] = $data['Sikap'];
+            $_POST['KomunikasiRangga'] = $data['Komunikasi'];
     
         }
     }

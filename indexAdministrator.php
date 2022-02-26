@@ -25,6 +25,16 @@ $username = $_SESSION['Username'];
         background-size: 100% 100%;
     }
 
+    .wrapperCard {
+    position: absolute;
+    width: 393px;
+    height: 700px;
+    left: 40%;
+    top: 30%;
+    background: #C4C4C4;
+    border-radius: 50px;
+    }
+
     </style>
     </head>
 
@@ -41,12 +51,13 @@ $username = $_SESSION['Username'];
             <div class="row">
                 <div class="wrapperCard">
                     <p class="judul">Administrator</p>
-                    <a href="formRegister" class="btn wrapperButton" style="height: 70px; left: 18%; top: 25%">Registrasi</a>
-                    <a href="formNilai"class="btn wrapperButton" style="height: 70px; left: 18%; top: 50%">Nilai</a>
-                    <a href="formEditData" class="btn wrapperButton" style="height: 70px; left: 18%; top: 75%">Edit Data</a>
+                    <a href="formRegister" class="btn wrapperButton" style="height: 70px; left: 18%; top: 20%">Registrasi</a>
+                    <a href="formNilai"class="btn wrapperButton" style="height: 70px; left: 18%; top: 40%">Nilai</a>
+                    <a href="formEditData" class="btn wrapperButton" style="height: 70px; left: 18%; top: 60%">Edit Data</a>
+                    <a href="formTambahPoinNilai" class="btn wrapperButton" style="height: 70px; left: 18%; top: 80%">Poin Nilai</a>
                 </div>
-                <a href="logout.php" class="btn btnDark btn-dark" id='btnLogout'>Logout</a>
             </div>
+            <a href="logout.php" class="btn btnDark btn-dark" id='btnLogout'>Logout</a>
         </div>
     </body> 
 </html>

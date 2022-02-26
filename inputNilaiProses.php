@@ -40,9 +40,15 @@ else{
 	$data = mysqli_fetch_array($queryGetID);
 	if($data <= 0){
 		inputNilai($ID_UserIn, $ID_UserOut, $TJPeran, $TepatHadir, $Keaktifan, $Inisiatif, $Sikap, $Komunikasi, $Periode);
-		echo "<script>alert('Data Berhasil Ditambahkan!');
-			 window.location='indexAdministrator';
-			 </script>";
+		if($_SESSION['Nama_Role'] == 'administrator'){
+			echo "<script>alert('Data Berhasil Dirubah!');
+			window.location='indexAdministrator';
+			</script>";
+		  }else if($_SESSION['Nama_Role'] == 'user'){
+			echo "<script>alert('Data Berhasil Dirubah!');
+			window.location='indexUser';
+			</script>";
+		  }
 	}else{
 		echo "<script>alert('Hai ".ucfirst($Username).", Data ".$Nama_User." Sudah Ditambahkan! Harap Masukkan Nama yang Lain');
 		window.location='formNilai';

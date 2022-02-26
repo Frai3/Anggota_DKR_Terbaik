@@ -24,6 +24,20 @@
         background-size: 100% 100%;
     }
 
+    .formRegister {
+    align-items: center;
+    width: 1000px;
+    height: 800px;
+    padding: 100px 100px 0 100px;
+    background: #F05959;
+    border-radius: 59px;
+    font-size: 15pt;
+    }
+
+    .formRegister form button {
+        width: 100px;
+    }
+
     </style>
     </head>
 
@@ -38,7 +52,7 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="formRegister" >
+                <div class="formRegister">
                     <form action="inputProses" method="get">
                         <div class="form-group">
                             <label for="nama_user">Nama</label>
@@ -93,7 +107,9 @@
                                 }
                                 ?>
                             </select>
-                        <button type="submit" name="input" value="Submit" class="btn mt-3">Input</button>
+                            <br />
+                            <br />
+                        <button type="submit" name="input" value="Submit" class="btn btn-primary">Input</button>
                     </form>
                 </div>
             </div>

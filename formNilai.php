@@ -31,6 +31,21 @@ $ID = $_SESSION['ID_User'];
             background-size: 100% 100%;
         }
 
+        .formRegister {
+        align-items: center;
+        width: 1000px;
+        height: 800px;
+        padding: 100px 100px 0 100px;
+        background: #F05959;
+        border-radius: 59px;
+        font-size: 15pt;
+        }
+
+        .formRegister form button {
+            width: 100px;
+        }
+
+
         </style>
     </head>
 
@@ -52,7 +67,8 @@ $ID = $_SESSION['ID_User'];
                             <label for="Nama_User">Nama</label>
                             <select style="width: 100%" name="cmbNama">
                             <?php
-                                $queryEditData = mysqli_query($koneksi, "SELECT * FROM user WHERE Nama_User <> '$username'");
+                                $queryEditData = mysqli_query($koneksi, "SELECT Nama_User FROM user WHERE ID_Akses <>
+                                (SELECT ID_Akses FROM akses WHERE Username = '$username')");
                                 while($data = mysqli_fetch_array($queryEditData)){
                              ?>
                             <option value="<?php echo $data['Nama_User'];?>"><?php echo $data['Nama_User'];?></option> 

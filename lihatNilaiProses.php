@@ -18,6 +18,7 @@
         $Sikap = sqrt($_POST['Sikap']);
         getNilaiKomunikasi($koneksi, $Periode);
         $Komunikasi = sqrt($_POST['Komunikasi']);
+
         if($TJPeran != 0){
         //Bobot nilai
         $nilaiTJPeran = 20/100;
@@ -26,34 +27,45 @@
         $nilaiInisiatif = 15/100;
         $nilaiSikap = 20/100;
         $nilaiKomunikasi = 10/100;
-    
+        
+
+
+
+
         //Tabel Zikri
         getNilaiZikri($koneksi, $Periode);
-        $TJPeranZikri = $_POST['TJPeran'];
-        $TepatHadirZikri = $_POST['TepatHadir'];
-        $KeaktifanZikri =  $_POST['Keaktifan'];
-        $InisiatifZikri =  $_POST['Inisiatif'];
-        $SikapZikri =  $_POST['Sikap'];
-        $KomunikasiZikri =  $_POST['Komunikasi'];
+        if(empty($_POST['TJPeranZikri']) AND empty($_POST['TepatHadirZikri']) AND empty($_POST['KeaktifanZikri']) AND empty($_POST['InisiatifZikri'])
+        AND empty($_POST['SikapZikri']) AND empty($_POST['KomunikasiZikri'])){
+            $jumlahZikri = 0;
+        }else{
+            
+            $TJPeranZikri = $_POST['TJPeranZikri'];
+            $TepatHadirZikri = $_POST['TepatHadirZikri'];
+            $KeaktifanZikri =  $_POST['KeaktifanZikri'];
+            $InisiatifZikri =  $_POST['InisiatifZikri'];
+            $SikapZikri =  $_POST['SikapZikri'];
+            $KomunikasiZikri =  $_POST['KomunikasiZikri'];
 
-        //Normalisasi Tabel Zikri
-        $TJPeranZikri = $TJPeranZikri / $TJPeran;
-        $TepatHadirZikri = $TepatHadirZikri / $TepatHadir;
-        $KeaktifanZikri = $KeaktifanZikri / $Keaktifan;
-        $InisiatifZikri = $InisiatifZikri / $Inisiatif;
-        $SikapZikri = $SikapZikri / $Sikap;
-        $KomunikasiZikri = $KomunikasiZikri / $Komunikasi;
-    
-        //Normalisasi * Bobot Tabel Zikri
-        $TJPeranZikri = $TJPeranZikri * $nilaiTJPeran;
-        $TepatHadirZikri = $TepatHadirZikri * $nilaiTepatHadir;
-        $KeaktifanZikri =  $KeaktifanZikri * $nilaiKeaktifan;
-        $InisiatifZikri =  $InisiatifZikri * $nilaiInisiatif;
-        $SikapZikri =  $SikapZikri * $nilaiSikap;
-        $KomunikasiZikri =  $KomunikasiZikri * $nilaiKomunikasi;
+            //Normalisasi Tabel Zikri
+            $TJPeranZikri = $TJPeranZikri / $TJPeran;
+            $TepatHadirZikri = $TepatHadirZikri / $TepatHadir;
+            $KeaktifanZikri = $KeaktifanZikri / $Keaktifan;
+            $InisiatifZikri = $InisiatifZikri / $Inisiatif;
+            $SikapZikri = $SikapZikri / $Sikap;
+            $KomunikasiZikri = $KomunikasiZikri / $Komunikasi;
         
-        //Jumlah Hasil Zikri
-        $jumlahZikri = $TJPeranZikri + $TepatHadirZikri + $KeaktifanZikri + $InisiatifZikri + $SikapZikri + $KomunikasiZikri;
+            //Normalisasi * Bobot Tabel Zikri
+            $TJPeranZikri = $TJPeranZikri * $nilaiTJPeran;
+            $TepatHadirZikri = $TepatHadirZikri * $nilaiTepatHadir;
+            $KeaktifanZikri =  $KeaktifanZikri * $nilaiKeaktifan;
+            $InisiatifZikri =  $InisiatifZikri * $nilaiInisiatif;
+            $SikapZikri =  $SikapZikri * $nilaiSikap;
+            $KomunikasiZikri =  $KomunikasiZikri * $nilaiKomunikasi;
+            
+            //Jumlah Hasil Zikri
+            $jumlahZikri = $TJPeranZikri + $TepatHadirZikri + $KeaktifanZikri + $InisiatifZikri + $SikapZikri + $KomunikasiZikri;
+
+        }
     
     
     
@@ -61,63 +73,72 @@
     
         //Tabel Fillah
         getNilaiFillah($koneksi, $Periode);
-        $TJPeranFillah = $_POST['TJPeran'];
-        $TepatHadirFillah = $_POST['TepatHadir'];
-        $KeaktifanFillah =  $_POST['Keaktifan'];
-        $InisiatifFillah =  $_POST['Inisiatif'];
-        $SikapFillah =  $_POST['Sikap'];
-        $KomunikasiFillah =  $_POST['Komunikasi'];
-    
-        //Normalisasi Tabel Fillah
-        $TJPeranFillah = $TJPeranFillah / $TJPeran;
-        $TepatHadirFillah = $TepatHadirFillah / $TepatHadir;
-        $KeaktifanFillah = $KeaktifanFillah / $Keaktifan;
-        $InisiatifFillah = $InisiatifFillah / $Inisiatif;
-        $SikapFillah = $SikapFillah / $Sikap;
-        $KomunikasiFillah = $KomunikasiFillah / $Komunikasi;
-    
-        //Normalisasi * Bobot Tabel Fillah
-        $TJPeranFillah = $TJPeranFillah * $nilaiTJPeran;
-        $TepatHadirFillah = $TepatHadirFillah * $nilaiTepatHadir;
-        $KeaktifanFillah =  $KeaktifanFillah * $nilaiKeaktifan;
-        $InisiatifFillah =  $InisiatifFillah * $nilaiInisiatif;
-        $SikapFillah =  $SikapFillah * $nilaiSikap;
-        $KomunikasiFillah =  $KomunikasiFillah * $nilaiKomunikasi;
-    
-        //Jumlah Hasil Fillah
-        $jumlahFillah = $TJPeranFillah + $TepatHadirFillah + $KeaktifanFillah + $InisiatifFillah + $SikapFillah + $KomunikasiFillah;
-    
+        if(empty($_POST['TJPeranFillah']) AND empty($_POST['TepatHadirFillah']) AND empty($_POST['KeaktifanFillah']) AND empty($_POST['InisiatifFillah'])
+        AND empty($_POST['SikapFillah']) AND empty($_POST['KomunikasiFillah'])){
+            $jumlahFillah = 0;
+        }else{
+            $TJPeranFillah = $_POST['TJPeranFillah'];
+            $TepatHadirFillah = $_POST['TepatHadirFillah'];
+            $KeaktifanFillah =  $_POST['KeaktifanFillah'];
+            $InisiatifFillah =  $_POST['InisiatifFillah'];
+            $SikapFillah =  $_POST['SikapFillah'];
+            $KomunikasiFillah =  $_POST['KomunikasiFillah'];
+        
+            //Normalisasi Tabel Fillah
+            $TJPeranFillah = $TJPeranFillah / $TJPeran;
+            $TepatHadirFillah = $TepatHadirFillah / $TepatHadir;
+            $KeaktifanFillah = $KeaktifanFillah / $Keaktifan;
+            $InisiatifFillah = $InisiatifFillah / $Inisiatif;
+            $SikapFillah = $SikapFillah / $Sikap;
+            $KomunikasiFillah = $KomunikasiFillah / $Komunikasi;
+        
+            //Normalisasi * Bobot Tabel Fillah
+            $TJPeranFillah = $TJPeranFillah * $nilaiTJPeran;
+            $TepatHadirFillah = $TepatHadirFillah * $nilaiTepatHadir;
+            $KeaktifanFillah =  $KeaktifanFillah * $nilaiKeaktifan;
+            $InisiatifFillah =  $InisiatifFillah * $nilaiInisiatif;
+            $SikapFillah =  $SikapFillah * $nilaiSikap;
+            $KomunikasiFillah =  $KomunikasiFillah * $nilaiKomunikasi;
+        
+            //Jumlah Hasil Fillah
+            $jumlahFillah = $TJPeranFillah + $TepatHadirFillah + $KeaktifanFillah + $InisiatifFillah + $SikapFillah + $KomunikasiFillah;
+        }
     
     
     
         
         //Tabel Meilizka
         getNilaiMeilizka($koneksi, $Periode);
-        $TJPeranMeilizka = $_POST['TJPeran'];
-        $TepatHadirMeilizka = $_POST['TepatHadir'];
-        $KeaktifanMeilizka =  $_POST['Keaktifan'];
-        $InisiatifMeilizka =  $_POST['Inisiatif'];
-        $SikapMeilizka =  $_POST['Sikap'];
-        $KomunikasiMeilizka =  $_POST['Komunikasi'];
+        if(empty($_POST['TJPeranMeilizka']) AND empty($_POST['TepatHadirMeilizka']) AND empty($_POST['KeaktifanMeilizka']) AND empty($_POST['InisiatifMeilizka'])
+        AND empty($_POST['SikapMeilizka']) AND empty($_POST['KomunikasiMeilizka'])){
+            $jumlahMeilizka = 0;
+        }else{
+            $TJPeranMeilizka = $_POST['TJPeranMeilizka'];
+            $TepatHadirMeilizka = $_POST['TepatHadirMeilizka'];
+            $KeaktifanMeilizka =  $_POST['KeaktifanMeilizka'];
+            $InisiatifMeilizka =  $_POST['InisiatifMeilizka'];
+            $SikapMeilizka =  $_POST['SikapMeilizka'];
+            $KomunikasiMeilizka =  $_POST['KomunikasiMeilizka'];
+            
+            //Normalisasi Tabel Meilizka
+            $TJPeranMeilizka = $TJPeranMeilizka / $TJPeran;
+            $TepatHadirMeilizka = $TepatHadirMeilizka / $TepatHadir;
+            $KeaktifanMeilizka = $KeaktifanMeilizka / $Keaktifan;
+            $InisiatifMeilizka = $InisiatifMeilizka / $Inisiatif;
+            $SikapMeilizka = $SikapMeilizka / $Sikap;
+            $KomunikasiMeilizka = $KomunikasiMeilizka / $Komunikasi;
         
-        //Normalisasi Tabel Meilizka
-        $TJPeranMeilizka = $TJPeranMeilizka / $TJPeran;
-        $TepatHadirMeilizka = $TepatHadirMeilizka / $TepatHadir;
-        $KeaktifanMeilizka = $KeaktifanMeilizka / $Keaktifan;
-        $InisiatifMeilizka = $InisiatifMeilizka / $Inisiatif;
-        $SikapMeilizka = $SikapMeilizka / $Sikap;
-        $KomunikasiMeilizka = $KomunikasiMeilizka / $Komunikasi;
-    
-        //Normalisasi * Bobot Tabel Meilizka
-        $TJPeranMeilizka = $TJPeranMeilizka * $nilaiTJPeran;
-        $TepatHadirMeilizka = $TepatHadirMeilizka * $nilaiTepatHadir;
-        $KeaktifanMeilizka =  $KeaktifanMeilizka * $nilaiKeaktifan;
-        $InisiatifMeilizka =  $InisiatifMeilizka * $nilaiInisiatif;
-        $SikapMeilizka =  $SikapMeilizka * $nilaiSikap;
-        $KomunikasiMeilizka =  $KomunikasiMeilizka * $nilaiKomunikasi;
-    
-        //Jumlah Hasil Meilizka
-        $jumlahMeilizka = $TJPeranMeilizka + $TepatHadirMeilizka + $KeaktifanMeilizka + $InisiatifMeilizka + $SikapMeilizka + $KomunikasiMeilizka;
+            //Normalisasi * Bobot Tabel Meilizka
+            $TJPeranMeilizka = $TJPeranMeilizka * $nilaiTJPeran;
+            $TepatHadirMeilizka = $TepatHadirMeilizka * $nilaiTepatHadir;
+            $KeaktifanMeilizka =  $KeaktifanMeilizka * $nilaiKeaktifan;
+            $InisiatifMeilizka =  $InisiatifMeilizka * $nilaiInisiatif;
+            $SikapMeilizka =  $SikapMeilizka * $nilaiSikap;
+            $KomunikasiMeilizka =  $KomunikasiMeilizka * $nilaiKomunikasi;
+        
+            //Jumlah Hasil Meilizka
+            $jumlahMeilizka = $TJPeranMeilizka + $TepatHadirMeilizka + $KeaktifanMeilizka + $InisiatifMeilizka + $SikapMeilizka + $KomunikasiMeilizka;
+        }
     
     
 
@@ -126,224 +147,249 @@
 
         //Tabel Kendanan
         getNilaiKendanan($koneksi, $Periode);
-        $TJPeranKendanan = $_POST['TJPeran'];
-        $TepatHadirKendanan = $_POST['TepatHadir'];
-        $KeaktifanKendanan =  $_POST['Keaktifan'];
-        $InisiatifKendanan =  $_POST['Inisiatif'];
-        $SikapKendanan =  $_POST['Sikap'];
-        $KomunikasiKendanan =  $_POST['Komunikasi'];
-        
-        //Normalisasi Tabel Kendanan
-        $TJPeranKendanan = $TJPeranKendanan / $TJPeran;
-        $TepatHadirKendanan = $TepatHadirKendanan / $TepatHadir;
-        $KeaktifanKendanan = $KeaktifanKendanan / $Keaktifan;
-        $InisiatifKendanan = $InisiatifKendanan / $Inisiatif;
-        $SikapKendanan = $SikapKendanan / $Sikap;
-        $KomunikasiKendanan = $KomunikasiKendanan / $Komunikasi;
-        
-        //Normalisasi * Bobot Tabel Kendanan
-        $TJPeranKendanan = $TJPeranKendanan * $nilaiTJPeran;
-        $TepatHadirKendanan = $TepatHadirKendanan * $nilaiTepatHadir;
-        $KeaktifanKendanan =  $KeaktifanKendanan * $nilaiKeaktifan;
-        $InisiatifKendanan =  $InisiatifKendanan * $nilaiInisiatif;
-        $SikapKendanan =  $SikapKendanan * $nilaiSikap;
-        $KomunikasiKendanan =  $KomunikasiKendanan * $nilaiKomunikasi;
-        
-        // //Jumlah Hasil Kendanan
-        $jumlahKendanan = $TJPeranKendanan + $TepatHadirKendanan + $KeaktifanKendanan + $InisiatifKendanan + $SikapKendanan + $KomunikasiKendanan;
-        
+        if(empty($_POST['TJPeranKendanan']) AND empty($_POST['TepatHadirKendanan']) AND empty($_POST['KeaktifanKendanan']) AND empty($_POST['InisiatifKendanan'])
+        AND empty($_POST['SikapKendanan']) AND empty($_POST['KomunikasiKendanan'])){
+            $jumlahKendanan = 0;
+        }else{
+            $TJPeranKendanan = $_POST['TJPeranKendanan'];
+            $TepatHadirKendanan = $_POST['TepatHadirKendanan'];
+            $KeaktifanKendanan =  $_POST['KeaktifanKendanan'];
+            $InisiatifKendanan =  $_POST['InisiatifKendanan'];
+            $SikapKendanan =  $_POST['SikapKendanan'];
+            $KomunikasiKendanan =  $_POST['KomunikasiKendanan'];
+            
+            //Normalisasi Tabel Kendanan
+            $TJPeranKendanan = $TJPeranKendanan / $TJPeran;
+            $TepatHadirKendanan = $TepatHadirKendanan / $TepatHadir;
+            $KeaktifanKendanan = $KeaktifanKendanan / $Keaktifan;
+            $InisiatifKendanan = $InisiatifKendanan / $Inisiatif;
+            $SikapKendanan = $SikapKendanan / $Sikap;
+            $KomunikasiKendanan = $KomunikasiKendanan / $Komunikasi;
+            
+            //Normalisasi * Bobot Tabel Kendanan
+            $TJPeranKendanan = $TJPeranKendanan * $nilaiTJPeran;
+            $TepatHadirKendanan = $TepatHadirKendanan * $nilaiTepatHadir;
+            $KeaktifanKendanan =  $KeaktifanKendanan * $nilaiKeaktifan;
+            $InisiatifKendanan =  $InisiatifKendanan * $nilaiInisiatif;
+            $SikapKendanan =  $SikapKendanan * $nilaiSikap;
+            $KomunikasiKendanan =  $KomunikasiKendanan * $nilaiKomunikasi;
+            
+            // //Jumlah Hasil Kendanan
+            $jumlahKendanan = $TJPeranKendanan + $TepatHadirKendanan + $KeaktifanKendanan + $InisiatifKendanan + $SikapKendanan + $KomunikasiKendanan;
+        }
 
 
 
 
         //Tabel Alya
         getNilaiAlya($koneksi, $Periode);
-        $TJPeranAlya = $_POST['TJPeran'];
-        $TepatHadirAlya = $_POST['TepatHadir'];
-        $KeaktifanAlya =  $_POST['Keaktifan'];
-        $InisiatifAlya =  $_POST['Inisiatif'];
-        $SikapAlya =  $_POST['Sikap'];
-        $KomunikasiAlya =  $_POST['Komunikasi'];
-    
-        //Normalisasi Tabel Alya
-        $TJPeranAlya = $TJPeranAlya / $TJPeran;
-        $TepatHadirAlya = $TepatHadirAlya / $TepatHadir;
-        $KeaktifanAlya = $KeaktifanAlya / $Keaktifan;
-        $InisiatifAlya = $InisiatifAlya / $Inisiatif;
-        $SikapAlya = $SikapAlya / $Sikap;
-        $KomunikasiAlya = $KomunikasiAlya / $Komunikasi;
-    
-        //Normalisasi * Bobot Tabel Alya
-        $TJPeranAlya = $TJPeranAlya * $nilaiTJPeran;
-        $TepatHadirAlya = $TepatHadirAlya * $nilaiTepatHadir;
-        $KeaktifanAlya =  $KeaktifanAlya * $nilaiKeaktifan;
-        $InisiatifAlya =  $InisiatifAlya * $nilaiInisiatif;
-        $SikapAlya =  $SikapAlya * $nilaiSikap;
-        $KomunikasiAlya =  $KomunikasiAlya * $nilaiKomunikasi;
-    
-        // //Jumlah Hasil Alya
-        $jumlahAlya = $TJPeranAlya + $TepatHadirAlya + $KeaktifanAlya + $InisiatifAlya + $SikapAlya + $KomunikasiAlya;
-
+        if(empty($_POST['TJPeranAlya']) AND empty($_POST['TepatHadirAlya']) AND empty($_POST['KeaktifanAlya']) AND empty($_POST['InisiatifAlya'])
+        AND empty($_POST['SikapAlya']) AND empty($_POST['KomunikasiAlya'])){
+            $jumlahAlya = 0;
+        }else{
+            $TJPeranAlya = $_POST['TJPeranAlya'];
+            $TepatHadirAlya = $_POST['TepatHadirAlya'];
+            $KeaktifanAlya =  $_POST['KeaktifanAlya'];
+            $InisiatifAlya =  $_POST['InisiatifAlya'];
+            $SikapAlya =  $_POST['SikapAlya'];
+            $KomunikasiAlya =  $_POST['KomunikasiAlya'];
+        
+            //Normalisasi Tabel Alya
+            $TJPeranAlya = $TJPeranAlya / $TJPeran;
+            $TepatHadirAlya = $TepatHadirAlya / $TepatHadir;
+            $KeaktifanAlya = $KeaktifanAlya / $Keaktifan;
+            $InisiatifAlya = $InisiatifAlya / $Inisiatif;
+            $SikapAlya = $SikapAlya / $Sikap;
+            $KomunikasiAlya = $KomunikasiAlya / $Komunikasi;
+        
+            //Normalisasi * Bobot Tabel Alya
+            $TJPeranAlya = $TJPeranAlya * $nilaiTJPeran;
+            $TepatHadirAlya = $TepatHadirAlya * $nilaiTepatHadir;
+            $KeaktifanAlya =  $KeaktifanAlya * $nilaiKeaktifan;
+            $InisiatifAlya =  $InisiatifAlya * $nilaiInisiatif;
+            $SikapAlya =  $SikapAlya * $nilaiSikap;
+            $KomunikasiAlya =  $KomunikasiAlya * $nilaiKomunikasi;
+        
+            // //Jumlah Hasil Alya
+            $jumlahAlya = $TJPeranAlya + $TepatHadirAlya + $KeaktifanAlya + $InisiatifAlya + $SikapAlya + $KomunikasiAlya;
+        }
 
 
 
 
         //Tabel Bayu
         getNilaiBayu($koneksi, $Periode);
-        $TJPeranBayu = $_POST['TJPeran'];
-        $TepatHadirBayu = $_POST['TepatHadir'];
-        $KeaktifanBayu =  $_POST['Keaktifan'];
-        $InisiatifBayu =  $_POST['Inisiatif'];
-        $SikapBayu =  $_POST['Sikap'];
-        $KomunikasiBayu =  $_POST['Komunikasi'];
-    
-        //Normalisasi Tabel Bayu
-        $TJPeranBayu = $TJPeranBayu / $TJPeran;
-        $TepatHadirBayu = $TepatHadirBayu / $TepatHadir;
-        $KeaktifanBayu = $KeaktifanBayu / $Keaktifan;
-        $InisiatifBayu = $InisiatifBayu / $Inisiatif;
-        $SikapBayu = $SikapBayu / $Sikap;
-        $KomunikasiBayu = $KomunikasiBayu / $Komunikasi;
-    
-        //Normalisasi * Bobot Tabel Bayu
-        $TJPeranBayu = $TJPeranBayu * $nilaiTJPeran;
-        $TepatHadirBayu = $TepatHadirBayu * $nilaiTepatHadir;
-        $KeaktifanBayu =  $KeaktifanBayu * $nilaiKeaktifan;
-        $InisiatifBayu =  $InisiatifBayu * $nilaiInisiatif;
-        $SikapBayu =  $SikapBayu * $nilaiSikap;
-        $KomunikasiBayu =  $KomunikasiBayu * $nilaiKomunikasi;
-    
-        // //Jumlah Hasil Bayu
-        $jumlahBayu = $TJPeranBayu + $TepatHadirBayu + $KeaktifanBayu + $InisiatifBayu + $SikapBayu + $KomunikasiBayu;
-
+        if(empty($_POST['TJPeranBayu']) AND empty($_POST['TepatHadirBayu']) AND empty($_POST['KeaktifanBayu']) AND empty($_POST['InisiatifBayu'])
+        AND empty($_POST['SikapBayu']) AND empty($_POST['KomunikasiBayu'])){
+            $jumlahBayu = 0;
+        }else{
+            $TJPeranBayu = $_POST['TJPeranBayu'];
+            $TepatHadirBayu = $_POST['TepatHadirBayu'];
+            $KeaktifanBayu =  $_POST['KeaktifanBayu'];
+            $InisiatifBayu =  $_POST['InisiatifBayu'];
+            $SikapBayu =  $_POST['SikapBayu'];
+            $KomunikasiBayu =  $_POST['KomunikasiBayu'];
+        
+            //Normalisasi Tabel Bayu
+            $TJPeranBayu = $TJPeranBayu / $TJPeran;
+            $TepatHadirBayu = $TepatHadirBayu / $TepatHadir;
+            $KeaktifanBayu = $KeaktifanBayu / $Keaktifan;
+            $InisiatifBayu = $InisiatifBayu / $Inisiatif;
+            $SikapBayu = $SikapBayu / $Sikap;
+            $KomunikasiBayu = $KomunikasiBayu / $Komunikasi;
+        
+            //Normalisasi * Bobot Tabel Bayu
+            $TJPeranBayu = $TJPeranBayu * $nilaiTJPeran;
+            $TepatHadirBayu = $TepatHadirBayu * $nilaiTepatHadir;
+            $KeaktifanBayu =  $KeaktifanBayu * $nilaiKeaktifan;
+            $InisiatifBayu =  $InisiatifBayu * $nilaiInisiatif;
+            $SikapBayu =  $SikapBayu * $nilaiSikap;
+            $KomunikasiBayu =  $KomunikasiBayu * $nilaiKomunikasi;
+        
+            // //Jumlah Hasil Bayu
+            $jumlahBayu = $TJPeranBayu + $TepatHadirBayu + $KeaktifanBayu + $InisiatifBayu + $SikapBayu + $KomunikasiBayu;
+        }
 
 
 
 
         //Tabel Regis
         getNilaiRegis($koneksi, $Periode);
-        $TJPeranRegis = $_POST['TJPeran'];
-        $TepatHadirRegis = $_POST['TepatHadir'];
-        $KeaktifanRegis =  $_POST['Keaktifan'];
-        $InisiatifRegis =  $_POST['Inisiatif'];
-        $SikapRegis =  $_POST['Sikap'];
-        $KomunikasiRegis =  $_POST['Komunikasi'];
-    
-        //Normalisasi Tabel Regis
-        $TJPeranRegis = $TJPeranRegis / $TJPeran;
-        $TepatHadirRegis = $TepatHadirRegis / $TepatHadir;
-        $KeaktifanRegis = $KeaktifanRegis / $Keaktifan;
-        $InisiatifRegis = $InisiatifRegis / $Inisiatif;
-        $SikapRegis = $SikapRegis / $Sikap;
-        $KomunikasiRegis = $KomunikasiRegis / $Komunikasi;
-    
-        //Normalisasi * Bobot Tabel Regis
-        $TJPeranRegis = $TJPeranRegis * $nilaiTJPeran;
-        $TepatHadirRegis = $TepatHadirRegis * $nilaiTepatHadir;
-        $KeaktifanRegis =  $KeaktifanRegis * $nilaiKeaktifan;
-        $InisiatifRegis =  $InisiatifRegis * $nilaiInisiatif;
-        $SikapRegis =  $SikapRegis * $nilaiSikap;
-        $KomunikasiRegis =  $KomunikasiRegis * $nilaiKomunikasi;
-    
-        // //Jumlah Hasil Regis
-        $jumlahRegis = $TJPeranRegis + $TepatHadirRegis + $KeaktifanRegis + $InisiatifRegis + $SikapRegis + $KomunikasiRegis;
-
+        if(empty($_POST['TJPeranRegis']) AND empty($_POST['TepatHadirRegis']) AND empty($_POST['KeaktifanRegis']) AND empty($_POST['InisiatifRegis'])
+        AND empty($_POST['SikapRegis']) AND empty($_POST['KomunikasiRegis'])){
+            $jumlahRegis = 0;
+        }else{
+            $TJPeranRegis = $_POST['TJPeranRegis'];
+            $TepatHadirRegis = $_POST['TepatHadirRegis'];
+            $KeaktifanRegis =  $_POST['KeaktifanRegis'];
+            $InisiatifRegis =  $_POST['InisiatifRegis'];
+            $SikapRegis =  $_POST['SikapRegis'];
+            $KomunikasiRegis =  $_POST['KomunikasiRegis'];
+        
+            //Normalisasi Tabel Regis
+            $TJPeranRegis = $TJPeranRegis / $TJPeran;
+            $TepatHadirRegis = $TepatHadirRegis / $TepatHadir;
+            $KeaktifanRegis = $KeaktifanRegis / $Keaktifan;
+            $InisiatifRegis = $InisiatifRegis / $Inisiatif;
+            $SikapRegis = $SikapRegis / $Sikap;
+            $KomunikasiRegis = $KomunikasiRegis / $Komunikasi;
+        
+            //Normalisasi * Bobot Tabel Regis
+            $TJPeranRegis = $TJPeranRegis * $nilaiTJPeran;
+            $TepatHadirRegis = $TepatHadirRegis * $nilaiTepatHadir;
+            $KeaktifanRegis =  $KeaktifanRegis * $nilaiKeaktifan;
+            $InisiatifRegis =  $InisiatifRegis * $nilaiInisiatif;
+            $SikapRegis =  $SikapRegis * $nilaiSikap;
+            $KomunikasiRegis =  $KomunikasiRegis * $nilaiKomunikasi;
+        
+            // //Jumlah Hasil Regis
+            $jumlahRegis = $TJPeranRegis + $TepatHadirRegis + $KeaktifanRegis + $InisiatifRegis + $SikapRegis + $KomunikasiRegis;
+        }
 
 
 
 
         //Tabel Revaldy
         getNilaiRevaldy($koneksi, $Periode);
-        $TJPeranRevaldy = $_POST['TJPeran'];
-        $TepatHadirRevaldy = $_POST['TepatHadir'];
-        $KeaktifanRevaldy =  $_POST['Keaktifan'];
-        $InisiatifRevaldy =  $_POST['Inisiatif'];
-        $SikapRevaldy =  $_POST['Sikap'];
-        $KomunikasiRevaldy =  $_POST['Komunikasi'];
-    
-        //Normalisasi Tabel Revaldy
-        $TJPeranRevaldy = $TJPeranRevaldy / $TJPeran;
-        $TepatHadirRevaldy = $TepatHadirRevaldy / $TepatHadir;
-        $KeaktifanRevaldy = $KeaktifanRevaldy / $Keaktifan;
-        $InisiatifRevaldy = $InisiatifRevaldy / $Inisiatif;
-        $SikapRevaldy = $SikapRevaldy / $Sikap;
-        $KomunikasiRevaldy = $KomunikasiRevaldy / $Komunikasi;
-    
-        //Normalisasi * Bobot Tabel Revaldy
-        $TJPeranRevaldy = $TJPeranRevaldy * $nilaiTJPeran;
-        $TepatHadirRevaldy = $TepatHadirRevaldy * $nilaiTepatHadir;
-        $KeaktifanRevaldy =  $KeaktifanRevaldy * $nilaiKeaktifan;
-        $InisiatifRevaldy =  $InisiatifRevaldy * $nilaiInisiatif;
-        $SikapRevaldy =  $SikapRevaldy * $nilaiSikap;
-        $KomunikasiRevaldy =  $KomunikasiRevaldy * $nilaiKomunikasi;
-    
-        // //Jumlah Hasil Revaldy
-        $jumlahRevaldy = $TJPeranRevaldy + $TepatHadirRevaldy + $KeaktifanRevaldy + $InisiatifRevaldy + $SikapRevaldy + $KomunikasiRevaldy;
-
+        if(empty($_POST['TJPeranRevaldy']) AND empty($_POST['TepatHadirRevaldy']) AND empty($_POST['KeaktifanRevaldy']) AND empty($_POST['InisiatifRevaldy'])
+        AND empty($_POST['SikapRevaldy']) AND empty($_POST['KomunikasiRevaldy'])){
+            $jumlahRevaldy = 0;
+        }else{
+            $TJPeranRevaldy = $_POST['TJPeranRevaldy'];
+            $TepatHadirRevaldy = $_POST['TepatHadirRevaldy'];
+            $KeaktifanRevaldy =  $_POST['KeaktifanRevaldy'];
+            $InisiatifRevaldy =  $_POST['InisiatifRevaldy'];
+            $SikapRevaldy =  $_POST['SikapRevaldy'];
+            $KomunikasiRevaldy =  $_POST['KomunikasiRevaldy'];
+        
+            //Normalisasi Tabel Revaldy
+            $TJPeranRevaldy = $TJPeranRevaldy / $TJPeran;
+            $TepatHadirRevaldy = $TepatHadirRevaldy / $TepatHadir;
+            $KeaktifanRevaldy = $KeaktifanRevaldy / $Keaktifan;
+            $InisiatifRevaldy = $InisiatifRevaldy / $Inisiatif;
+            $SikapRevaldy = $SikapRevaldy / $Sikap;
+            $KomunikasiRevaldy = $KomunikasiRevaldy / $Komunikasi;
+        
+            //Normalisasi * Bobot Tabel Revaldy
+            $TJPeranRevaldy = $TJPeranRevaldy * $nilaiTJPeran;
+            $TepatHadirRevaldy = $TepatHadirRevaldy * $nilaiTepatHadir;
+            $KeaktifanRevaldy =  $KeaktifanRevaldy * $nilaiKeaktifan;
+            $InisiatifRevaldy =  $InisiatifRevaldy * $nilaiInisiatif;
+            $SikapRevaldy =  $SikapRevaldy * $nilaiSikap;
+            $KomunikasiRevaldy =  $KomunikasiRevaldy * $nilaiKomunikasi;
+        
+            // //Jumlah Hasil Revaldy
+            $jumlahRevaldy = $TJPeranRevaldy + $TepatHadirRevaldy + $KeaktifanRevaldy + $InisiatifRevaldy + $SikapRevaldy + $KomunikasiRevaldy;
+        }
 
 
 
 
         //Tabel Rangga
         getNilaiRangga($koneksi, $Periode);
-        $TJPeranRangga = $_POST['TJPeran'];
-        $TepatHadirRangga = $_POST['TepatHadir'];
-        $KeaktifanRangga =  $_POST['Keaktifan'];
-        $InisiatifRangga =  $_POST['Inisiatif'];
-        $SikapRangga =  $_POST['Sikap'];
-        $KomunikasiRangga =  $_POST['Komunikasi'];
-    
-        //Normalisasi Tabel Rangga
-        $TJPeranRangga = $TJPeranRangga / $TJPeran;
-        $TepatHadirRangga = $TepatHadirRangga / $TepatHadir;
-        $KeaktifanRangga = $KeaktifanRangga / $Keaktifan;
-        $InisiatifRangga = $InisiatifRangga / $Inisiatif;
-        $SikapRangga = $SikapRangga / $Sikap;
-        $KomunikasiRangga = $KomunikasiRangga / $Komunikasi;
-    
-        //Normalisasi * Bobot Tabel Rangga
-        $TJPeranRangga = $TJPeranRangga * $nilaiTJPeran;
-        $TepatHadirRangga = $TepatHadirRangga * $nilaiTepatHadir;
-        $KeaktifanRangga =  $KeaktifanRangga * $nilaiKeaktifan;
-        $InisiatifRangga =  $InisiatifRangga * $nilaiInisiatif;
-        $SikapRangga =  $SikapRangga * $nilaiSikap;
-        $KomunikasiRangga =  $KomunikasiRangga * $nilaiKomunikasi;
-    
-        // //Jumlah Hasil Rangga
-        $jumlahRangga = $TJPeranRangga + $TepatHadirRangga + $KeaktifanRangga + $InisiatifRangga + $SikapRangga + $KomunikasiRangga;
-    
+        if(empty($_POST['TJPeranRangga']) AND empty($_POST['TepatHadirRangga']) AND empty($_POST['KeaktifanRangga']) AND empty($_POST['InisiatifRangga'])
+        AND empty($_POST['SikapRangga']) AND empty($_POST['KomunikasiRangga'])){
+            $jumlahRangga = 0;
+        }else{
+            $TJPeranRangga = $_POST['TJPeranRangga'];
+            $TepatHadirRangga = $_POST['TepatHadirRangga'];
+            $KeaktifanRangga =  $_POST['KeaktifanRangga'];
+            $InisiatifRangga =  $_POST['InisiatifRangga'];
+            $SikapRangga =  $_POST['SikapRangga'];
+            $KomunikasiRangga =  $_POST['KomunikasiRangga'];
+        
+            //Normalisasi Tabel Rangga
+            $TJPeranRangga = $TJPeranRangga / $TJPeran;
+            $TepatHadirRangga = $TepatHadirRangga / $TepatHadir;
+            $KeaktifanRangga = $KeaktifanRangga / $Keaktifan;
+            $InisiatifRangga = $InisiatifRangga / $Inisiatif;
+            $SikapRangga = $SikapRangga / $Sikap;
+            $KomunikasiRangga = $KomunikasiRangga / $Komunikasi;
+        
+            //Normalisasi * Bobot Tabel Rangga
+            $TJPeranRangga = $TJPeranRangga * $nilaiTJPeran;
+            $TepatHadirRangga = $TepatHadirRangga * $nilaiTepatHadir;
+            $KeaktifanRangga =  $KeaktifanRangga * $nilaiKeaktifan;
+            $InisiatifRangga =  $InisiatifRangga * $nilaiInisiatif;
+            $SikapRangga =  $SikapRangga * $nilaiSikap;
+            $KomunikasiRangga =  $KomunikasiRangga * $nilaiKomunikasi;
+        
+            // //Jumlah Hasil Rangga
+            $jumlahRangga = $TJPeranRangga + $TepatHadirRangga + $KeaktifanRangga + $InisiatifRangga + $SikapRangga + $KomunikasiRangga;
+        }
 
 
-    
-    
+
+
+
         //Hasil
         $nilaiMax = MAX($jumlahZikri, $jumlahFillah, $jumlahMeilizka, $jumlahKendanan, $jumlahAlya, $jumlahBayu, $jumlahRegis, $jumlahRevaldy, $jumlahRangga);
-    
+        
         if($nilaiMax == $jumlahZikri){
-            $nama = "Muara Zikri";
+            $nama = "Zikri";
         }else if($nilaiMax == $jumlahFillah){
-            $nama = "Frai";
+            $nama = "Fillah";
         }
         else if($nilaiMax == $jumlahMeilizka){
-            $nama = "Ray";
+            $nama = "Meilizka";
         }
         else if($nilaiMax == $jumlahKendanan){
-            $nama = "Mark";
+            $nama = "Kendanan";
         }
         else if($nilaiMax == $jumlahAlya){
-            $nama = "Mark";
+            $nama = "Alya";
         }
         else if($nilaiMax == $jumlahBayu){
-            $nama = "Mark";
+            $nama = "Bayu";
         }
         else if($nilaiMax == $jumlahRegis){
-            $nama = "Mark";
+            $nama = "Regis";
         }
         else if($nilaiMax == $jumlahRevaldy){
-            $nama = "Mark";
+            $nama = "Revaldy";
         }
         else if($nilaiMax == $jumlahRangga){
-            $nama = "Mark";
+            $nama = "Rangga";
         }
         $_POST['nama'] = $nama;
         $_POST['nilai'] = $nilaiMax;

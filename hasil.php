@@ -64,7 +64,7 @@ include "lihatNilaiProses.php";
                                     <br />
                                     Poin
                                     <br />
-                                    <?php echo $nilai; ?>
+                                    <?php echo round($nilai,2);?>
                                     <br /><br />
                                     Peringkat 1
                                 </p>
@@ -76,7 +76,7 @@ include "lihatNilaiProses.php";
                     <div class="card bg-light mb-3" style="max-width: 100%; height:40rem">
                         <div class="card-body">
                             <div class="innerWrap">
-                                <h2 class="card-title">Anggota Terbaik<br />2021</h2>
+                                <h2 class="card-title">Anggota Terbaik<br />2022</h2>
                                 <?php if($nilai == 0){
                                 ?>
                                 <img src="gambar/faceIcon.png" alt="">
