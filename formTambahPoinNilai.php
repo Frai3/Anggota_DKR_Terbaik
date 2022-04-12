@@ -10,78 +10,71 @@
 ?>
 <!DOCTYPE html>
 <html>
-    <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+<head>
 
-    <style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    body {
-        background-image: url('gambar/Background.PNG');
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: 100% 100%;
-    }
+    <!-- Font Awesome dan CSS Bootstrap -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 
-    .wrapKonten{
-        padding: 10px 0px 0 300px;
-    }
+    <!-- Title dan Gambar di Halaman File -->
+    <link rel="icon" href="gambar/DKR.png">
+    <title>DKR Kelapa Dua</title>
 
-    .formRegister {
-    align-items: center;
-    width: 500px;
-    height: 500px;
-    background: #F05959;
-    border-radius: 59px;
-    font-size: 15pt;
-    }
+</head>
 
-    .formRegister form button {
-        width: 100px;
-    }
-
-    </style>
-    </head>
-
-    <body>
-        <div class='font'>
-            <div class='col-9'>
-                <p>Poin Penilaian</p>
-            </div>
-            <div class='col-3'>
-                <img src='gambar/DKR.PNG' />
-            </div>
+<body>
+    
+<div class="row">
+        <div class="col-5">
+            <p class="font">Registrasi</p>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="wrapKonten">
-                    <div class="formRegister">
-                        <form action="editPoinProses" method="get">
-                            <div class="form-group">
-                                <label for="poinNilai">Poin Penilaian</label>
-                                <input type="text" class="form-control" name="poinNilai" placeholder="Masukkan Nilai">
-                            </div>
-                            <div class="form-group">
-                                <select style="width: 100%" name="cmbAction">
-                                    <option value=" ">Isi Keterangan</option>
-                                    <?php
-                                    $pilihan = array("Tambah", "Hapus");
-                                    foreach ($pilihan as $nilai) {
-                                        if ($dataLevel==$nilai) {
-                                            $cek="selected";
-                                        } else {
-                                            $cek = "";
-                                        }
-                                        echo "<option value='$nilai'  $cek>$nilai</option>";
+        <div class="col-5 d-flex justify-content-end p-5">
+             <img src='gambar/DKR.PNG'  style="width: 200px;"/>
+        </div>
+        <div class="col-2">
+    </div>
+    
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8" style="border-radius: 10px; background-color: #FA8072;">
+                <h2 class="pt-5 text-center text-white">Tambah Poin Penilaian</h2>
+                <div class="p-5">
+                    <form action="editPoinProses" method="get">
+                        <div class="form-group">
+                            <label for="poinNilai">Poin Penilaian</label>
+                            <input type="text" class="form-control" name="poinNilai" placeholder="Masukkan Nilai">
+                        </div>
+                        <div class="form-group">
+                            <select style="width: 100%" name="cmbAction">
+                                <option value=" ">Isi Keterangan</option>
+                                <?php
+                                $pilihan = array("Tambah", "Hapus");
+                                foreach ($pilihan as $nilai) {
+                                    if ($dataLevel==$nilai) {
+                                        $cek="selected";
+                                    } else {
+                                        $cek = "";
                                     }
-                                    ?>
-                                </select>
-                            </div>
+                                    echo "<option value='$nilai'  $cek>$nilai</option>";
+                                }
+                                ?>
+                            </select>
+                        </div>
                         <button type="submit" name="input" value="Submit" class="btn btn-primary">Input</button>
-                    </div>
+                    </form>
                 </div>
             </div>
+            <div class="col-2"></div>
         </div>
-    </body> 
+    </div>
+    <br />
+    <br />
+
+</body> 
 </html>

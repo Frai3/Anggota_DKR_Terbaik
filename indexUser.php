@@ -10,95 +10,59 @@ if (!isset($_SESSION)) {
 ?>
 <!DOCTYPE html>
 <html>
-    <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+<head>
 
-    <style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    body {
-        background-image: url('gambar/loginBackground.PNG');
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: 100% 100%;
-    }
+    <!-- Font Awesome dan CSS Bootstrap -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 
-    .wrapperCard {
-        position: absolute;
-        width: 393px;
-        height: 539px;
-        left: 40%;
-        top: 28%;
+    <!-- Title dan Gambar di Halaman File -->
+    <link rel="icon" href="gambar/DKR.png">
+    <title>DKR Kelapa Dua</title>
 
-        background: #C4C4C4;
-        border-radius: 50px;
-    }
+</head>
 
-    .wrapperButton{
-        position: absolute;
-        width: 260px;
-        background: #FC5858;
-        border-radius: 10px;
-        height: 40px;
-
-        font-family: Kalam;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 30pt;
-        line-height: 130%;
-        text-align: center;
-        color: black;
-        border: 3px solid #212121;
-        text-shadow: 0px 4px 40px rgba(255, 255, 255, 0.4);
-    }
-
-    .judul{
-        position: absolute;
-        width: 279px;
-        height: 45px;
-        left: 15%;
-        top: 10%;
-
-        font-family: Kalam;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 45px;
-        line-height: 110%;
-        text-align: center;
-
-        text-shadow: 0px 4px 40px rgba(255, 255, 255, 0.4);
-    }
-
-    .btnDark{
-        position: absolute;
-        height: 60px;
-        width: 150px;
-        left: 85%;
-        top: 90%;
-        line-height: 300%;
-        text-align: center;
-        color: black;
-        font-family: Kalam;
-        font-style: normal;
-        font-weight: bold;
-        background: #FC5858;
-        border-radius: 10px;
-    }
-
-    </style>
-    </head>
-
-    <body>
-        <div class="container">
-            <div class="row">
-                <div class="wrapperCard">
-                    <p class="judul">User</p>
-                    <a href="formNilai" class="btn wrapperButton" style="height: 70px; left: 18%; top: 35%">Nilai</a>
-                    <a href="formEditData" class="btn wrapperButton" style="height: 70px; left: 18%; top: 60%">Edit Data</a>
+<body>
+    <div class="row">
+        <div class="col-5">
+            <p class="font">Dewan Kerja Ranting <br /> Kelapa Dua</p>
+        </div>
+        <div class="col-5 d-flex justify-content-end p-5">
+             <img src='gambar/DKR.PNG'  style="width: 200px;"/>
+        </div>
+        <div class="col-2">
+        </div>
+    </div>
+    
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4 bg-secondary" style="border-radius: 10px">
+                <h2 class="pt-5 text-center text-white">Administrator</h2>
+                <div class="p-5">
+                    <br />
+                    <a href="formNilai" class="p-3 nav justify-content-center btn btn-dark btnIndex">
+                    Nilai
+                    </a>
+                    <br />
+                    <a href="formEditData" class="p-3 nav justify-content-center btn btn-dark btnIndex">
+                    Edit Data
+                    </a>
+                    <br />
                 </div>
             </div>
+            <div class="col-4"></div>
         </div>
-        <a href="logout" class="btn btnDark btn-dark">Logout</a>
-    </body> 
+        <br />
+        <br />
+        <a href="logout" class="p-3 btnIndex btn btn-dark">Logout</a>
+    </div>
+    <br />
+    <br />
+</body> 
 </html>

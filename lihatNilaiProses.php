@@ -4,20 +4,46 @@
         include 'getNilai.php';
         $Periode = date('Y');
         $koneksi = mysqli_connect("localhost","root","", "dkr");
-    
-        //Mendapatkan Nilai SUM
-        getNilaiTJPeran($koneksi, $Periode);
-        $TJPeran = sqrt($_POST['TJPeran']);
-        getNilaiTepatHadir($koneksi, $Periode);
-        $TepatHadir = sqrt($_POST['TepatHadir']);
-        getNilaiKeaktifan($koneksi, $Periode);
-        $Keaktifan = sqrt($_POST['Keaktifan']);
-        getNilaiInisiatif($koneksi, $Periode);
-        $Inisiatif = sqrt($_POST['Inisiatif']);
-        getNilaiSikap($koneksi, $Periode);
-        $Sikap = sqrt($_POST['Sikap']);
-        getNilaiKomunikasi($koneksi, $Periode);
-        $Komunikasi = sqrt($_POST['Komunikasi']);
+        
+        getNilaiZikri($koneksi, $Periode);
+        getNilaiFillah($koneksi, $Periode);
+        getNilaiMeilizka($koneksi, $Periode);
+        getNilaiKendanan($koneksi, $Periode);
+        getNilaiAlya($koneksi, $Periode);
+        getNilaiBayu($koneksi, $Periode);
+        getNilaiRegis($koneksi, $Periode);
+        getNilaiRevaldy($koneksi, $Periode);
+        getNilaiRangga($koneksi, $Periode);
+
+
+        //SQRT adalah akar pangkat 2
+        //POW adalah pangkat
+
+        //SQRT(SUM(TJPeran^2))
+        $TJPeran = SQRT(POW($_POST['TJPeranZikri'],2) + POW($_POST['TJPeranFillah'],2) + POW($_POST['TJPeranMeilizka'],2) + POW($_POST['TJPeranKendanan'],2) + POW($_POST['TJPeranAlya'],2)
+                    + POW($_POST['TJPeranBayu'],2) + POW($_POST['TJPeranRegis'],2) + POW($_POST['TJPeranRevaldy'],2) + POW($_POST['TJPeranRangga'],2));
+
+        //SQRT(SUM(TepatHadir^2))
+        $TepatHadir = SQRT(POW($_POST['TepatHadirZikri'],2) + POW($_POST['TepatHadirFillah'],2) + POW($_POST['TepatHadirMeilizka'],2) + POW($_POST['TepatHadirKendanan'],2) + POW($_POST['TepatHadirAlya'],2)
+                    + POW($_POST['TepatHadirBayu'],2) + POW($_POST['TepatHadirRegis'],2) + POW($_POST['TepatHadirRevaldy'],2) + POW($_POST['TepatHadirRangga'],2));
+        
+        //SQRT(SUM(Inisiatif^2))
+        $Inisiatif = SQRT(POW($_POST['InisiatifZikri'],2) + POW($_POST['InisiatifFillah'],2) + POW($_POST['InisiatifMeilizka'],2) + POW($_POST['InisiatifKendanan'],2) + POW($_POST['InisiatifAlya'],2)
+                    + POW($_POST['InisiatifBayu'],2) + POW($_POST['InisiatifRegis'],2) + POW($_POST['InisiatifRevaldy'],2) + POW($_POST['InisiatifRangga'],2));
+
+        //SQRT(SUM(Sikap^2))
+        $Sikap = SQRT(POW($_POST['SikapZikri'],2) + POW($_POST['SikapFillah'],2) + POW($_POST['SikapMeilizka'],2) + POW($_POST['SikapKendanan'],2) + POW($_POST['SikapAlya'],2)
+                    + POW($_POST['SikapBayu'],2) + POW($_POST['SikapRegis'],2) + POW($_POST['SikapRevaldy'],2) + POW($_POST['SikapRangga'],2));
+
+        //SQRT(SUM(Keaktifan^2))
+        $Keaktifan = SQRT(POW($_POST['KeaktifanZikri'],2) + POW($_POST['KeaktifanFillah'],2) + POW($_POST['KeaktifanMeilizka'],2) + POW($_POST['KeaktifanKendanan'],2) + POW($_POST['KeaktifanAlya'],2)
+                    + POW($_POST['KeaktifanBayu'],2) + POW($_POST['KeaktifanRegis'],2) + POW($_POST['KeaktifanRevaldy'],2) + POW($_POST['KeaktifanRangga'],2));
+
+        //SQRT(SUM(Komunikasi^2))
+        $Komunikasi = SQRT(POW($_POST['KomunikasiZikri'],2) + POW($_POST['KomunikasiFillah'],2) + POW($_POST['KomunikasiMeilizka'],2) + POW($_POST['KomunikasiKendanan'],2) + POW($_POST['KomunikasiAlya'],2)
+                    + POW($_POST['KomunikasiBayu'],2) + POW($_POST['KomunikasiRegis'],2) + POW($_POST['KomunikasiRevaldy'],2) + POW($_POST['KomunikasiRangga'],2));
+
+
 
         if($TJPeran != 0){
         //Bobot nilai
@@ -33,7 +59,6 @@
 
 
         //Tabel Zikri
-        getNilaiZikri($koneksi, $Periode);
         if(empty($_POST['TJPeranZikri']) AND empty($_POST['TepatHadirZikri']) AND empty($_POST['KeaktifanZikri']) AND empty($_POST['InisiatifZikri'])
         AND empty($_POST['SikapZikri']) AND empty($_POST['KomunikasiZikri'])){
             $jumlahZikri = 0;
@@ -72,7 +97,7 @@
     
     
         //Tabel Fillah
-        getNilaiFillah($koneksi, $Periode);
+        // getNilaiFillah($koneksi, $Periode);
         if(empty($_POST['TJPeranFillah']) AND empty($_POST['TepatHadirFillah']) AND empty($_POST['KeaktifanFillah']) AND empty($_POST['InisiatifFillah'])
         AND empty($_POST['SikapFillah']) AND empty($_POST['KomunikasiFillah'])){
             $jumlahFillah = 0;
@@ -108,7 +133,7 @@
     
         
         //Tabel Meilizka
-        getNilaiMeilizka($koneksi, $Periode);
+        // getNilaiMeilizka($koneksi, $Periode);
         if(empty($_POST['TJPeranMeilizka']) AND empty($_POST['TepatHadirMeilizka']) AND empty($_POST['KeaktifanMeilizka']) AND empty($_POST['InisiatifMeilizka'])
         AND empty($_POST['SikapMeilizka']) AND empty($_POST['KomunikasiMeilizka'])){
             $jumlahMeilizka = 0;
@@ -146,7 +171,7 @@
 
 
         //Tabel Kendanan
-        getNilaiKendanan($koneksi, $Periode);
+        // getNilaiKendanan($koneksi, $Periode);
         if(empty($_POST['TJPeranKendanan']) AND empty($_POST['TepatHadirKendanan']) AND empty($_POST['KeaktifanKendanan']) AND empty($_POST['InisiatifKendanan'])
         AND empty($_POST['SikapKendanan']) AND empty($_POST['KomunikasiKendanan'])){
             $jumlahKendanan = 0;
@@ -182,7 +207,7 @@
 
 
         //Tabel Alya
-        getNilaiAlya($koneksi, $Periode);
+        // getNilaiAlya($koneksi, $Periode);
         if(empty($_POST['TJPeranAlya']) AND empty($_POST['TepatHadirAlya']) AND empty($_POST['KeaktifanAlya']) AND empty($_POST['InisiatifAlya'])
         AND empty($_POST['SikapAlya']) AND empty($_POST['KomunikasiAlya'])){
             $jumlahAlya = 0;
@@ -218,7 +243,7 @@
 
 
         //Tabel Bayu
-        getNilaiBayu($koneksi, $Periode);
+        // getNilaiBayu($koneksi, $Periode);
         if(empty($_POST['TJPeranBayu']) AND empty($_POST['TepatHadirBayu']) AND empty($_POST['KeaktifanBayu']) AND empty($_POST['InisiatifBayu'])
         AND empty($_POST['SikapBayu']) AND empty($_POST['KomunikasiBayu'])){
             $jumlahBayu = 0;
@@ -254,7 +279,7 @@
 
 
         //Tabel Regis
-        getNilaiRegis($koneksi, $Periode);
+        // getNilaiRegis($koneksi, $Periode);
         if(empty($_POST['TJPeranRegis']) AND empty($_POST['TepatHadirRegis']) AND empty($_POST['KeaktifanRegis']) AND empty($_POST['InisiatifRegis'])
         AND empty($_POST['SikapRegis']) AND empty($_POST['KomunikasiRegis'])){
             $jumlahRegis = 0;
@@ -290,7 +315,7 @@
 
 
         //Tabel Revaldy
-        getNilaiRevaldy($koneksi, $Periode);
+        // getNilaiRevaldy($koneksi, $Periode);
         if(empty($_POST['TJPeranRevaldy']) AND empty($_POST['TepatHadirRevaldy']) AND empty($_POST['KeaktifanRevaldy']) AND empty($_POST['InisiatifRevaldy'])
         AND empty($_POST['SikapRevaldy']) AND empty($_POST['KomunikasiRevaldy'])){
             $jumlahRevaldy = 0;
@@ -326,7 +351,7 @@
 
 
         //Tabel Rangga
-        getNilaiRangga($koneksi, $Periode);
+        // getNilaiRangga($koneksi, $Periode);
         if(empty($_POST['TJPeranRangga']) AND empty($_POST['TepatHadirRangga']) AND empty($_POST['KeaktifanRangga']) AND empty($_POST['InisiatifRangga'])
         AND empty($_POST['SikapRangga']) AND empty($_POST['KomunikasiRangga'])){
             $jumlahRangga = 0;
@@ -397,6 +422,7 @@
         $_POST['nama'] = "Nilai Belum Ditentukan";
         $_POST['nilai'] = 0;
     }
+    $_POST['TJPeran'] = $TJPeran;
 }
 
 ?>

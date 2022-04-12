@@ -1,0 +1,67 @@
+body {
+    background-image: url('gambar/Background.PNG');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+
+/* Halaman Index */
+
+.btn:hover,
+.btn:focus {
+    color: #F0F8FF;
+    outline: 0;
+}
+
+.third {
+    border-color: #3498db;
+    color: #F0F8FF;
+    box-shadow: 0 0 40px 40px #000000 inset, 0 0 0 0 #F0F8FF;
+    transition: all 150ms ease-in-out;
+}
+
+.third:hover {
+    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+}
+
+.backgroundIndex img {
+    position: relative;
+    z-index: 1;
+}
+
+.backgroundIndex p {
+    font-family: Kalam;
+    font-style: normal;
+    font-weight: bold;
+    position: absolute;
+    color: #4B0082;
+    z-index: 2;
+    font-size: 100px;
+    line-height: 100%;
+    padding: 350px 0 0 100px;
+}
+
+
+/* Header Halaman Index User, Admin */
+
+.font {
+    font-family: Kalam;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 100%;
+    padding: 100px 0 0 150px;
+}
+
+.btnIndex {
+    background-color: #FA8072;
+    border-radius: 100px;
+    border-style: solid;
+    border-width: 2px;
+}
+
+.wrapForm {
+    border-radius: 10px;
+    background-color: #FA8072;
+}

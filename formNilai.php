@@ -17,51 +17,40 @@ $ID = $_SESSION['ID_User'];
 ?>
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+<head>
 
-        <style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body {
-            background-image: url('gambar/Background.PNG');
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: 100% 100%;
-        }
+    <!-- Font Awesome dan CSS Bootstrap -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 
-        .formRegister {
-        align-items: center;
-        width: 1000px;
-        height: 800px;
-        padding: 100px 100px 0 100px;
-        background: #F05959;
-        border-radius: 59px;
-        font-size: 15pt;
-        }
+    <!-- Title dan Gambar di Halaman File -->
+    <link rel="icon" href="gambar/DKR.png">
+    <title>DKR Kelapa Dua</title>
 
-        .formRegister form button {
-            width: 100px;
-        }
+</head>
 
-
-        </style>
-    </head>
-
-    <body>
-        <div class='font'>
-            <div class='col-9'>
-                <p>Nilai</p>
-            </div>
-            <div class='col-3' style="padding-left:150px">
-                <img src='gambar/DKR.PNG' />
-            </div>
+<body>
+    
+    <div class="row">
+        <div class="col-5">
+            <p class="font">Registrasi</p>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="judul">Biodata</div>
-                <div class="formRegister">
+        <div class="col-5 d-flex justify-content-end p-5">
+             <img src='gambar/DKR.PNG'  style="width: 200px;"/>
+        </div>
+        <div class="col-2">
+    </div>
+    
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8" style="border-radius: 10px; background-color: #FA8072;">
+                <div class="p-5">
                     <form action="inputNilaiProses" method="get">    
                         <div class="form-group">
                             <label for="Nama_User">Nama</label>
@@ -105,6 +94,10 @@ $ID = $_SESSION['ID_User'];
                     </form>
                 </div>
             </div>
+            <div class="col-2"></div>
         </div>
-    </body> 
+    </div>
+    <br />
+    <br />
+</body> 
 </html>
