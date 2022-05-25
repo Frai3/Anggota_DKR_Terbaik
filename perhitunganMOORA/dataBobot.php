@@ -34,104 +34,111 @@ ini_set('memory_limit', '64M');
 </div>
 
 <div class="container">
-<div class="row text-center">
-    <table class="table">
-        <thead class="thead-dark">
-            <tr>
-                <th>Nama</th>
-                <th>TJPeran</th>
-                <th>TepatHadir</th>
-                <th>Keaktifan</th>
-                <th>Inisiatif</th>
-                <th>Sikap</th>
-                <th>Komunikasi</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><input type="text" class="form-control" name="" value="Muara Zikri" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $TJPeranZikri; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $TepatHadirZikri; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $KeaktifanZikri; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $InisiatifZikri; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $SikapZikri; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $KomunikasiZikri; ?>" readonly></td>
-            </tr>
-            <tr>
-                <td><input type="text" class="form-control" name="" value="Fillah Munaya" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $TJPeranFillah; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $TepatHadirFillah; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $KeaktifanFillah; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $InisiatifFillah; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $SikapFillah; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $KomunikasiFillah; ?>" readonly></td>
-            </tr>
-            <tr>
-                <td><input type="text" class="form-control" name="" value="Meilizka Dwie" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $TJPeranMeilizka; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $TepatHadirMeilizka; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $KeaktifanMeilizka; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $InisiatifMeilizka; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $SikapMeilizka; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $KomunikasiMeilizka; ?>" readonly></td>
-            </tr>    
-            <tr>
-                <td><input type="text" class="form-control" name="" value="Kendanan Wherespati" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $TJPeranKendanan; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $TepatHadirKendanan; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $KeaktifanKendanan; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $InisiatifKendanan; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $SikapKendanan; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $KomunikasiKendanan; ?>" readonly></td>
-            </tr>
-            <tr>
-                <td><input type="text" class="form-control" name="" value="Alya Dani" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $TJPeranAlya; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $TepatHadirAlya; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $KeaktifanAlya; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $InisiatifAlya; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $SikapAlya; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $KomunikasiAlya; ?>" readonly></td>
-            </tr>
-            <tr>
-                <td><input type="text" class="form-control" name="" value="Bayu Aryo" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $TJPeranBayu; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $TepatHadirBayu; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $KeaktifanBayu; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $InisiatifBayu; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $SikapBayu; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $KomunikasiBayu; ?>" readonly></td>
-            </tr>
-            <tr>
-                <td><input type="text" class="form-control" name="" value="Regis Revaldy" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $TJPeranRegis; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $TepatHadirRegis; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $KeaktifanRegis; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $InisiatifRegis; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $SikapRegis; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $KomunikasiRegis; ?>" readonly></td>
-            </tr>
-            <tr>
-                <td><input type="text" class="form-control" name="" value="Revaldy Putra" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $TJPeranRevaldy; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $TepatHadirRevaldy; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $KeaktifanRevaldy; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $InisiatifRevaldy; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $SikapRevaldy; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $KomunikasiRevaldy; ?>" readonly></td>
-            </tr>
-            <tr>
-                <td><input type="text" class="form-control" name="" value="Rangga Satria" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $TJPeranRangga; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $TepatHadirRangga; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $KeaktifanRangga; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $InisiatifRangga; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $SikapRangga; ?>" readonly></td>
-                <td><input type="text" class="form-control" name="" value="<?php echo $KomunikasiRangga; ?>" readonly></td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+    <div class="row text-center">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Nama</th>
+                    <th>TJPeran</th>
+                    <th>TepatHadir</th>
+                    <th>Keaktifan</th>
+                    <th>Inisiatif</th>
+                    <th>Sikap</th>
+                    <th>Komunikasi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" class="form-control" name="" value="Muara Zikri" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $TJPeranZikri; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $TepatHadirZikri; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $KeaktifanZikri; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $InisiatifZikri; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $SikapZikri; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $KomunikasiZikri; ?>" readonly></td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="form-control" name="" value="Fillah Munaya" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $TJPeranFillah; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $TepatHadirFillah; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $KeaktifanFillah; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $InisiatifFillah; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $SikapFillah; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $KomunikasiFillah; ?>" readonly></td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="form-control" name="" value="Meilizka Dwie" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $TJPeranMeilizka; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $TepatHadirMeilizka; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $KeaktifanMeilizka; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $InisiatifMeilizka; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $SikapMeilizka; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $KomunikasiMeilizka; ?>" readonly></td>
+                </tr>    
+                <tr>
+                    <td><input type="text" class="form-control" name="" value="Kendanan Wherespati" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $TJPeranKendanan; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $TepatHadirKendanan; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $KeaktifanKendanan; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $InisiatifKendanan; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $SikapKendanan; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $KomunikasiKendanan; ?>" readonly></td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="form-control" name="" value="Alya Dani" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $TJPeranAlya; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $TepatHadirAlya; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $KeaktifanAlya; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $InisiatifAlya; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $SikapAlya; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $KomunikasiAlya; ?>" readonly></td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="form-control" name="" value="Bayu Aryo" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $TJPeranBayu; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $TepatHadirBayu; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $KeaktifanBayu; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $InisiatifBayu; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $SikapBayu; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $KomunikasiBayu; ?>" readonly></td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="form-control" name="" value="Regis Revaldy" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $TJPeranRegis; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $TepatHadirRegis; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $KeaktifanRegis; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $InisiatifRegis; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $SikapRegis; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $KomunikasiRegis; ?>" readonly></td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="form-control" name="" value="Revaldy Putra" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $TJPeranRevaldy; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $TepatHadirRevaldy; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $KeaktifanRevaldy; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $InisiatifRevaldy; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $SikapRevaldy; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $KomunikasiRevaldy; ?>" readonly></td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="form-control" name="" value="Rangga Satria" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $TJPeranRangga; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $TepatHadirRangga; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $KeaktifanRangga; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $InisiatifRangga; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $SikapRangga; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $KomunikasiRangga; ?>" readonly></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>TJPeran = 20%</h3>
+    <h3>TepatHadir = 20%</h3>
+    <h3>Keaktifan = 15%</h3>
+    <h3>Inisiatif = 15%</h3>
+    <h3>Sikap = 20%</h3>
+    <h3>Komunikasi = 10%</h3>
 </div>
 <br />
 <br />
