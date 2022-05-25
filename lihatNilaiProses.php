@@ -45,7 +45,7 @@
 
 
 
-        if($TJPeran != 0){
+    if($TJPeran != 0){
         //Bobot nilai
         $nilaiTJPeran = 20/100;
         $nilaiTepatHadir = 20/100;
@@ -416,13 +416,18 @@
         else if($nilaiMax == $jumlahRangga){
             $nama = "Rangga";
         }
-        $_POST['nama'] = $nama;
-        $_POST['nilai'] = $nilaiMax;
+            $_POST['nama'] = $nama;
+            $_POST['nilai'] = $nilaiMax;
     }else{
         $_POST['nama'] = "Nilai Belum Ditentukan";
         $_POST['nilai'] = 0;
     }
     $_POST['TJPeran'] = $TJPeran;
+    
+    // echo $TJPeranAlya; //Jika ingin menampilkan nilai TJPeran
+    // echo $jumlahAlya;
 }
+
+hasilNilai(); //Jika ingin menampilkan nilai TJPeran
 
 ?>

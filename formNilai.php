@@ -38,7 +38,7 @@ $ID = $_SESSION['ID_User'];
     
     <div class="row">
         <div class="col-5">
-            <p class="font">Registrasi</p>
+            <p class="font">Penilaian</p>
         </div>
         <div class="col-5 d-flex justify-content-end p-5">
              <img src='gambar/DKR.PNG'  style="width: 200px;"/>
