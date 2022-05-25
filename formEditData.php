@@ -2,6 +2,11 @@
 if (!isset($_SESSION)) {
 
     session_start();
+    if(empty($_SESSION['Username'])){
+        echo "<script>alert('Anda Harus Login Terlebih Dahulu!');
+        window.location='login.php';
+        </script>";
+    }
 
 }
     $ID_User = $_SESSION['ID_User'];
@@ -35,7 +40,7 @@ if (!isset($_SESSION)) {
 
     <div class="row">
         <div class="col-5">
-            <p class="font">Registrasi</p>
+            <p class="font">Edit Data</p>
         </div>
         <div class="col-5 d-flex justify-content-end p-5">
              <img src='gambar/DKR.PNG'  style="width: 200px;"/>
