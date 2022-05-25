@@ -56,8 +56,8 @@ $ID = $_SESSION['ID_User'];
                             <label for="Nama_User">Nama</label>
                             <select style="width: 100%" name="cmbNama">
                             <?php
-                                $queryEditData = mysqli_query($koneksi, "SELECT Nama_User FROM user WHERE ID_Akses <>
-                                (SELECT ID_Akses FROM akses WHERE Username = '$username')");
+                                $queryEditData = mysqli_query($koneksi, "SELECT Nama_User FROM user WHERE ID_User <> '$ID'");
+                                // ID_Akses <> (SELECT ID_Akses FROM akses WHERE Username = '$username')");
                                 while($data = mysqli_fetch_array($queryEditData)){
                              ?>
                             <option value="<?php echo $data['Nama_User'];?>"><?php echo $data['Nama_User'];?></option> 

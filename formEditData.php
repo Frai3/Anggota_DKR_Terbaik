@@ -4,11 +4,12 @@ if (!isset($_SESSION)) {
     session_start();
 
 }
+    $ID_User = $_SESSION['ID_User'];
     $Username = $_SESSION['Username'];
 
     include 'getData.php';
 
-    getData($Username);
+    getData($Username, $ID_User);
 
 ?>
 <!DOCTYPE html>

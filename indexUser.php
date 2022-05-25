@@ -43,7 +43,7 @@ if (!isset($_SESSION)) {
         <div class="row">
             <div class="col-4"></div>
             <div class="col-4 bg-secondary" style="border-radius: 10px">
-                <h2 class="pt-5 text-center text-white">Administrator</h2>
+                <h2 class="pt-5 text-center text-white">User</h2>
                 <div class="p-5">
                     <br />
                     <a href="formNilai" class="p-3 nav justify-content-center btn btn-dark btnIndex">

@@ -1,9 +1,9 @@
  <?php
 
- 	function getData($Username){
+ 	function getData($Username, $ID_User){
 	 	include 'koneksi.php';
 		
-	    $queryEditData = mysqli_query($koneksi, "SELECT * FROM user u, akses a WHERE Username='$Username' and a.ID_Akses = u.ID_Akses");
+	    $queryEditData = mysqli_query($koneksi, "SELECT * FROM user u, akses a WHERE Username='$Username' and a.ID_Akses = u.ID_Akses and u.ID_User = '$ID_User'");
 		while($data = mysqli_fetch_array($queryEditData)){
 			$_POST['ID_User'] = $data['ID_User'];
 			$_POST['Nama_User'] = $data['Nama_User'];

@@ -6,6 +6,7 @@ include 'koneksi.php';
 include 'inputNilai.php';
 
 $Username = $_SESSION['Username'];
+$ID_User = $_SESSION['ID_User'];
 
 //Mengambil data dari form login
 $Nama_User = $_GET['cmbNama'];
@@ -18,10 +19,12 @@ $Komunikasi = $_GET['Komunikasi'];
 $Periode = date('Y');
 
 //Mengambil data ID_User yang Dinilai
-$queryGetIDIn = mysqli_query($koneksi, "SELECT ID_User FROM user WHERE Nama_User='$Nama_User'");
-while($data = mysqli_fetch_array($queryGetIDIn)){
-    $ID_UserIn = $data['ID_User'];
-}
+// $queryGetIDIn = mysqli_query($koneksi, "SELECT ID_User FROM user WHERE Nama_User='$Nama_User'");
+// while($data = mysqli_fetch_array($queryGetIDIn)){
+//     $ID_UserIn = $data['ID_User'];
+// }
+
+$ID_UserIn = $ID_User;
 
 //Mengambil data ID_User Penilai
 $queryGetIDOut = mysqli_query($koneksi, "SELECT ID_User FROM user u, akses a WHERE Username='$Username' AND a.ID_Akses = u.ID_Akses");
