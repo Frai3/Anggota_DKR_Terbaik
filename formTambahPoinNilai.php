@@ -31,7 +31,7 @@
     
 <div class="row">
         <div class="col-5">
-            <p class="font">Registrasi</p>
+            <p class="font">Poin Penilaian</p>
         </div>
         <div class="col-5 d-flex justify-content-end p-5">
              <img src='gambar/DKR.PNG'  style="width: 200px;"/>
@@ -43,12 +43,12 @@
         <div class="row">
             <div class="col-2"></div>
             <div class="col-8" style="border-radius: 10px; background-color: #FA8072;">
-                <h2 class="pt-5 text-center text-white">Tambah Poin Penilaian</h2>
+                <h2 class="pt-5 text-center text-white">Poin Penilaian</h2>
                 <div class="p-5">
                     <form action="editPoinProses" method="get">
                         <div class="form-group">
                             <label for="poinNilai">Poin Penilaian</label>
-                            <input type="text" class="form-control" name="poinNilai" placeholder="Masukkan Nilai">
+                            <input type="text" class="form-control" name="poinNilai" placeholder="Masukkan Poin Penilaian">
                         </div>
                         <div class="form-group">
                             <select style="width: 100%" name="cmbAction">
@@ -72,9 +72,8 @@
             </div>
             <div class="col-2"></div>
         </div>
+    <br />
+    <br />
     </div>
-    <br />
-    <br />
-
 </body> 
 </html>

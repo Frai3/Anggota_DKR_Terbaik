@@ -18,19 +18,22 @@ $Sikap = $_GET['Sikap'];
 $Komunikasi = $_GET['Komunikasi'];
 $Periode = date('Y');
 
-//Mengambil data ID_User yang Dinilai
-// $queryGetIDIn = mysqli_query($koneksi, "SELECT ID_User FROM user WHERE Nama_User='$Nama_User'");
-// while($data = mysqli_fetch_array($queryGetIDIn)){
-//     $ID_UserIn = $data['ID_User'];
-// }
+// Mengambil data ID_User yang Dinilai
+$queryGetIDIn = mysqli_query($koneksi, "SELECT ID_User FROM user WHERE Nama_User='$Nama_User'");
+while($data = mysqli_fetch_array($queryGetIDIn)){
+    $ID_UserIn = $data['ID_User'];
+}
 
-$ID_UserIn = $ID_User;
+// $ID_UserIn = $ID_User;
 
 //Mengambil data ID_User Penilai
 $queryGetIDOut = mysqli_query($koneksi, "SELECT ID_User FROM user u, akses a WHERE Username='$Username' AND a.ID_Akses = u.ID_Akses");
 while($data = mysqli_fetch_array($queryGetIDOut)){
     $ID_UserOut = $data['ID_User'];
 }
+
+// echo $ID_UserIn;
+// echo $ID_UserOut;
 
 if($Nama_User == "" or $TJPeran == "" or $TepatHadir=="" or $Keaktifan=="" or $Inisiatif=="" or $Sikap=="" or $Komunikasi==""){
 	echo "<script>
@@ -44,11 +47,11 @@ else{
 	if($data <= 0){
 		inputNilai($ID_UserIn, $ID_UserOut, $TJPeran, $TepatHadir, $Keaktifan, $Inisiatif, $Sikap, $Komunikasi, $Periode);
 		if($_SESSION['Nama_Role'] == 'administrator'){
-			echo "<script>alert('Data Berhasil Dirubah!');
+			echo "<script>alert('Data Berhasil Ditambahkan!');
 			window.location='indexAdministrator';
 			</script>";
 		  }else if($_SESSION['Nama_Role'] == 'user'){
-			echo "<script>alert('Data Berhasil Dirubah!');
+			echo "<script>alert('Data Berhasil Ditambahkan!');
 			window.location='indexUser';
 			</script>";
 		  }
