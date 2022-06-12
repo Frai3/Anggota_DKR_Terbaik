@@ -1,6 +1,4 @@
 <?php
-
-
 function inputAksesAnggotaBaru($ID_Role, $Username, $Password){
   include 'koneksi.php';
   

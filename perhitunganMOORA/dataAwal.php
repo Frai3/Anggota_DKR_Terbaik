@@ -36,7 +36,7 @@ include '../getNilai.php';
 <div class="container">
     <div class="row text-center">
         <!-- Tabel Awal Zikri -->
-        <h4>Muara Zikri</h4>
+        <h4>US001</h4>
         <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -71,7 +71,7 @@ include '../getNilai.php';
         </table>
 
         <!-- Tabel Awal Fillah -->
-        <h4>Fillah Munaya</h4>
+        <h4>US002</h4>
         <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -106,7 +106,7 @@ include '../getNilai.php';
         </table>
 
         <!-- Tabel Awal Meilizka -->
-        <h4>Meilizka Dwie</h4>
+        <h4>US003</h4>
         <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -141,7 +141,7 @@ include '../getNilai.php';
         </table>
 
         <!-- Tabel Awal Kendanan -->
-        <h4>Kendanan Wherespati</h4>
+        <h4>US004</h4>
         <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -176,7 +176,7 @@ include '../getNilai.php';
         </table>
 
         <!-- Tabel Awal Alya -->
-        <h4>Alya Dani</h4>
+        <h4>US005</h4>
         <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -211,7 +211,7 @@ include '../getNilai.php';
         </table>
 
         <!-- Tabel Awal Bayu -->
-        <h4>Bayu Aryo</h4>
+        <h4>US006</h4>
         <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -246,7 +246,7 @@ include '../getNilai.php';
         </table>
 
         <!-- Tabel Awal Regis -->
-        <h4>Regis Revaldy</h4>
+        <h4>US007</h4>
         <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -281,7 +281,7 @@ include '../getNilai.php';
         </table>
         
         <!-- Tabel Awal Revaldy -->
-        <h4>Revaldy Putra</h4>
+        <h4>US008</h4>
         <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -316,7 +316,7 @@ include '../getNilai.php';
         </table>
 
         <!-- Tabel Awal Rangga -->
-        <h4>Rangga Satria</h4>
+        <h4>US009</h4>
         <table class="table">
             <thead class="thead-dark">
                 <tr>
