@@ -4,15 +4,18 @@ include 'koneksi.php';
 
 if (!isset($_SESSION)) {
     session_start();
-    if(empty($_SESSION['Username'])){
+    if(empty($_SESSION['Kode'])){
         echo "<script>alert('Anda Harus Login Terlebih Dahulu!');
         window.location='login.php';
         </script>";
     }
 }
 
-$username = $_SESSION['Username'];
+// $username = $_SESSION['Username'];
+
 $ID = $_SESSION['ID_User'];
+$Nama_User = $_SESSION['Nama_User'];
+echo $ID;
 
 ?>
 <!DOCTYPE html>
@@ -51,18 +54,56 @@ $ID = $_SESSION['ID_User'];
             <div class="col-2"></div>
             <div class="col-8" style="border-radius: 10px; background-color: #FA8072;">
                 <div class="p-5">
-                    <form action="inputNilaiProses" method="get">    
+                    <form action="inputNilaiProses" method="get">
                         <div class="form-group">
                             <label for="Nama_User">Nama</label>
                             <select style="width: 100%" name="cmbNama">
                             <?php
-                                $queryEditData = mysqli_query($koneksi, "SELECT Nama_User FROM user WHERE ID_User <> '$ID'");
-                                // ID_Akses <> (SELECT ID_Akses FROM akses WHERE Username = '$username')");
-                                while($data = mysqli_fetch_array($queryEditData)){
-                             ?>
-                            <option value="<?php echo $data['Nama_User'];?>"><?php echo $data['Nama_User'];?></option> 
-                            <?php
+                                $queryGetArrayAdmin = mysqli_query($koneksi, "SELECT Nama_User FROM administrator");
+                                $cekGetArrayAdmin = mysqli_num_rows($queryGetArrayAdmin);
+                            
+                                while($dataAdmin = mysqli_fetch_array($queryGetArrayAdmin)){
+                            
+                                        $dataAdmin1 = $dataAdmin['Nama_User'];
+                                        
+                                        if(empty($dataAdmin2)){
+                                            $dataAdmin2 = $dataAdmin1;
+                                        }
+                            
                                 }
+                            
+                                $queryGetArrayAnggota = mysqli_query($koneksi, "SELECT Nama_User FROM anggota");
+                                $cekGetArrayAnggota = mysqli_num_rows($queryGetArrayAnggota);
+                            
+                                while($dataAnggota = mysqli_fetch_array($queryGetArrayAnggota)){
+                            
+                                        $dataAnggota1 = $dataAnggota['Nama_User'];
+                            
+                                        if(empty($dataAnggota2)){
+                                            $dataAnggota2 = $dataAnggota1;
+                                        }elseif(empty($dataAnggota3)){
+                                            $dataAnggota3 = $dataAnggota1;
+                                        }elseif(empty($dataAnggota4)){
+                                            $dataAnggota4 = $dataAnggota1;
+                                        }elseif(empty($dataAnggota5)){
+                                            $dataAnggota5 = $dataAnggota1;
+                                        }elseif(empty($dataAnggota6)){
+                                            $dataAnggota6 = $dataAnggota1;
+                                        }elseif(empty($dataAnggota7)){
+                                            $dataAnggota7 = $dataAnggota1;
+                                        }
+                                }
+                            
+                                $data = array($dataAdmin2, $dataAdmin1, $dataAnggota2, $dataAnggota3, $dataAnggota4, $dataAnggota5, $dataAnggota6, $dataAnggota7, $dataAnggota1);
+                                
+                                for($i = 0; $i < count($data); $i++){
+                                    if($data[$i] != $Nama_User){
+                                        ?>
+                                        <option value="<?php echo $data[$i];?>"><?php echo $data[$i];?></option>
+                                        <?php
+                                    }
+                                }
+                                
                             ?>
                             </select>
                         </div>

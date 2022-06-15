@@ -1,7 +1,7 @@
 <?php
 if (!isset($_SESSION)) {
     session_start();
-    if($_SESSION['Nama_Role'] != 'user'){
+    if($_SESSION['Kode'] != 'Anggota'){
         echo "<script>alert('Anda Harus Login Terlebih Dahulu!');
         window.location='login';
         </script>";

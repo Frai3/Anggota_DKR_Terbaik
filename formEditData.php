@@ -2,7 +2,7 @@
 if (!isset($_SESSION)) {
 
     session_start();
-    if(empty($_SESSION['Username'])){
+    if(empty($_SESSION['Kode'])){
         echo "<script>alert('Anda Harus Login Terlebih Dahulu!');
         window.location='login.php';
         </script>";
@@ -10,11 +10,11 @@ if (!isset($_SESSION)) {
 
 }
     $ID_User = $_SESSION['ID_User'];
-    $Username = $_SESSION['Username'];
+    // $Username = $_SESSION['Username'];
 
     include 'getData.php';
 
-    getData($Username, $ID_User);
+    getData($ID_User);
 
 ?>
 <!DOCTYPE html>
@@ -86,16 +86,26 @@ if (!isset($_SESSION)) {
                                                 }
                                                 echo "<option value='$nilai'  $cek>$nilai</option>";
                                             }
-                                        }else{
+                                        }elseif($_POST['Golongan'] == "Penegak"){
                                             $pilihan = array("Pandega");
-                                            foreach ($pilihan as $nilai) {
-                                            if ($dataLevel==$nilai) {
-                                                $cek=" selected";
+                                                foreach ($pilihan as $nilai) {
+                                                    if ($dataLevel==$nilai) {
+                                                        $cek=" selected";
+                                                    } else {
+                                                        $cek = " ";
+                                                    }
+                                                    echo "<option value='$nilai'  $cek>$nilai</option>";
+                                                }
+                                        }else{
+                                        $pilihan = array("Penegak", "Pandega");
+                                        foreach ($pilihan as $nilai) {
+                                           if ($dataLevel==$nilai) {
+                                               $cek=" selected";
                                             } else {
                                                 $cek = " ";
                                             }
                                             echo "<option value='$nilai'  $cek>$nilai</option>";
-                                            }
+                                        }
                                         }
                                     ?>
                                 }

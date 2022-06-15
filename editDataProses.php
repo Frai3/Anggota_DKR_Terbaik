@@ -22,12 +22,12 @@ if (isset($_POST['input'])) {
   else{
   //Get function edit data dari model edit data
   editData($ID_User, $Nama_User, $Sekolah, $NoTelp, $Golongan);
-  
-    if($_SESSION['Nama_Role'] == 'administrator'){
+
+    if($_SESSION['Kode'] == 'Administrator'){
       echo "<script>alert('Data Berhasil Dirubah!');
       window.location='indexAdministrator';
       </script>";
-    }else if($_SESSION['Nama_Role'] == 'user'){
+    }else if($_SESSION['Kode'] == 'Anggota'){
       echo "<script>alert('Data Berhasil Dirubah!');
       window.location='indexUser';
       </script>";

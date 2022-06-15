@@ -1,13 +1,12 @@
 <?php
 if (!isset($_SESSION)) {
     session_start();
-    if($_SESSION['Nama_Role'] != 'administrator'){
+    if($_SESSION['Kode'] != 'Administrator'){
         echo "<script>alert('Anda Harus Login Terlebih Dahulu!');
         window.location='login.php';
         </script>";
     }
 }
-$username = $_SESSION['Username'];
 ?>
 
 <!DOCTYPE html>

@@ -1,7 +1,7 @@
 <?php
 
-include '../koneksi.php';
-include '../getNilai.php';
+    include '../koneksi.php';
+    include '../getNilai.php';
 
 ?>
 <!DOCTYPE html>

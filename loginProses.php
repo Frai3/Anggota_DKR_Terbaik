@@ -30,13 +30,13 @@ elseif($Password == ""){
 else{
 	//Jalanin fungsi di cekLogin
 	cek_login($Username, $Password);
-	$Username = $_SESSION['Username'];
-	if($_SESSION['Nama_Role'] == 'administrator'){
-		echo "<script>alert('Selamat Datang ".ucfirst($Username)."!');
+	$Kode = $_SESSION['Kode'];
+	if($Kode == 'Administrator'){
+		echo "<script>alert('Selamat Datang !');
 		window.location='indexAdministrator';
 		</script>";
-	}elseif($_SESSION['Nama_Role'] == 'user'){
-		echo "<script>alert('Selamat Datang ".ucfirst($Username)."!');
+	}elseif($Kode == 'Anggota'){
+		echo "<script>alert('Selamat Datang !');
 		window.location='indexUser';
 		</script>";
 	}
