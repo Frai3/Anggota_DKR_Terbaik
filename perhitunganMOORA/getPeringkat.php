@@ -15,30 +15,30 @@
     $nilaiMax = MAX($jumlahZikri, $jumlahFillah, $jumlahMeilizka, $jumlahKendanan, $jumlahAlya, $jumlahBayu, $jumlahRegis, $jumlahRevaldy, $jumlahRangga);
 
     if($nilaiMax == $jumlahZikri){
-        $nama = "Zikri";
+        $nama = "Pengguna 1";
     }else if($nilaiMax == $jumlahFillah){
-        $nama = "Fillah";
+        $nama = "Pengguna 2";
     }
     else if($nilaiMax == $jumlahMeilizka){
-        $nama = "Meilizka";
+        $nama = "Pengguna 3";
     }
     else if($nilaiMax == $jumlahKendanan){
-        $nama = "Kendanan";
+        $nama = "Pengguna 4";
     }
     else if($nilaiMax == $jumlahAlya){
-        $nama = "Alya";
+        $nama = "Pengguna 5";
     }
     else if($nilaiMax == $jumlahBayu){
-        $nama = "Bayu";
+        $nama = "Pengguna 6";
     }
     else if($nilaiMax == $jumlahRegis){
-        $nama = "Regis";
+        $nama = "Pengguna 7";
     }
     else if($nilaiMax == $jumlahRevaldy){
-        $nama = "Revaldy";
+        $nama = "Pengguna 8";
     }
     else if($nilaiMax == $jumlahRangga){
-        $nama = "Rangga";
+        $nama = "Pengguna 9";
     }
     $_POST['nama'] = $nama;
     $_POST['nilai'] = $nilaiMax;

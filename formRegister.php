@@ -1,7 +1,7 @@
 <?php
     if (!isset($_SESSION)) {
         session_start();
-        if(empty($_SESSION['Username']) or $_SESSION['Nama_Role'] != 'administrator'){
+        if($_SESSION['Kode'] != 'Administrator'){
             echo "<script>alert('Anda Harus Login Sebagai Administrator!');
             window.location='login.php';
             </script>";
@@ -45,7 +45,7 @@
                 <h2 class="pt-5 text-center text-white">Biodata</h2>
                 <div class="p-5">
                     <form action="inputProses" method="get">
-                    <div class="form-group">
+                        <div class="form-group">
                             <label for="nama_user">Nama</label>
                             <input type="text" class="form-control" name="Nama_user" placeholder="Masukkan Nama">
                         </div>
@@ -87,7 +87,7 @@
                             <select style="width: 100%" name="cmbRole">
                                 <option value=" ">Isi Role</option>
                                 <?php
-                                $pilihan = array("Administrator", "User");
+                                $pilihan = array("Administrator", "Anggota");
                                 foreach ($pilihan as $nilai) {
                                     if ($dataLevel==$nilai) {
                                         $cek=" selected";

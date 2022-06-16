@@ -1,7 +1,7 @@
 <?php
     if (!isset($_SESSION)) {
         session_start();
-        if(empty($_SESSION['Username']) or $_SESSION['Nama_Role'] != 'administrator'){
+        if($_SESSION['Kode'] != 'Administrator'){
             echo "<script>alert('Anda Harus Login Sebagai Administrator!');
             window.location='login.php';
             </script>";

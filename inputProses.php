@@ -15,11 +15,11 @@ $Username = $_GET['Username'];
 $Password = $_GET['Password'];
 $Nama_Role = strtolower($_GET['cmbRole']);
 
-//Mengambil data ID_Role
-$queryGetID = mysqli_query($koneksi, "SELECT ID_Role FROM role WHERE Nama_Role='$Nama_Role'");
-while($data = mysqli_fetch_array($queryGetID)){
-    $ID_Role = $data['ID_Role'];
-}
+// //Mengambil data ID_Role
+// $queryGetID = mysqli_query($koneksi, "SELECT ID_Role FROM role WHERE Nama_Role='$Nama_Role'");
+// while($data = mysqli_fetch_array($queryGetID)){
+//     $ID_Role = $data['ID_Role'];
+// }
 
 if($Nama_User == "" or $Sekolah == "" or $NoTelp=="" or $Golongan=="" or $Username=="" or $Password==""){
 	echo "<script>
@@ -29,10 +29,14 @@ if($Nama_User == "" or $Sekolah == "" or $NoTelp=="" or $Golongan=="" or $Userna
 }
 else{
 	//Input akses terlebih dahulu
-	inputAksesAnggotaBaru($ID_Role, $Username, $Password);
+	inputAksesAnggotaBaru($Username, $Password);
 	
-	//Jalanin fungsi di inputAnggotaBaru
-	inputAnggotaBaru($ID_Role, $Nama_User, $Sekolah, $NoTelp, $Golongan);
+	if($Nama_Role == "administrator"){
+		inputAdminBaru($Nama_User, $Sekolah, $NoTelp, $Golongan, $Username);
+	}else{
+		inputAnggotaBaru($Nama_User, $Sekolah, $NoTelp, $Golongan, $Username);
+	}	
+	
 	echo "<script>alert('Data Berhasil Ditambahkan!');
 	 	window.location='indexAdministrator';
 	 	</script>";

@@ -3,7 +3,7 @@
     function hasilNilai(){
         include 'getNilai.php';
         $Periode = date('Y');
-        $koneksi = mysqli_connect("localhost","root","", "dkr");
+        $koneksi = mysqli_connect("localhost","root","", "dkrkelapadua");
         
         getNilaiZikri($koneksi, $Periode);
         getNilaiFillah($koneksi, $Periode);

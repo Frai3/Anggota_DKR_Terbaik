@@ -46,39 +46,39 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><input type="text" class="form-control" name="" value="Muara Zikri" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="Pengguna 1" readonly></td>
                     <td><input type="text" class="form-control" name="" value="<?php echo $jumlahZikri; ?>" readonly></td>
                 </tr>
                 <tr>
-                    <td><input type="text" class="form-control" name="" value="Fillah Munaya" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="Pengguna 2" readonly></td>
                     <td><input type="text" class="form-control" name="" value="<?php echo $jumlahFillah; ?>" readonly></td>
                 </tr>
                 <tr>
-                    <td><input type="text" class="form-control" name="" value="Meilizka Dwie" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="Pengguna 3" readonly></td>
                     <td><input type="text" class="form-control" name="" value="<?php echo $jumlahMeilizka; ?>" readonly></td>
                 </tr>    
                 <tr>
-                    <td><input type="text" class="form-control" name="" value="Kendanan Wherespati" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="Pengguna 4" readonly></td>
                     <td><input type="text" class="form-control" name="" value="<?php echo $jumlahKendanan; ?>" readonly></td>
                 </tr>
                 <tr>
-                    <td><input type="text" class="form-control" name="" value="Alya Dani" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="Pengguna 5" readonly></td>
                     <td><input type="text" class="form-control" name="" value="<?php echo $jumlahAlya; ?>" readonly></td>
                 </tr>
                 <tr>
-                    <td><input type="text" class="form-control" name="" value="Bayu Aryo" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="Pengguna 6" readonly></td>
                     <td><input type="text" class="form-control" name="" value="<?php echo $jumlahBayu; ?>" readonly></td>
                 </tr>
                 <tr>
-                    <td><input type="text" class="form-control" name="" value="Regis Revaldy" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="Pengguna 7" readonly></td>
                     <td><input type="text" class="form-control" name="" value="<?php echo $jumlahRegis; ?>" readonly></td>
                 </tr>
                 <tr>
-                    <td><input type="text" class="form-control" name="" value="Revaldy Putra" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="Pengguna 8" readonly></td>
                     <td><input type="text" class="form-control" name="" value="<?php echo $jumlahRevaldy; ?>" readonly></td>
                 </tr>
                 <tr>
-                    <td><input type="text" class="form-control" name="" value="Rangga Satria" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="Pengguna 9" readonly></td>
                     <td><input type="text" class="form-control" name="" value="<?php echo $jumlahRangga; ?>" readonly></td>
                 </tr>
                 <tr>

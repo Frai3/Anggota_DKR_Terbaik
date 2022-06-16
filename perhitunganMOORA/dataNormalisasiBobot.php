@@ -58,7 +58,7 @@ ini_set('memory_limit', '64M');
                     <td><input type="text" class="form-control" name="" value="10%" readonly></td>
                 </tr>
                 <tr>
-                    <td><input type="text" class="form-control" name="" value="Muara Zikri" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="Pengguna 1" readonly></td>
                     <td><input type="text" class="form-control" name="" value="<?php echo $TJPeranZikri; ?>" readonly></td>
                     <td><input type="text" class="form-control" name="" value="<?php echo $TepatHadirZikri; ?>" readonly></td>
                     <td><input type="text" class="form-control" name="" value="<?php echo $KeaktifanZikri; ?>" readonly></td>
@@ -67,7 +67,7 @@ ini_set('memory_limit', '64M');
                     <td><input type="text" class="form-control" name="" value="<?php echo $KomunikasiZikri; ?>" readonly></td>
                 </tr>
                 <tr>
-                    <td><input type="text" class="form-control" name="" value="Fillah Munaya" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="Pengguna 2" readonly></td>
                     <td><input type="text" class="form-control" name="" value="<?php echo $TJPeranFillah; ?>" readonly></td>
                     <td><input type="text" class="form-control" name="" value="<?php echo $TepatHadirFillah; ?>" readonly></td>
                     <td><input type="text" class="form-control" name="" value="<?php echo $KeaktifanFillah; ?>" readonly></td>
@@ -76,7 +76,7 @@ ini_set('memory_limit', '64M');
                     <td><input type="text" class="form-control" name="" value="<?php echo $KomunikasiFillah; ?>" readonly></td>
                 </tr>
                 <tr>
-                    <td><input type="text" class="form-control" name="" value="Meilizka Dwie" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="Pengguna 3" readonly></td>
                     <td><input type="text" class="form-control" name="" value="<?php echo $TJPeranMeilizka; ?>" readonly></td>
                     <td><input type="text" class="form-control" name="" value="<?php echo $TepatHadirMeilizka; ?>" readonly></td>
                     <td><input type="text" class="form-control" name="" value="<?php echo $KeaktifanMeilizka; ?>" readonly></td>
@@ -85,7 +85,7 @@ ini_set('memory_limit', '64M');
                     <td><input type="text" class="form-control" name="" value="<?php echo $KomunikasiMeilizka; ?>" readonly></td>
                 </tr>    
                 <tr>
-                    <td><input type="text" class="form-control" name="" value="Kendanan Wherespati" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="Pengguna 4" readonly></td>
                     <td><input type="text" class="form-control" name="" value="<?php echo $TJPeranKendanan; ?>" readonly></td>
                     <td><input type="text" class="form-control" name="" value="<?php echo $TepatHadirKendanan; ?>" readonly></td>
                     <td><input type="text" class="form-control" name="" value="<?php echo $KeaktifanKendanan; ?>" readonly></td>
@@ -94,7 +94,7 @@ ini_set('memory_limit', '64M');
                     <td><input type="text" class="form-control" name="" value="<?php echo $KomunikasiKendanan; ?>" readonly></td>
                 </tr>
                 <tr>
-                    <td><input type="text" class="form-control" name="" value="Alya Dani" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="Pengguna 5" readonly></td>
                     <td><input type="text" class="form-control" name="" value="<?php echo $TJPeranAlya; ?>" readonly></td>
                     <td><input type="text" class="form-control" name="" value="<?php echo $TepatHadirAlya; ?>" readonly></td>
                     <td><input type="text" class="form-control" name="" value="<?php echo $KeaktifanAlya; ?>" readonly></td>
@@ -103,7 +103,7 @@ ini_set('memory_limit', '64M');
                     <td><input type="text" class="form-control" name="" value="<?php echo $KomunikasiAlya; ?>" readonly></td>
                 </tr>
                 <tr>
-                    <td><input type="text" class="form-control" name="" value="Bayu Aryo" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="Pengguna 6" readonly></td>
                     <td><input type="text" class="form-control" name="" value="<?php echo $TJPeranBayu; ?>" readonly></td>
                     <td><input type="text" class="form-control" name="" value="<?php echo $TepatHadirBayu; ?>" readonly></td>
                     <td><input type="text" class="form-control" name="" value="<?php echo $KeaktifanBayu; ?>" readonly></td>
@@ -112,7 +112,7 @@ ini_set('memory_limit', '64M');
                     <td><input type="text" class="form-control" name="" value="<?php echo $KomunikasiBayu; ?>" readonly></td>
                 </tr>
                 <tr>
-                    <td><input type="text" class="form-control" name="" value="Regis Revaldy" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="Pengguna 7" readonly></td>
                     <td><input type="text" class="form-control" name="" value="<?php echo $TJPeranRegis; ?>" readonly></td>
                     <td><input type="text" class="form-control" name="" value="<?php echo $TepatHadirRegis; ?>" readonly></td>
                     <td><input type="text" class="form-control" name="" value="<?php echo $KeaktifanRegis; ?>" readonly></td>
@@ -121,7 +121,7 @@ ini_set('memory_limit', '64M');
                     <td><input type="text" class="form-control" name="" value="<?php echo $KomunikasiRegis; ?>" readonly></td>
                 </tr>
                 <tr>
-                    <td><input type="text" class="form-control" name="" value="Revaldy Putra" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="Pengguna 8" readonly></td>
                     <td><input type="text" class="form-control" name="" value="<?php echo $TJPeranRevaldy; ?>" readonly></td>
                     <td><input type="text" class="form-control" name="" value="<?php echo $TepatHadirRevaldy; ?>" readonly></td>
                     <td><input type="text" class="form-control" name="" value="<?php echo $KeaktifanRevaldy; ?>" readonly></td>
@@ -130,7 +130,7 @@ ini_set('memory_limit', '64M');
                     <td><input type="text" class="form-control" name="" value="<?php echo $KomunikasiRevaldy; ?>" readonly></td>
                 </tr>
                 <tr>
-                    <td><input type="text" class="form-control" name="" value="Rangga Satria" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="Pengguna 9" readonly></td>
                     <td><input type="text" class="form-control" name="" value="<?php echo $TJPeranRangga; ?>" readonly></td>
                     <td><input type="text" class="form-control" name="" value="<?php echo $TepatHadirRangga; ?>" readonly></td>
                     <td><input type="text" class="form-control" name="" value="<?php echo $KeaktifanRangga; ?>" readonly></td>
@@ -141,8 +141,9 @@ ini_set('memory_limit', '64M');
             </tbody>
         </table>
     </div>
-<br />
-<br />
+    <div class="p-3">
+        <a href="dataPeringkat" class="btn btn-primary">Selanjutnya</a>
+    </div>
 </div>
 </body>
 </html>

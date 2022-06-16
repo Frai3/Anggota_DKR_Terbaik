@@ -1,5 +1,5 @@
 <?php
-function inputAksesAnggotaBaru($ID_Role, $Username, $Password){
+function inputAksesAnggotaBaru($Username, $Password){
   include 'koneksi.php';
   
   $queryGetID = mysqli_query($koneksi, "SELECT COUNT(ID_Akses) as CountID FROM akses");
@@ -13,7 +13,7 @@ function inputAksesAnggotaBaru($ID_Role, $Username, $Password){
       }
   }
 
-  $queryAksesBaru = "INSERT INTO akses VALUES ('$ID_Akses', '$ID_Role', '$Username', '$Password')";
+  $queryAksesBaru = "INSERT INTO akses VALUES ('$ID_Akses', '$Username', '$Password')";
   $result = mysqli_query($koneksi, $queryAksesBaru);
   if(!$result){
       die ("Query gagal dijalankan: ".mysqli_errno($koneksi).

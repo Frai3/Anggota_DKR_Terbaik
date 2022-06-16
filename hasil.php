@@ -1,6 +1,6 @@
 <?php
 
-include "lihatNilaiProses.php";
+    include "lihatNilaiProses.php";
 
     hasilNilai();
 

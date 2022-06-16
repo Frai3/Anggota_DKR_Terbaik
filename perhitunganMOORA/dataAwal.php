@@ -36,7 +36,7 @@
 <div class="container">
     <div class="row text-center">
         <!-- Tabel Awal Zikri -->
-        <h4>US001</h4>
+        <h4>Pengguna 1</h4>
         <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -51,7 +51,7 @@
             <tbody>
                 <?php
 
-                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserIn = 'US001';");
+                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserOut = 'AD001';");
                     $cekNilai = mysqli_num_rows($cekDatabase);
 
                     while($data = mysqli_fetch_array($cekDatabase)){
@@ -71,7 +71,7 @@
         </table>
 
         <!-- Tabel Awal Fillah -->
-        <h4>US002</h4>
+        <h4>Pengguna 2</h4>
         <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -86,7 +86,7 @@
             <tbody>
                 <?php
 
-                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserIn = 'US002';");
+                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserOut = 'AD002';");
                     $cekNilai = mysqli_num_rows($cekDatabase);
 
                     while($data = mysqli_fetch_array($cekDatabase)){
@@ -106,7 +106,7 @@
         </table>
 
         <!-- Tabel Awal Meilizka -->
-        <h4>US003</h4>
+        <h4>Pengguna 3</h4>
         <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -121,7 +121,7 @@
             <tbody>
                 <?php
 
-                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserIn = 'US003';");
+                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserOut = 'US001';");
                     $cekNilai = mysqli_num_rows($cekDatabase);
 
                     while($data = mysqli_fetch_array($cekDatabase)){
@@ -141,7 +141,7 @@
         </table>
 
         <!-- Tabel Awal Kendanan -->
-        <h4>US004</h4>
+        <h4>Pengguna 4</h4>
         <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -156,7 +156,7 @@
             <tbody>
                 <?php
 
-                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserIn = 'US004';");
+                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserOut = 'US002';");
                     $cekNilai = mysqli_num_rows($cekDatabase);
 
                     while($data = mysqli_fetch_array($cekDatabase)){
@@ -176,7 +176,7 @@
         </table>
 
         <!-- Tabel Awal Alya -->
-        <h4>US005</h4>
+        <h4>Pengguna 5</h4>
         <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -191,7 +191,7 @@
             <tbody>
                 <?php
 
-                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserIn = 'US005';");
+                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserOut = 'US003';");
                     $cekNilai = mysqli_num_rows($cekDatabase);
 
                     while($data = mysqli_fetch_array($cekDatabase)){
@@ -211,7 +211,7 @@
         </table>
 
         <!-- Tabel Awal Bayu -->
-        <h4>US006</h4>
+        <h4>Pengguna 6</h4>
         <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -226,7 +226,7 @@
             <tbody>
                 <?php
 
-                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserIn = 'US006';");
+                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserOut = 'US004';");
                     $cekNilai = mysqli_num_rows($cekDatabase);
 
                     while($data = mysqli_fetch_array($cekDatabase)){
@@ -246,7 +246,7 @@
         </table>
 
         <!-- Tabel Awal Regis -->
-        <h4>US007</h4>
+        <h4>Pengguna 7</h4>
         <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -261,7 +261,7 @@
             <tbody>
                 <?php
 
-                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserIn = 'US007';");
+                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserOut = 'US005';");
                     $cekNilai = mysqli_num_rows($cekDatabase);
 
                     while($data = mysqli_fetch_array($cekDatabase)){
@@ -281,7 +281,7 @@
         </table>
         
         <!-- Tabel Awal Revaldy -->
-        <h4>US008</h4>
+        <h4>Pengguna 8</h4>
         <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -296,7 +296,7 @@
             <tbody>
                 <?php
 
-                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserIn = 'US008';");
+                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserOut = 'US006';");
                     $cekNilai = mysqli_num_rows($cekDatabase);
 
                     while($data = mysqli_fetch_array($cekDatabase)){
@@ -316,7 +316,7 @@
         </table>
 
         <!-- Tabel Awal Rangga -->
-        <h4>US009</h4>
+        <h4>Pengguna 9</h4>
         <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -331,7 +331,7 @@
             <tbody>
                 <?php
 
-                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserIn = 'US009';");
+                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserOut = 'US007';");
                     $cekNilai = mysqli_num_rows($cekDatabase);
 
                     while($data = mysqli_fetch_array($cekDatabase)){
@@ -349,6 +349,9 @@
                 ?>
             </tbody>
         </table>
+    </div>
+    <div class="p-3">
+        <a href="dataJumlah" class="btn btn-primary">Selanjutnya</a>
     </div>
 </div>
 <br />
