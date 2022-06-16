@@ -14,20 +14,22 @@ function cek_login($username, $password){
 
 		$ID_Akses = $dataLogin['ID_Akses'];
 
-		$cekDatabaseAdmin = mysqli_query($koneksi, "SELECT ID_Admin, Nama_User FROM administrator WHERE ID_Akses = '$ID_Akses'");
+		$cekDatabaseAdmin = mysqli_query($koneksi, "SELECT * FROM administrator WHERE ID_Akses = '$ID_Akses'");
 		$cekAdmin = mysqli_num_rows($cekDatabaseAdmin);
 
-		$cekDatabaseAnggota = mysqli_query($koneksi, "SELECT ID_Anggota, Nama_User FROM anggota WHERE ID_Akses = '$ID_Akses'");
+		$cekDatabaseAnggota = mysqli_query($koneksi, "SELECT * FROM anggota WHERE ID_Akses = '$ID_Akses'");
 		$cekAnggota = mysqli_num_rows($cekDatabaseAnggota);
 
 		if($cekAdmin > 0){
 			$dataAdmin = mysqli_fetch_array($cekDatabaseAdmin);
 			$_SESSION['ID_User'] = $dataAdmin['ID_Admin'];
+			$_SESSION['ID_Akses'] = $dataAdmin['ID_Akses'];
 			$_SESSION['Kode'] = "Administrator";
 			$_SESSION['Nama_User'] = $dataAdmin['Nama_User'];
 		}elseif ($cekAnggota > 0) {
 			$dataAnggota = mysqli_fetch_array($cekDatabaseAnggota);
 			$_SESSION['ID_User'] = $dataAnggota['ID_Anggota'];
+			$_SESSION['ID_Akses'] = $dataAnggota['ID_Akses'];
 			$_SESSION['Kode'] = "Anggota";
 			$_SESSION['Nama_User'] = $dataAnggota['Nama_User'];
 		}

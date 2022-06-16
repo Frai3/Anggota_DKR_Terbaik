@@ -27,7 +27,7 @@
         <p class="font">Data Normalisasi</p>
     </div>
     <div class="col-5 d-flex justify-content-end p-5">
-        <img src='../gambar/DKR.PNG'  style="width: 200px;"/>
+        <img src='../gambar/DKR.png'  style="width: 200px;"/>
     </div>
     <div class="col-2">
 </div>

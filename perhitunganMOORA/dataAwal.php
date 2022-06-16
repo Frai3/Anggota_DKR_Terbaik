@@ -28,7 +28,7 @@
         <p class="font">Data Awal</p>
     </div>
     <div class="col-5 d-flex justify-content-end p-5">
-        <img src='../gambar/DKR.PNG'  style="width: 200px;"/>
+        <img src='../gambar/DKR.png'  style="width: 200px;"/>
     </div>
     <div class="col-2">
 </div>
@@ -51,7 +51,7 @@
             <tbody>
                 <?php
 
-                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserOut = 'AD001';");
+                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserOut = 'AK001';");
                     $cekNilai = mysqli_num_rows($cekDatabase);
 
                     while($data = mysqli_fetch_array($cekDatabase)){
@@ -86,7 +86,7 @@
             <tbody>
                 <?php
 
-                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserOut = 'AD002';");
+                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserOut = 'AK002';");
                     $cekNilai = mysqli_num_rows($cekDatabase);
 
                     while($data = mysqli_fetch_array($cekDatabase)){
@@ -121,7 +121,7 @@
             <tbody>
                 <?php
 
-                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserOut = 'US001';");
+                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserOut = 'AK003';");
                     $cekNilai = mysqli_num_rows($cekDatabase);
 
                     while($data = mysqli_fetch_array($cekDatabase)){
@@ -156,7 +156,7 @@
             <tbody>
                 <?php
 
-                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserOut = 'US002';");
+                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserOut = 'AK004';");
                     $cekNilai = mysqli_num_rows($cekDatabase);
 
                     while($data = mysqli_fetch_array($cekDatabase)){
@@ -191,7 +191,7 @@
             <tbody>
                 <?php
 
-                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserOut = 'US003';");
+                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserOut = 'AK005';");
                     $cekNilai = mysqli_num_rows($cekDatabase);
 
                     while($data = mysqli_fetch_array($cekDatabase)){
@@ -226,7 +226,7 @@
             <tbody>
                 <?php
 
-                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserOut = 'US004';");
+                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserOut = 'AK006';");
                     $cekNilai = mysqli_num_rows($cekDatabase);
 
                     while($data = mysqli_fetch_array($cekDatabase)){
@@ -261,7 +261,7 @@
             <tbody>
                 <?php
 
-                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserOut = 'US005';");
+                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserOut = 'AK007';");
                     $cekNilai = mysqli_num_rows($cekDatabase);
 
                     while($data = mysqli_fetch_array($cekDatabase)){
@@ -296,7 +296,7 @@
             <tbody>
                 <?php
 
-                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserOut = 'US006';");
+                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserOut = 'AK008';");
                     $cekNilai = mysqli_num_rows($cekDatabase);
 
                     while($data = mysqli_fetch_array($cekDatabase)){
@@ -331,7 +331,7 @@
             <tbody>
                 <?php
 
-                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserOut = 'US007';");
+                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserOut = 'AK009';");
                     $cekNilai = mysqli_num_rows($cekDatabase);
 
                     while($data = mysqli_fetch_array($cekDatabase)){

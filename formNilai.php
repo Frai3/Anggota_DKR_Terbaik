@@ -15,7 +15,7 @@ if (!isset($_SESSION)) {
 
 $ID = $_SESSION['ID_User'];
 $Nama_User = $_SESSION['Nama_User'];
-echo $ID;
+// echo $ID;
 
 ?>
 <!DOCTYPE html>
@@ -44,7 +44,7 @@ echo $ID;
             <p class="font">Penilaian</p>
         </div>
         <div class="col-5 d-flex justify-content-end p-5">
-             <img src='gambar/DKR.PNG'  style="width: 200px;"/>
+             <img src='gambar/DKR.png'  style="width: 200px;"/>
         </div>
         <div class="col-2">
     </div>

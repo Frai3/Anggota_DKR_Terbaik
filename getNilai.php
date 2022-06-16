@@ -4,7 +4,7 @@
         //Mengambil data nilai US001
         function getNilaiZikri($koneksi, $Periode){
 
-            $queryGetNilai = mysqli_query($koneksi, "SELECT SUM(TJPeran) AS TJPeran, SUM(TepatHadir) AS TepatHadir, SUM(Keaktifan) AS Keaktifan, SUM(Inisiatif) AS Inisiatif, SUM(Sikap) AS Sikap, SUM(Komunikasi) AS Komunikasi FROM nilai WHERE ID_UserOut = 'AD001' AND Periode = '$Periode'");
+            $queryGetNilai = mysqli_query($koneksi, "SELECT SUM(TJPeran) AS TJPeran, SUM(TepatHadir) AS TepatHadir, SUM(Keaktifan) AS Keaktifan, SUM(Inisiatif) AS Inisiatif, SUM(Sikap) AS Sikap, SUM(Komunikasi) AS Komunikasi FROM nilai WHERE ID_UserOut = 'AK001' AND Periode = '$Periode'");
             while($data = mysqli_fetch_array($queryGetNilai)){
         
                 $_POST['TJPeranZikri'] = $data['TJPeran'];
@@ -23,7 +23,7 @@
         //Mengambil data nilai US002
         function getNilaiFillah($koneksi, $Periode){
     
-            $queryGetNilai = mysqli_query($koneksi, "SELECT SUM(TJPeran) AS TJPeran, SUM(TepatHadir) AS TepatHadir, SUM(Keaktifan) AS Keaktifan, SUM(Inisiatif) AS Inisiatif, SUM(Sikap) AS Sikap, SUM(Komunikasi) AS Komunikasi FROM nilai WHERE ID_UserOut = 'AD002' AND Periode = '$Periode'");
+            $queryGetNilai = mysqli_query($koneksi, "SELECT SUM(TJPeran) AS TJPeran, SUM(TepatHadir) AS TepatHadir, SUM(Keaktifan) AS Keaktifan, SUM(Inisiatif) AS Inisiatif, SUM(Sikap) AS Sikap, SUM(Komunikasi) AS Komunikasi FROM nilai WHERE ID_UserOut = 'AK002' AND Periode = '$Periode'");
             while($data = mysqli_fetch_array($queryGetNilai)){
         
                 $_POST['TJPeranFillah'] = $data['TJPeran'];
@@ -43,7 +43,7 @@
         //Mengambil data nilai US003
         function getNilaiMeilizka($koneksi, $Periode){
     
-            $queryGetNilai = mysqli_query($koneksi, "SELECT SUM(TJPeran) AS TJPeran, SUM(TepatHadir) AS TepatHadir, SUM(Keaktifan) AS Keaktifan, SUM(Inisiatif) AS Inisiatif, SUM(Sikap) AS Sikap, SUM(Komunikasi) AS Komunikasi FROM nilai WHERE ID_UserOut = 'US001' AND Periode = '$Periode'");
+            $queryGetNilai = mysqli_query($koneksi, "SELECT SUM(TJPeran) AS TJPeran, SUM(TepatHadir) AS TepatHadir, SUM(Keaktifan) AS Keaktifan, SUM(Inisiatif) AS Inisiatif, SUM(Sikap) AS Sikap, SUM(Komunikasi) AS Komunikasi FROM nilai WHERE ID_UserOut = 'AK003' AND Periode = '$Periode'");
             while($data = mysqli_fetch_array($queryGetNilai)){
         
                 $_POST['TJPeranMeilizka'] = $data['TJPeran'];
@@ -63,7 +63,7 @@
         //Mengambil data nilai US004
         function getNilaiKendanan($koneksi, $Periode){
 
-            $queryGetNilai = mysqli_query($koneksi, "SELECT SUM(TJPeran) AS TJPeran, SUM(TepatHadir) AS TepatHadir, SUM(Keaktifan) AS Keaktifan, SUM(Inisiatif) AS Inisiatif, SUM(Sikap) AS Sikap, SUM(Komunikasi) AS Komunikasi FROM nilai WHERE ID_UserOut = 'US002' AND Periode = '$Periode'");
+            $queryGetNilai = mysqli_query($koneksi, "SELECT SUM(TJPeran) AS TJPeran, SUM(TepatHadir) AS TepatHadir, SUM(Keaktifan) AS Keaktifan, SUM(Inisiatif) AS Inisiatif, SUM(Sikap) AS Sikap, SUM(Komunikasi) AS Komunikasi FROM nilai WHERE ID_UserOut = 'AK004' AND Periode = '$Periode'");
             while($data = mysqli_fetch_array($queryGetNilai)){
         
                 $_POST['TJPeranKendanan'] = $data['TJPeran'];
@@ -83,7 +83,7 @@
         //Mengambil data nilai US005
         function getNilaiAlya($koneksi, $Periode){
 
-            $queryGetNilai = mysqli_query($koneksi, "SELECT SUM(TJPeran) AS TJPeran, SUM(TepatHadir) AS TepatHadir, SUM(Keaktifan) AS Keaktifan, SUM(Inisiatif) AS Inisiatif, SUM(Sikap) AS Sikap, SUM(Komunikasi) AS Komunikasi FROM nilai WHERE ID_UserOut = 'US003' AND Periode = '$Periode'");
+            $queryGetNilai = mysqli_query($koneksi, "SELECT SUM(TJPeran) AS TJPeran, SUM(TepatHadir) AS TepatHadir, SUM(Keaktifan) AS Keaktifan, SUM(Inisiatif) AS Inisiatif, SUM(Sikap) AS Sikap, SUM(Komunikasi) AS Komunikasi FROM nilai WHERE ID_UserOut = 'AK005' AND Periode = '$Periode'");
             while($data = mysqli_fetch_array($queryGetNilai)){
         
                 $_POST['TJPeranAlya'] = $data['TJPeran'];
@@ -103,7 +103,7 @@
         //Mengambil data nilai US006
         function getNilaiBayu($koneksi, $Periode){
 
-            $queryGetNilai = mysqli_query($koneksi, "SELECT SUM(TJPeran) AS TJPeran, SUM(TepatHadir) AS TepatHadir, SUM(Keaktifan) AS Keaktifan, SUM(Inisiatif) AS Inisiatif, SUM(Sikap) AS Sikap, SUM(Komunikasi) AS Komunikasi FROM nilai WHERE ID_UserOut = 'US004' AND Periode = '$Periode'");
+            $queryGetNilai = mysqli_query($koneksi, "SELECT SUM(TJPeran) AS TJPeran, SUM(TepatHadir) AS TepatHadir, SUM(Keaktifan) AS Keaktifan, SUM(Inisiatif) AS Inisiatif, SUM(Sikap) AS Sikap, SUM(Komunikasi) AS Komunikasi FROM nilai WHERE ID_UserOut = 'AK006' AND Periode = '$Periode'");
             while($data = mysqli_fetch_array($queryGetNilai)){
         
                 $_POST['TJPeranBayu'] = $data['TJPeran'];
@@ -123,7 +123,7 @@
             //Mengambil data nilai US007
         function getNilaiRegis($koneksi, $Periode){
 
-            $queryGetNilai = mysqli_query($koneksi, "SELECT SUM(TJPeran) AS TJPeran, SUM(TepatHadir) AS TepatHadir, SUM(Keaktifan) AS Keaktifan, SUM(Inisiatif) AS Inisiatif, SUM(Sikap) AS Sikap, SUM(Komunikasi) AS Komunikasi FROM nilai WHERE ID_UserOut = 'US005' AND Periode = '$Periode'");
+            $queryGetNilai = mysqli_query($koneksi, "SELECT SUM(TJPeran) AS TJPeran, SUM(TepatHadir) AS TepatHadir, SUM(Keaktifan) AS Keaktifan, SUM(Inisiatif) AS Inisiatif, SUM(Sikap) AS Sikap, SUM(Komunikasi) AS Komunikasi FROM nilai WHERE ID_UserOut = 'AK007' AND Periode = '$Periode'");
             while($data = mysqli_fetch_array($queryGetNilai)){
         
                 $_POST['TJPeranRegis'] = $data['TJPeran'];
@@ -143,7 +143,7 @@
         //Mengambil data nilai US008
         function getNilaiRevaldy($koneksi, $Periode){
 
-            $queryGetNilai = mysqli_query($koneksi, "SELECT SUM(TJPeran) AS TJPeran, SUM(TepatHadir) AS TepatHadir, SUM(Keaktifan) AS Keaktifan, SUM(Inisiatif) AS Inisiatif, SUM(Sikap) AS Sikap, SUM(Komunikasi) AS Komunikasi FROM nilai WHERE ID_UserOut = 'US006' AND Periode = '$Periode'");
+            $queryGetNilai = mysqli_query($koneksi, "SELECT SUM(TJPeran) AS TJPeran, SUM(TepatHadir) AS TepatHadir, SUM(Keaktifan) AS Keaktifan, SUM(Inisiatif) AS Inisiatif, SUM(Sikap) AS Sikap, SUM(Komunikasi) AS Komunikasi FROM nilai WHERE ID_UserOut = 'AK008' AND Periode = '$Periode'");
             while($data = mysqli_fetch_array($queryGetNilai)){
         
                 $_POST['TJPeranRevaldy'] = $data['TJPeran'];
@@ -163,7 +163,7 @@
         //Mengambil data nilai US009
         function getNilaiRangga($koneksi, $Periode){
 
-            $queryGetNilai = mysqli_query($koneksi, "SELECT SUM(TJPeran) AS TJPeran, SUM(TepatHadir) AS TepatHadir, SUM(Keaktifan) AS Keaktifan, SUM(Inisiatif) AS Inisiatif, SUM(Sikap) AS Sikap, SUM(Komunikasi) AS Komunikasi FROM nilai WHERE ID_UserOut = 'US007' AND Periode = '$Periode'");
+            $queryGetNilai = mysqli_query($koneksi, "SELECT SUM(TJPeran) AS TJPeran, SUM(TepatHadir) AS TepatHadir, SUM(Keaktifan) AS Keaktifan, SUM(Inisiatif) AS Inisiatif, SUM(Sikap) AS Sikap, SUM(Komunikasi) AS Komunikasi FROM nilai WHERE ID_UserOut = 'AK009' AND Periode = '$Periode'");
             while($data = mysqli_fetch_array($queryGetNilai)){
         
                 $_POST['TJPeranRangga'] = $data['TJPeran'];
