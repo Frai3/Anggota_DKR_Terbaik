@@ -53,15 +53,15 @@ if($data <= 0){
 			window.location='formNilai'
 			</script>";
 	}else{
-	inputNilai($ID_UserIn, $ID_UserOut, $TJPeran, $TepatHadir, $Keaktifan, $Inisiatif, $Sikap, $Komunikasi, $Periode);
-	if($_SESSION['Kode'] == 'Administrator'){
-		echo "<script>alert('Data Berhasil Ditambahkan!');
-		window.location='indexAdministrator';
-		</script>";
-		}else if($_SESSION['Kode'] == 'Anggota'){
-		echo "<script>alert('Data Berhasil Ditambahkan!');
-		window.location='indexUser';
-		/script>";
+		inputNilai($ID_UserIn, $ID_UserOut, $TJPeran, $TepatHadir, $Keaktifan, $Inisiatif, $Sikap, $Komunikasi, $Periode);
+		if($_SESSION['Kode'] == 'Administrator'){
+			echo "<script>alert('Data Berhasil Ditambahkan!');
+			window.location='indexAdministrator';
+			</script>";
+		}else{
+			echo "<script>alert('Data Berhasil Ditambahkan!');
+			window.location='indexUser';
+			</script>";
 		}
 	}
 }else{
