@@ -45,26 +45,37 @@
             <div class="col-8" style="border-radius: 10px; background-color: #FA8072;">
                 <h2 class="pt-5 text-center text-white">Poin Penilaian</h2>
                 <div class="p-5">
-                    <form action="editPoinProses" method="get">
+                    <form action="poinNilai" method="POST">
+                        <table class="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Poin Penilaian</th>
+                                    <th>Nilai</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                include 'koneksi.php';
+                                $cekDatabaseNilai = mysqli_query($koneksi, "SELECT * FROM poinnilai");
+                                $cekNilai = mysqli_num_rows($cekDatabaseNilai);
+                                while($data = mysqli_fetch_array($cekDatabaseNilai)){
+                                ?>
+                                    <tr>
+                                        <td><input type="text" class="form-control" name="PoinNilai[]" value="<?php echo $data['PoinNilai']; ?>"></td>
+                                        <td><input type="text" class="form-control" name="Persentase[]" value="<?php echo $data['Persentase']*100; ?>"></td>
+                                    </tr>
+                                <?php
+                                }                                            
+                                ?>
+                            </tbody>
+                        </table>
                         <div class="form-group">
-                            <label for="poinNilai">Poin Penilaian</label>
-                            <input type="text" class="form-control" name="poinNilai" placeholder="Masukkan Poin Penilaian">
+                            <label for="poinNilaiBaru">Poin Penilaian</label>
+                            <input type="text" class="form-control" name="poinNilaiBaru" placeholder="Masukkan Poin Penilaian">
                         </div>
                         <div class="form-group">
-                            <select style="width: 100%" name="cmbAction">
-                                <option value=" ">Isi Keterangan</option>
-                                <?php
-                                $pilihan = array("Tambah", "Hapus");
-                                foreach ($pilihan as $nilai) {
-                                    if ($dataLevel==$nilai) {
-                                        $cek="selected";
-                                    } else {
-                                        $cek = "";
-                                    }
-                                    echo "<option value='$nilai'  $cek>$nilai</option>";
-                                }
-                                ?>
-                            </select>
+                            <label for="persen">Persentase Nilai</label>
+                            <input type="number" class="form-control" name="persen" placeholder="Masukkan Persentase Poin Penilaian">
                         </div>
                         <button type="submit" name="input" value="Submit" class="btn btn-primary">Input</button>
                     </form>

@@ -46,7 +46,7 @@ if (!isset($_SESSION)) {
                 <h2 class="pt-5 text-center text-white">User</h2>
                 <div class="p-5">
                     <br />
-                    <a href="formNilai" class="p-3 nav justify-content-center btn btn-dark btnIndex">
+                    <a href="formKandidat" class="p-3 nav justify-content-center btn btn-dark btnIndex">
                     Nilai
                     </a>
                     <br />

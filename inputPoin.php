@@ -1,11 +1,11 @@
 <?php
 
-function editPoin($ID_Notif, $poinNilai, $keterangan){
+function editPoin($PoinNilai, $Persentase, $Periode){
 
   include 'koneksi.php';
   $ID_Admin = $_SESSION['ID_User'];
 
-  $queryPoinNilai = "INSERT INTO notifikasi VALUES ('$ID_Notif', '$ID_Admin', '$poinNilai', '$keterangan')";
+  $queryPoinNilai = "INSERT INTO poinnilai VALUES ('$ID_Admin', '$PoinNilai', '$Persentase', '$Periode')";
   $result = mysqli_query($koneksi, $queryPoinNilai);
   if(!$result){
       die ("Query gagal dijalankan: ".mysqli_errno($koneksi).

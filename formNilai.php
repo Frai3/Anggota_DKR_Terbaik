@@ -11,11 +11,35 @@ if (!isset($_SESSION)) {
     }
 }
 
-// $username = $_SESSION['Username'];
+$ID_User = $_SESSION['ID_Akses'];
+$Kandidat = $_GET['kandidat'];
+$Periode = date('Y');
 
-$ID = $_SESSION['ID_User'];
-$Nama_User = $_SESSION['Nama_User'];
-// echo $ID;
+$queryGetNilai = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_User = '$ID_User' AND ID_Kandidat = '$Kandidat' AND Periode = '$Periode';");
+$cekGetNilai = mysqli_num_rows($queryGetNilai);
+$dataNilai = mysqli_fetch_array($queryGetNilai);
+
+$queryGetKandidat = mysqli_query($koneksi, "SELECT * FROM kandidat WHERE ID_User = '$ID_User' AND Periode = '$Periode';");
+$cekGetKandidat = mysqli_num_rows($queryGetKandidat);
+$dataKandidat = mysqli_fetch_array($queryGetKandidat);
+
+if($dataNilai > 0){
+    echo "<script>alert('Data Sudah Ditambahkan! Harap Nilai Kandidat Lain!');
+        window.location='formKandidat.php';
+        </script>";
+}elseif ($dataKandidat > 0) {
+    echo "<script>alert('Maaf, Anda tidak bisa menilai diri sendiri! Harap Nilai Kandidat Lain!');
+        window.location='formKandidat.php';
+        </script>";
+}
+
+$queryGetNamaAdmin = mysqli_query($koneksi, "SELECT Nama_User FROM administrator ad, kandidat ka WHERE ID_Kandidat = '$Kandidat' AND ka.ID_User = ad.ID_Akses");
+$cekGetNamaAdmin = mysqli_num_rows($queryGetNamaAdmin);
+$dataNamaAdmin = mysqli_fetch_array($queryGetNamaAdmin);
+
+$queryGetNamaAnggota = mysqli_query($koneksi, "SELECT Nama_User FROM anggota ag, kandidat ka WHERE ID_Kandidat = '$Kandidat' AND ka.ID_User = ag.ID_Akses");
+$cekGetNamaAnggota = mysqli_num_rows($queryGetNamaAnggota);
+$dataNamaAnggota = mysqli_fetch_array($queryGetNamaAnggota);
 
 ?>
 <!DOCTYPE html>
@@ -57,80 +81,33 @@ $Nama_User = $_SESSION['Nama_User'];
                     <form action="inputNilaiProses" method="get">
                         <div class="form-group">
                             <label for="Nama_User">Nama</label>
-                            <select style="width: 100%" name="cmbNama">
                             <?php
-                                $queryGetArrayAdmin = mysqli_query($koneksi, "SELECT Nama_User FROM administrator");
-                                $cekGetArrayAdmin = mysqli_num_rows($queryGetArrayAdmin);
-                            
-                                while($dataAdmin = mysqli_fetch_array($queryGetArrayAdmin)){
-                            
-                                        $dataAdmin1 = $dataAdmin['Nama_User'];
-                                        
-                                        if(empty($dataAdmin2)){
-                                            $dataAdmin2 = $dataAdmin1;
-                                        }
-                            
+                                if($dataNamaAdmin > 0){
+                                    echo '<input type="text" class="form-control" name="Nama_User" value="'.$dataNamaAdmin['Nama_User'].'" readonly>';
+                                }elseif($dataNamaAnggota > 0){
+                                    echo '<input type="text" class="form-control" name="Nama_User" value="'.$dataNamaAnggota['Nama_User'].'" readonly>';
                                 }
-                            
-                                $queryGetArrayAnggota = mysqli_query($koneksi, "SELECT Nama_User FROM anggota");
-                                $cekGetArrayAnggota = mysqli_num_rows($queryGetArrayAnggota);
-                            
-                                while($dataAnggota = mysqli_fetch_array($queryGetArrayAnggota)){
-                            
-                                        $dataAnggota1 = $dataAnggota['Nama_User'];
-                            
-                                        if(empty($dataAnggota2)){
-                                            $dataAnggota2 = $dataAnggota1;
-                                        }elseif(empty($dataAnggota3)){
-                                            $dataAnggota3 = $dataAnggota1;
-                                        }elseif(empty($dataAnggota4)){
-                                            $dataAnggota4 = $dataAnggota1;
-                                        }elseif(empty($dataAnggota5)){
-                                            $dataAnggota5 = $dataAnggota1;
-                                        }elseif(empty($dataAnggota6)){
-                                            $dataAnggota6 = $dataAnggota1;
-                                        }elseif(empty($dataAnggota7)){
-                                            $dataAnggota7 = $dataAnggota1;
-                                        }
-                                }
-                            
-                                $data = array($dataAdmin2, $dataAdmin1, $dataAnggota2, $dataAnggota3, $dataAnggota4, $dataAnggota5, $dataAnggota6, $dataAnggota7, $dataAnggota1);
-                                
-                                for($i = 0; $i < count($data); $i++){
-                                    if($data[$i] != $Nama_User){
-                                        ?>
-                                        <option value="<?php echo $data[$i];?>"><?php echo $data[$i];?></option>
-                                        <?php
-                                    }
-                                }
-                                
                             ?>
-                            </select>
                         </div>
+                        <?php
+
+                        $queryGetPoinNilai = mysqli_query($koneksi, "SELECT * FROM poinnilai");
+                        $cekGetPoinNilai = mysqli_num_rows($queryGetPoinNilai);
+
+                        while($dataPoinNilai = mysqli_fetch_array($queryGetPoinNilai)){
+                        ?>
+                        
                         <div class="form-group">
-                            <label for="TJPeran">Tanggungjawab Peran</label>
-                            <input type="text" class="form-control" name="TJPeran">
+                            <label><input type="text" class="form-control" name="PoinNilai[]" value="<?php echo $dataPoinNilai['PoinNilai']; ?>" readonly></label>
+                            <input type="hidden" class="form-control" name="Kandidat" value="<?php echo $Kandidat; ?>">
+                            <input type="text" class="form-control" name="nilai[]">
                         </div>
-                        <div class="form-group">
-                            <label for="TepatHadir">Ketepatan Waktu Hadir</label>
-                            <input type="text" class="form-control" name="TepatHadir">
-                        </div>
-                        <div class="form-group">
-                            <label for="Keaktifan">Keaktifan</label>
-                            <input type="text" class="form-control" name="Keaktifan">
-                        </div>
-                        <div class="form-group">
-                            <label for="Inisiatif">Inisiatif</label>
-                            <input type="text" class="form-control" name="Inisiatif">
-                        </div>
-                        <div class="form-group">
-                            <label for="Sikap">Sikap</label>
-                            <input type="text" class="form-control" name="Sikap">
-                        </div>
-                        <div class="form-group">
-                            <label for="Komunikasi">Komunikasi</label>
-                            <input type="text" class="form-control" name="Komunikasi">
-                        </div>
+
+                        <?php
+
+                        }
+
+                        ?>
                         <input type="submit" name="input" value="Simpan" class="btn btn-primary">
                     </form>
                 </div>

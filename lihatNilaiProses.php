@@ -1,10 +1,45 @@
 <?php
     
     function hasilNilai(){
+        include 'class.php';
         include 'getNilai.php';
         $Periode = date('Y');
-        $koneksi = mysqli_connect("localhost","root","", "dkrkelapadua");
-        
+        include 'koneksi.php';
+
+        $queryGetPoinNilai = mysqli_query($koneksi, "SELECT * FROM poinnilai");
+        $cekGetPoinNilai = mysqli_num_rows($queryGetPoinNilai);
+        $Poin = array();
+        $DataPoin = array();
+
+        while($row = mysqli_fetch_assoc($queryGetPoinNilai)){
+            $Poin[] = $row;
+        }
+
+
+        getPenilaianKN002($koneksi, $Periode);
+        $DataPoin = $_POST['DataPoin'];
+
+        for($i=0; $i<count($Poin); $i++){
+            if($i != 0){
+                $arr = array_merge($DataPoin[$i], $arr);
+            }else{
+                $arr = $DataPoin[$i];
+            }
+        }
+
+        $obj_baru = new array_object();
+
+        for($i=0; $i<count($Poin); $i++){
+            $data = strtolower($Poin[$i]['PoinNilai']);
+        }
+
+        $ubah_objek = $obj_baru->arrayKeObject($arr);
+        $ubah_array = $obj_baru->objectKeArray($ubah_objek);
+        foreach ($ubah_array as $kolom_arr=>$isi_arr)
+        {
+            $ubah_array[$kolom_arr];
+        }
+
         getNilaiZikri($koneksi, $Periode);
         getNilaiFillah($koneksi, $Periode);
         getNilaiMeilizka($koneksi, $Periode);
@@ -428,6 +463,6 @@
     // echo $jumlahAlya;
 }
 
-hasilNilai(); //Jika ingin menampilkan nilai TJPeran
+
 
 ?>

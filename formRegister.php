@@ -1,4 +1,5 @@
-<?php
+<?php   
+    include 'koneksi.php';
     if (!isset($_SESSION)) {
         session_start();
         if($_SESSION['Kode'] != 'Administrator'){
@@ -7,6 +8,31 @@
             </script>";
         }
     }
+
+    $queryGetIDAnggota = mysqli_query($koneksi, "SELECT count(ID_Anggota) as ID FROM anggota");
+    $cekGetIDAnggota = mysqli_num_rows($queryGetIDAnggota);
+    $dataIDAnggota = mysqli_fetch_array($queryGetIDAnggota);
+
+    $queryGetIDAdmin= mysqli_query($koneksi, "SELECT count(ID_Admin) as ID FROM administrator");
+    $cekGetIDAdmin = mysqli_num_rows($queryGetIDAdmin);
+    $dataIDAdmin = mysqli_fetch_array($queryGetIDAdmin);
+    if($dataIDAdmin['ID']==3){
+        $Kode = "anggota";
+        echo "<script>
+		alert('Role Administrator Sudah Penuh! Hanya dapat input anggota');
+		</script>";
+    }elseif ($dataIDAnggota['ID']==19) {
+        $Kode = "admin";
+        echo "<script>
+		alert('Anggota Sudah Penuh! Hanya dapat input administrator');
+		</script>";
+    }elseif ($dataIDAdmin['ID']==3 && $dataIDAdmin['ID']==19){
+        echo "<script>
+		alert('Seluruh akses sudah penuh! Silahkan hapus yang masa jabatannya sudah habi');
+		window.location='indexAdministrator'
+		</script>";
+    }
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -87,19 +113,42 @@
                             <select style="width: 100%" name="cmbRole">
                                 <option value=" ">Isi Role</option>
                                 <?php
-                                $pilihan = array("Administrator", "Anggota");
-                                foreach ($pilihan as $nilai) {
-                                    if ($dataLevel==$nilai) {
-                                        $cek=" selected";
-                                    } else {
-                                        $cek = "";
+                                if($Kode = "anggota"){
+                                    $pilihan = array("Anggota");
+                                    foreach ($pilihan as $nilai) {
+                                        if ($dataLevel==$nilai) {
+                                            $cek=" selected";
+                                        } else {
+                                            $cek = "";
+                                        }
+                                        echo "<option value='$nilai'  $cek>$nilai</option>";
                                     }
-                                    echo "<option value='$nilai'  $cek>$nilai</option>";
+                                }elseif($Kode = "admin"){
+                                    $pilihan = array("Administrator");
+                                    foreach ($pilihan as $nilai) {
+                                        if ($dataLevel==$nilai) {
+                                            $cek=" selected";
+                                        } else {
+                                            $cek = "";
+                                        }
+                                        echo "<option value='$nilai'  $cek>$nilai</option>";
+                                    }
+                                }else{
+                                    $pilihan = array("Administrator", "Anggota");
+                                    foreach ($pilihan as $nilai) {
+                                        if ($dataLevel==$nilai) {
+                                            $cek=" selected";
+                                        } else {
+                                            $cek = "";
+                                        }
+                                        echo "<option value='$nilai'  $cek>$nilai</option>";
+                                    }
                                 }
                                 ?>
                             </select>
-                            <br />
-                            <br />
+                        </div>
+                        <br />
+                        <br />
                         <button type="submit" name="input" value="Submit" class="btn btn-primary">Input</button>
                     </form>
                 </div>

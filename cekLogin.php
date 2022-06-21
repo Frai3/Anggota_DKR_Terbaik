@@ -12,12 +12,14 @@ function cek_login($username, $password){
 
 		$dataLogin = mysqli_fetch_array($cekDatabaseLogin);
 
+		$MasaBakti = date('Y');
+		// $MasaBakti = '2025';
 		$ID_Akses = $dataLogin['ID_Akses'];
 
-		$cekDatabaseAdmin = mysqli_query($koneksi, "SELECT * FROM administrator WHERE ID_Akses = '$ID_Akses'");
+		$cekDatabaseAdmin = mysqli_query($koneksi, "SELECT * FROM administrator WHERE ID_Akses = '$ID_Akses' AND MasaBakti >= '$MasaBakti'");
 		$cekAdmin = mysqli_num_rows($cekDatabaseAdmin);
 
-		$cekDatabaseAnggota = mysqli_query($koneksi, "SELECT * FROM anggota WHERE ID_Akses = '$ID_Akses'");
+		$cekDatabaseAnggota = mysqli_query($koneksi, "SELECT * FROM anggota WHERE ID_Akses = '$ID_Akses' AND MasaBakti >= '$MasaBakti'");
 		$cekAnggota = mysqli_num_rows($cekDatabaseAnggota);
 
 		if($cekAdmin > 0){
@@ -32,6 +34,11 @@ function cek_login($username, $password){
 			$_SESSION['ID_Akses'] = $dataAnggota['ID_Akses'];
 			$_SESSION['Kode'] = "Anggota";
 			$_SESSION['Nama_User'] = $dataAnggota['Nama_User'];
+		}else{
+			echo "<script>
+			alert('Maaf Anda Tidak Memiliki Akses!');
+			window.location='login';
+			</script>";
 		}
 		
 	}else{

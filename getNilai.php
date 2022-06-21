@@ -1,5 +1,74 @@
 <?php
 
+    if(!function_exists('getPenilaianKN002')){
+        //Mengambil data nilai US001
+        function getPenilaianKN002($koneksi, $Periode){
+
+            $queryGetPoinNilai = mysqli_query($koneksi, "SELECT * FROM poinnilai");
+            $cekGetPoinNilai = mysqli_num_rows($queryGetPoinNilai);
+            $Poin = array();
+            $DataPoin = array();
+
+            while($row = mysqli_fetch_assoc($queryGetPoinNilai)){
+                $Poin[] = $row;
+            }
+
+            for($i=0; $i<count($Poin); $i++){
+                $data = $Poin[$i]['PoinNilai'];
+                $queryGetNilai = mysqli_query($koneksi, "SELECT SUM(Nilai) AS '$data'
+                FROM nilai
+                WHERE ID_Kandidat = 'KN002'AND PoinNilai = '$data' AND Periode = '$Periode'");
+                $cekGetNilai = mysqli_num_rows($queryGetNilai);
+                $dataNilai = mysqli_fetch_assoc($queryGetNilai);
+                $DataPoin[$i] = $dataNilai;
+                $_POST['DataPoin'][$i] = $DataPoin[$i];
+            }
+
+            // // print_r($DataPoin[2]);
+            // $queryGetNilaiTJPeran = mysqli_query($koneksi, "SELECT SUM(Nilai) AS TJPeran WHERE ID_Kandidat = 'KN002' AND PoinNilai = 'TJPeran' AND Periode = '$Periode'");
+            // while($data = mysqli_fetch_array($queryGetNilaiTJPeran)){
+        
+            //     $_POST['TJPeranKN002'] = $data['TJPeran'];
+        
+            // }
+
+            // $queryGetNilaiTepatHadir = mysqli_query($koneksi, "SELECT SUM(Nilai) AS TepatHadir WHERE ID_Kandidat = 'KN002' AND PoinNilai = 'TepatHadir' AND Periode = '$Periode'");
+            // while($data = mysqli_fetch_array($queryGetNilaiTepatHadir)){
+        
+            //     $_POST['TepatHadirKN002'] = $data['TepatHadir'];
+        
+            // }
+
+            // $queryGetNilaiSikap = mysqli_query($koneksi, "SELECT SUM(Nilai) AS Sikap WHERE ID_Kandidat = 'KN002' AND PoinNilai = 'Sikap' AND Periode = '$Periode'");
+            // while($data = mysqli_fetch_array($queryGetNilaiSikap)){
+        
+            //     $_POST['SikapKN002'] = $data['Sikap'];
+        
+            // }
+
+            // $queryGetNilaiKomunikasi = mysqli_query($koneksi, "SELECT SUM(Nilai) AS Komunikasi WHERE ID_Kandidat = 'KN002' AND PoinNilai = 'Komunikasi' AND Periode = '$Periode'");
+            // while($data = mysqli_fetch_array($queryGetNilaiKomunikasi)){
+        
+            //     $_POST['KomunikasiKN002'] = $data['Komunikasi'];
+        
+            // }
+
+            // $queryGetNilaiKeaktifan = mysqli_query($koneksi, "SELECT SUM(Nilai) AS Keaktifan WHERE ID_Kandidat = 'KN002' AND PoinNilai = 'Keaktifan' AND Periode = '$Periode'");
+            // while($data = mysqli_fetch_array($queryGetNilaiKeaktifan)){
+        
+            //     $_POST['KeaktifanKN002'] = $data['Keaktifan'];
+        
+            // }
+
+            // $queryGetNilaiInisiatif = mysqli_query($koneksi, "SELECT SUM(Nilai) AS Inisiatif WHERE ID_Kandidat = 'KN002' AND PoinNilai = 'Inisiatif' AND Periode = '$Periode'");
+            // while($data = mysqli_fetch_array($queryGetNilaiInisiatif)){
+        
+            //     $_POST['InisiatifKN002'] = $data['Inisiatif'];
+        
+            // }
+        }
+    }
+
     if(!function_exists('getNilaiZikri')){
         //Mengambil data nilai US001
         function getNilaiZikri($koneksi, $Periode){
