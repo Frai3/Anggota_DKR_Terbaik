@@ -49,7 +49,7 @@
                                 <br />
                                 Poin
                                 <br />
-                                <?php echo $nilai1;?>
+                                <?php echo round($nilai1,2);?>
                                 <br /><br />
                                 <?php
                                     if($kode == '1'){
@@ -70,7 +70,7 @@
                                 <br />
                                 Poin
                                 <br />
-                                <?php echo $nilai2;?>
+                                <?php echo round($nilai2,2);?>
                                 <br /><br />
                                 <?php
                                     if($kode == '2'){

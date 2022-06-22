@@ -48,7 +48,11 @@ if (!isset($_SESSION)) {
                 <h2 class="pt-5 text-center text-white">Administrator</h2>
                 <div class="p-5">
                     <a href="formRegister" class="p-3 nav justify-content-center btn btn-dark btnIndex">
-                    Registrasi
+                    Registrasi Anggota
+                    </a>
+                    <br /> 
+                    <a href="formKandidatBaru" class="p-3 nav justify-content-center btn btn-dark btnIndex">
+                    Registrasi Kandidat
                     </a>
                     <br />
                     <a href="formKandidat" class="p-3 nav justify-content-center btn btn-dark btnIndex">
@@ -60,7 +64,7 @@ if (!isset($_SESSION)) {
                     </a>
                     <br />
                     <a href="formTambahPoinNilai" class="p-3 nav justify-content-center btn btn-dark btnIndex">
-                    Poin Nilai
+                    Poin Penilaian
                     </a>
                 </div>
             </div>

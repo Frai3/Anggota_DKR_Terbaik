@@ -7,6 +7,28 @@ if (!isset($_SESSION)) {
         </script>";
     }
 }
+include 'koneksi.php';
+
+$ID_User = $_SESSION['ID_Akses'];
+$Periode = date('Y');
+$queryGetNilai = mysqli_query($koneksi, "SELECT COUNT(*) as ID FROM nilai WHERE ID_User = '$ID_User' AND Periode = '$Periode';");
+$cekGetNilai = mysqli_num_rows($queryGetNilai);
+$dataNilai = mysqli_fetch_array($queryGetNilai);
+
+// 2 Kandidat dan 6 penilaian
+$jumlahData = $dataNilai['ID']*6;
+if($dataNilai['ID'] == 12){
+
+    if($_SESSION['Kode'] == 'Administrator'){
+        echo "<script>alert('Anda sudah memasukkan nilai kepada semua kandidat! Terima kasih atas partisipasinya');
+        window.location='indexAdministrator';
+        </script>";
+    }else{
+        echo "<script>alert('Anda sudah memasukkan nilai kepada semua kandidat! Terima kasih atas partisipasinya');
+        window.location='indexUser';
+        </script>";
+    }
+}
 ?>
 <!DOCTYPE html>
 <html>

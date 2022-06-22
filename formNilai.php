@@ -25,12 +25,12 @@ $dataKandidat = mysqli_fetch_array($queryGetKandidat);
 
 if($dataNilai > 0){
     echo "<script>alert('Data Sudah Ditambahkan! Harap Nilai Kandidat Lain!');
-        window.location='formKandidat.php';
+        window.location='formKandidat';
         </script>";
 }
 if ($dataKandidat > 0) {
     echo "<script>alert('Maaf, Anda tidak bisa menilai diri sendiri! Harap Nilai Kandidat Lain!');
-        window.location='formKandidat.php';
+        window.location='formKandidat';
         </script>";
 }
 
