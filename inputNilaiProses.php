@@ -27,15 +27,9 @@ for($i = 0; $i < 6; $i++){
 	 			</script>";
 	}else{
 		inputNilai($Kandidat, $ID_PoinNilai[$i], $ID_UserIn, $Nilai[$i], $Periode);
-		if($_SESSION['Kode'] == 'Administrator'){
-			echo "<script>alert('Data Berhasil Ditambahkan!');
-			window.location='indexAdministrator';
-			</script>";
-		}else{
-			echo "<script>alert('Data Berhasil Ditambahkan!');
-			window.location='indexUser';
-			</script>";
-		}
+		echo "<script>alert('Data Berhasil Ditambahkan!');
+		window.location='formKandidat';
+		</script>";
 	}
 }
 // //Mengambil data dari form login
