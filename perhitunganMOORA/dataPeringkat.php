@@ -3,7 +3,9 @@
     include 'getPeringkat.php';
     
     $nama = $_POST['nama'];
-    $nilai = $_POST['nilai']; 
+    $nilai1 = $_POST['nilai1'];
+    $nilai2 = $_POST['nilai2'];
+    $kode = $_POST['kode'];
 
 ?>
 <!DOCTYPE html>
@@ -42,52 +44,35 @@
                 <tr>
                     <th>Nama</th>
                     <th>Jumlah Total</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td><input type="text" class="form-control" name="" value="Pengguna 1" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $jumlahZikri; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $jumlahKandidat1; ?>" readonly></td>
+                    <td>
+                    <?php
+                        if($kode == '1'){
+                            echo 'Peringkat 1';
+                        }else{
+                            echo 'Peringkat 2';
+                        }
+                    ?>
+                    </td>
                 </tr>
                 <tr>
                     <td><input type="text" class="form-control" name="" value="Pengguna 2" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $jumlahFillah; ?>" readonly></td>
-                </tr>
-                <tr>
-                    <td><input type="text" class="form-control" name="" value="Pengguna 3" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $jumlahMeilizka; ?>" readonly></td>
-                </tr>    
-                <tr>
-                    <td><input type="text" class="form-control" name="" value="Pengguna 4" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $jumlahKendanan; ?>" readonly></td>
-                </tr>
-                <tr>
-                    <td><input type="text" class="form-control" name="" value="Pengguna 5" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $jumlahAlya; ?>" readonly></td>
-                </tr>
-                <tr>
-                    <td><input type="text" class="form-control" name="" value="Pengguna 6" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $jumlahBayu; ?>" readonly></td>
-                </tr>
-                <tr>
-                    <td><input type="text" class="form-control" name="" value="Pengguna 7" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $jumlahRegis; ?>" readonly></td>
-                </tr>
-                <tr>
-                    <td><input type="text" class="form-control" name="" value="Pengguna 8" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $jumlahRevaldy; ?>" readonly></td>
-                </tr>
-                <tr>
-                    <td><input type="text" class="form-control" name="" value="Pengguna 9" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $jumlahRangga; ?>" readonly></td>
-                </tr>
-                <tr>
-                    <td><h1>Peringkat 1</h1>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $nama; ?>" readonly></td>
-                </tr>
-                <tr>
-                    <td><h1>Nilai Tertinggi</h1>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $nilai; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $jumlahKandidat2; ?>" readonly></td>
+                    <td>
+                    <?php
+                        if($kode == '2'){
+                            echo 'Peringkat 1';
+                        }else{
+                            echo 'Peringkat 2';
+                        }
+                    ?>
+                    </td>
                 </tr>
             </tbody>
         </table>

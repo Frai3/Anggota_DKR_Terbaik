@@ -29,28 +29,29 @@
 
 <div class="container">
     <div class="row text-center">
-        <table class="table">
+    <table class="table">
             <thead class="thead-dark">
                 <tr>
-                    <th></th>
-                    <th>TJPeran</th>
-                    <th>TepatHadir</th>
-                    <th>Keaktifan</th>
-                    <th>Inisiatif</th>
-                    <th>Sikap</th>
-                    <th>Komunikasi</th>
+                    <th>Poin Penilaian</th>
+                    <th>Persentase</th>
                 </tr>
             </thead>
             <tbody>
+                <?php
+                    include '../koneksi.php';
+                    $Periode = date('Y');
+                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM poinnilai WHERE Periode = '$Periode';");
+                    $cekNilai = mysqli_num_rows($cekDatabase);
+
+                    while($data = mysqli_fetch_array($cekDatabase)){
+                ?>
                 <tr>
-                    <td><input type="text" class="form-control" name="" value="Persentase" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="20%" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="20%" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="15%" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="15%" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="20%" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="10%" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $data['PoinNilai']; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $data['Persentase']*100; ?>" readonly></td>
                 </tr>
+                <?php
+                    }
+                ?>
             </tbody>
         </table>
     </div>

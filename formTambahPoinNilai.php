@@ -61,6 +61,7 @@
                                 while($data = mysqli_fetch_array($cekDatabaseNilai)){
                                 ?>
                                     <tr>
+                                        <input type="hidden" class="form-control" name="ID_PoinNilai[]" value="<?php echo $data['ID_PoinNilai']; ?>">
                                         <td><input type="text" class="form-control" name="PoinNilai[]" value="<?php echo $data['PoinNilai']; ?>"></td>
                                         <td><input type="text" class="form-control" name="Persentase[]" value="<?php echo $data['Persentase']*100; ?>"></td>
                                     </tr>
@@ -69,14 +70,6 @@
                                 ?>
                             </tbody>
                         </table>
-                        <div class="form-group">
-                            <label for="poinNilaiBaru">Poin Penilaian</label>
-                            <input type="text" class="form-control" name="poinNilaiBaru" placeholder="Masukkan Poin Penilaian">
-                        </div>
-                        <div class="form-group">
-                            <label for="persen">Persentase Nilai</label>
-                            <input type="number" class="form-control" name="persen" placeholder="Masukkan Persentase Poin Penilaian">
-                        </div>
                         <button type="submit" name="input" value="Submit" class="btn btn-primary">Input</button>
                     </form>
                 </div>

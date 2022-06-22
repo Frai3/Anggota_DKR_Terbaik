@@ -9,6 +9,7 @@ include 'inputNilai.php';
 // $Username = $_SESSION['Username'];
 $ID_UserIn = $_SESSION['ID_Akses'];
 $Nilai = $_GET['nilai'];
+$ID_PoinNilai = $_GET['ID_PoinNilai'];
 $Kandidat = $_GET['Kandidat'];
 $PoinNilai = $_GET['PoinNilai'];
 $Periode = date('Y');
@@ -25,7 +26,7 @@ for($i = 0; $i < 6; $i++){
 	 			window.location='formNilai?kandidat=".$Kandidat."'
 	 			</script>";
 	}else{
-		inputNilai($Kandidat, $PoinNilai[$i], $ID_UserIn, $Nilai[$i], $Periode);
+		inputNilai($Kandidat, $ID_PoinNilai[$i], $ID_UserIn, $Nilai[$i], $Periode);
 		if($_SESSION['Kode'] == 'Administrator'){
 			echo "<script>alert('Data Berhasil Ditambahkan!');
 			window.location='indexAdministrator';

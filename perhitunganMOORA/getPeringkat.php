@@ -2,44 +2,20 @@
 
     include 'getNormalisasiBobot.php';
 
-    $jumlahZikri = $TJPeranZikri + $TepatHadirZikri + $KeaktifanZikri + $InisiatifZikri + $SikapZikri + $KomunikasiZikri;
-    $jumlahFillah = $TJPeranFillah + $TepatHadirFillah + $KeaktifanFillah + $InisiatifFillah + $SikapFillah + $KomunikasiFillah;
-    $jumlahMeilizka = $TJPeranMeilizka + $TepatHadirMeilizka + $KeaktifanMeilizka + $InisiatifMeilizka + $SikapMeilizka + $KomunikasiMeilizka;
-    $jumlahKendanan = $TJPeranKendanan + $TepatHadirKendanan + $KeaktifanKendanan + $InisiatifKendanan + $SikapKendanan + $KomunikasiKendanan;
-    $jumlahAlya = $TJPeranAlya + $TepatHadirAlya + $KeaktifanAlya + $InisiatifAlya + $SikapAlya + $KomunikasiAlya;
-    $jumlahBayu = $TJPeranBayu + $TepatHadirBayu + $KeaktifanBayu + $InisiatifBayu + $SikapBayu + $KomunikasiBayu;
-    $jumlahRegis = $TJPeranRegis + $TepatHadirRegis + $KeaktifanRegis + $InisiatifRegis + $SikapRegis + $KomunikasiRegis;
-    $jumlahRevaldy = $TJPeranRevaldy + $TepatHadirRevaldy + $KeaktifanRevaldy + $InisiatifRevaldy + $SikapRevaldy + $KomunikasiRevaldy;
-    $jumlahRangga = $TJPeranRangga + $TepatHadirRangga + $KeaktifanRangga + $InisiatifRangga + $SikapRangga + $KomunikasiRangga;
+    $jumlahKandidat1 = $Poin1KN1 + $Poin2KN1 + $Poin3KN1 + $Poin4KN1 + $Poin5KN1 + $Poin6KN1;
+    $jumlahKandidat2 = $Poin1KN2 + $Poin2KN2 + $Poin3KN2 + $Poin4KN2 + $Poin5KN2 + $Poin6KN2;
 
-    $nilaiMax = MAX($jumlahZikri, $jumlahFillah, $jumlahMeilizka, $jumlahKendanan, $jumlahAlya, $jumlahBayu, $jumlahRegis, $jumlahRevaldy, $jumlahRangga);
-
-    if($nilaiMax == $jumlahZikri){
-        $nama = "Pengguna 1";
-    }else if($nilaiMax == $jumlahFillah){
-        $nama = "Pengguna 2";
-    }
-    else if($nilaiMax == $jumlahMeilizka){
-        $nama = "Pengguna 3";
-    }
-    else if($nilaiMax == $jumlahKendanan){
-        $nama = "Pengguna 4";
-    }
-    else if($nilaiMax == $jumlahAlya){
-        $nama = "Pengguna 5";
-    }
-    else if($nilaiMax == $jumlahBayu){
-        $nama = "Pengguna 6";
-    }
-    else if($nilaiMax == $jumlahRegis){
-        $nama = "Pengguna 7";
-    }
-    else if($nilaiMax == $jumlahRevaldy){
-        $nama = "Pengguna 8";
-    }
-    else if($nilaiMax == $jumlahRangga){
-        $nama = "Pengguna 9";
-    }
-    $_POST['nama'] = $nama;
-    $_POST['nilai'] = $nilaiMax;
+    $nilaiMax = MAX($jumlahKandidat1, $jumlahKandidat2);
+        
+        if($nilaiMax == $jumlahKandidat1){
+            $nama = "Pengguna 1";
+            $kode = '1';
+        }else if($nilaiMax == $jumlahKandidat2){
+            $nama = "Pengguna 2";
+            $kode = '2';
+        }
+            $_POST['nama'] = $nama;
+            $_POST['kode'] = $kode;
+            $_POST['nilai1'] = $jumlahKandidat1;
+            $_POST['nilai2'] = $jumlahKandidat2;
 ?>

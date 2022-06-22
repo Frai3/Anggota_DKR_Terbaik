@@ -19,7 +19,7 @@ $queryGetNilai = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_User = '$I
 $cekGetNilai = mysqli_num_rows($queryGetNilai);
 $dataNilai = mysqli_fetch_array($queryGetNilai);
 
-$queryGetKandidat = mysqli_query($koneksi, "SELECT * FROM kandidat WHERE ID_User = '$ID_User' AND Periode = '$Periode';");
+$queryGetKandidat = mysqli_query($koneksi, "SELECT * FROM kandidat WHERE ID_Kandidat = '$Kandidat' AND ID_User = '$ID_User' AND Periode = '$Periode';");
 $cekGetKandidat = mysqli_num_rows($queryGetKandidat);
 $dataKandidat = mysqli_fetch_array($queryGetKandidat);
 
@@ -27,7 +27,8 @@ if($dataNilai > 0){
     echo "<script>alert('Data Sudah Ditambahkan! Harap Nilai Kandidat Lain!');
         window.location='formKandidat.php';
         </script>";
-}elseif ($dataKandidat > 0) {
+}
+if ($dataKandidat > 0) {
     echo "<script>alert('Maaf, Anda tidak bisa menilai diri sendiri! Harap Nilai Kandidat Lain!');
         window.location='formKandidat.php';
         </script>";
@@ -98,6 +99,7 @@ $dataNamaAnggota = mysqli_fetch_array($queryGetNamaAnggota);
                         ?>
                         
                         <div class="form-group">
+                            <input type="hidden" class="form-control" name="ID_PoinNilai[]" value="<?php echo $dataPoinNilai['ID_PoinNilai']; ?>">
                             <label><input type="text" class="form-control" name="PoinNilai[]" value="<?php echo $dataPoinNilai['PoinNilai']; ?>" readonly></label>
                             <input type="hidden" class="form-control" name="Kandidat" value="<?php echo $Kandidat; ?>">
                             <input type="text" class="form-control" name="nilai[]">

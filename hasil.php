@@ -4,9 +4,10 @@
 
     hasilNilai();
 
-    $nama = $_POST['nama'];
-    $nilai = $_POST['nilai'];
-
+    // $nama = $_POST['nama'];
+    $nilai1 = $_POST['nilai1'];
+    $nilai2 = $_POST['nilai2'];
+    $kode = $_POST['kode'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -43,32 +44,42 @@
                 <div class="col-6">
                     <div class="card bg-light mb-3" style="max-width: 100%; height:40rem">
                         <div class="card-body">
-                                <h1 class="card-title text-center pt-5"><?php echo $nama; ?></h1>
-                                <p class="card-text text-center" style="font-size: 30pt">
-                                    <br />
-                                    Poin
-                                    <br />
-                                    <?php echo round($nilai,2);?>
-                                    <br /><br />
-                                    Peringkat 1
-                                </p>
+                            <h1 class="card-title text-center pt-5">Kandidat 1</h1>
+                            <p class="card-text text-center" style="font-size: 30pt">
+                                <br />
+                                Poin
+                                <br />
+                                <?php echo $nilai1;?>
+                                <br /><br />
+                                <?php
+                                    if($kode == '1'){
+                                        echo "Peringkat 1";
+                                    }else{
+                                        echo 'Peringkat 2';
+                                    }
+                                ?>
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="card bg-light mb-3" style="max-width: 100%; height:40rem">
-                        <div class="card-body text-center">
-                                <h2 class="card-title p-5">Anggota Terbaik<br />2022</h2>
-                                <?php if($nilai == 0){
-                                ?>
-                                <img src="gambar/faceIcon.png" width="400">
+                        <div class="card-body">
+                            <h1 class="card-title text-center pt-5">Kandidat 2</h1>
+                            <p class="card-text text-center" style="font-size: 30pt">
+                                <br />
+                                Poin
+                                <br />
+                                <?php echo $nilai2;?>
+                                <br /><br />
                                 <?php
-                                }else{
-                                    ?>
-                                <img src="gambar/DKR.png"  width="400"> <!-- Gambar diganti foto pengguna atau dihapus (tidak menggunakan foto) -->
-                                <?php
-                                }
+                                    if($kode == '2'){
+                                        echo "Peringkat 1";
+                                    }else{
+                                        echo 'Peringkat 2';
+                                    }
                                 ?>
+                            </p>
                         </div>
                     </div>
                 </div>

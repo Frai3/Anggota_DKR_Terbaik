@@ -35,34 +35,26 @@
     
 <div class="container">
     <div class="row text-center">
-        <!-- Tabel Awal Zikri -->
-        <h4>Pengguna 1</h4>
+        <!-- Tabel Awal Kandidat 1 -->
+        <h4>Kandidat 1</h4>
         <table class="table">
             <thead class="thead-dark">
                 <tr>
-                    <th>TJPeran</th>
-                    <th>TepatHadir</th>
-                    <th>Keaktifan</th>
-                    <th>Inisiatif</th>
-                    <th>Sikap</th>
-                    <th>Komunikasi</th>
+                    <th>Poin Penilaian</th>
+                    <th>Nilai</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
 
-                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserOut = 'AK001';");
+                    $cekDatabase = mysqli_query($koneksi, "SELECT PoinNilai, Nilai FROM nilai n, poinnilai pn WHERE ID_Kandidat = 'KN001' AND n.ID_PoinNilai = pn.ID_PoinNilai;");
                     $cekNilai = mysqli_num_rows($cekDatabase);
 
                     while($data = mysqli_fetch_array($cekDatabase)){
                 ?>
                 <tr>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['TJPeran']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['TepatHadir']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['Keaktifan']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['Inisiatif']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['Sikap']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['Komunikasi']; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $data['PoinNilai']; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $data['Nilai']; ?>" readonly></td>
                 </tr>
                 <?php
                     }
@@ -70,34 +62,26 @@
             </tbody>
         </table>
 
-        <!-- Tabel Awal Fillah -->
-        <h4>Pengguna 2</h4>
+        <!-- Tabel Awal Kandidat 2-->
+        <h4>Kandidat 2</h4>
         <table class="table">
             <thead class="thead-dark">
                 <tr>
-                    <th>TJPeran</th>
-                    <th>TepatHadir</th>
-                    <th>Keaktifan</th>
-                    <th>Inisiatif</th>
-                    <th>Sikap</th>
-                    <th>Komunikasi</th>
+                    <th>Poin Penilaian</th>
+                    <th>Nilai</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
 
-                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserOut = 'AK002';");
+                    $cekDatabase = mysqli_query($koneksi, "SELECT PoinNilai, Nilai FROM nilai n, poinnilai pn WHERE ID_Kandidat = 'KN002' AND n.ID_PoinNilai = pn.ID_PoinNilai;");
                     $cekNilai = mysqli_num_rows($cekDatabase);
 
                     while($data = mysqli_fetch_array($cekDatabase)){
                 ?>
                 <tr>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['TJPeran']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['TepatHadir']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['Keaktifan']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['Inisiatif']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['Sikap']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['Komunikasi']; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $data['PoinNilai']; ?>" readonly></td>
+                    <td><input type="text" class="form-control" name="" value="<?php echo $data['Nilai']; ?>" readonly></td>
                 </tr>
                 <?php
                     }
@@ -105,250 +89,6 @@
             </tbody>
         </table>
 
-        <!-- Tabel Awal Meilizka -->
-        <h4>Pengguna 3</h4>
-        <table class="table">
-            <thead class="thead-dark">
-                <tr>
-                    <th>TJPeran</th>
-                    <th>TepatHadir</th>
-                    <th>Keaktifan</th>
-                    <th>Inisiatif</th>
-                    <th>Sikap</th>
-                    <th>Komunikasi</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-
-                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserOut = 'AK003';");
-                    $cekNilai = mysqli_num_rows($cekDatabase);
-
-                    while($data = mysqli_fetch_array($cekDatabase)){
-                ?>
-                <tr>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['TJPeran']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['TepatHadir']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['Keaktifan']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['Inisiatif']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['Sikap']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['Komunikasi']; ?>" readonly></td>
-                </tr>
-                <?php
-                    }
-                ?>
-            </tbody>
-        </table>
-
-        <!-- Tabel Awal Kendanan -->
-        <h4>Pengguna 4</h4>
-        <table class="table">
-            <thead class="thead-dark">
-                <tr>
-                    <th>TJPeran</th>
-                    <th>TepatHadir</th>
-                    <th>Keaktifan</th>
-                    <th>Inisiatif</th>
-                    <th>Sikap</th>
-                    <th>Komunikasi</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-
-                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserOut = 'AK004';");
-                    $cekNilai = mysqli_num_rows($cekDatabase);
-
-                    while($data = mysqli_fetch_array($cekDatabase)){
-                ?>
-                <tr>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['TJPeran']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['TepatHadir']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['Keaktifan']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['Inisiatif']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['Sikap']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['Komunikasi']; ?>" readonly></td>
-                </tr>
-                <?php
-                    }
-                ?>
-            </tbody>
-        </table>
-
-        <!-- Tabel Awal Alya -->
-        <h4>Pengguna 5</h4>
-        <table class="table">
-            <thead class="thead-dark">
-                <tr>
-                    <th>TJPeran</th>
-                    <th>TepatHadir</th>
-                    <th>Keaktifan</th>
-                    <th>Inisiatif</th>
-                    <th>Sikap</th>
-                    <th>Komunikasi</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-
-                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserOut = 'AK005';");
-                    $cekNilai = mysqli_num_rows($cekDatabase);
-
-                    while($data = mysqli_fetch_array($cekDatabase)){
-                ?>
-                <tr>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['TJPeran']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['TepatHadir']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['Keaktifan']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['Inisiatif']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['Sikap']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['Komunikasi']; ?>" readonly></td>
-                </tr>
-                <?php
-                    }
-                ?>
-            </tbody>
-        </table>
-
-        <!-- Tabel Awal Bayu -->
-        <h4>Pengguna 6</h4>
-        <table class="table">
-            <thead class="thead-dark">
-                <tr>
-                    <th>TJPeran</th>
-                    <th>TepatHadir</th>
-                    <th>Keaktifan</th>
-                    <th>Inisiatif</th>
-                    <th>Sikap</th>
-                    <th>Komunikasi</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-
-                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserOut = 'AK006';");
-                    $cekNilai = mysqli_num_rows($cekDatabase);
-
-                    while($data = mysqli_fetch_array($cekDatabase)){
-                ?>
-                <tr>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['TJPeran']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['TepatHadir']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['Keaktifan']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['Inisiatif']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['Sikap']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['Komunikasi']; ?>" readonly></td>
-                </tr>
-                <?php
-                    }
-                ?>
-            </tbody>
-        </table>
-
-        <!-- Tabel Awal Regis -->
-        <h4>Pengguna 7</h4>
-        <table class="table">
-            <thead class="thead-dark">
-                <tr>
-                    <th>TJPeran</th>
-                    <th>TepatHadir</th>
-                    <th>Keaktifan</th>
-                    <th>Inisiatif</th>
-                    <th>Sikap</th>
-                    <th>Komunikasi</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-
-                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserOut = 'AK007';");
-                    $cekNilai = mysqli_num_rows($cekDatabase);
-
-                    while($data = mysqli_fetch_array($cekDatabase)){
-                ?>
-                <tr>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['TJPeran']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['TepatHadir']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['Keaktifan']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['Inisiatif']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['Sikap']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['Komunikasi']; ?>" readonly></td>
-                </tr>
-                <?php
-                    }
-                ?>
-            </tbody>
-        </table>
-        
-        <!-- Tabel Awal Revaldy -->
-        <h4>Pengguna 8</h4>
-        <table class="table">
-            <thead class="thead-dark">
-                <tr>
-                    <th>TJPeran</th>
-                    <th>TepatHadir</th>
-                    <th>Keaktifan</th>
-                    <th>Inisiatif</th>
-                    <th>Sikap</th>
-                    <th>Komunikasi</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-
-                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserOut = 'AK008';");
-                    $cekNilai = mysqli_num_rows($cekDatabase);
-
-                    while($data = mysqli_fetch_array($cekDatabase)){
-                ?>
-                <tr>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['TJPeran']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['TepatHadir']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['Keaktifan']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['Inisiatif']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['Sikap']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['Komunikasi']; ?>" readonly></td>
-                </tr>
-                <?php
-                    }
-                ?>
-            </tbody>
-        </table>
-
-        <!-- Tabel Awal Rangga -->
-        <h4>Pengguna 9</h4>
-        <table class="table">
-            <thead class="thead-dark">
-                <tr>
-                    <th>TJPeran</th>
-                    <th>TepatHadir</th>
-                    <th>Keaktifan</th>
-                    <th>Inisiatif</th>
-                    <th>Sikap</th>
-                    <th>Komunikasi</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-
-                    $cekDatabase = mysqli_query($koneksi, "SELECT * FROM nilai WHERE ID_UserOut = 'AK009';");
-                    $cekNilai = mysqli_num_rows($cekDatabase);
-
-                    while($data = mysqli_fetch_array($cekDatabase)){
-                ?>
-                <tr>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['TJPeran']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['TepatHadir']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['Keaktifan']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['Inisiatif']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['Sikap']; ?>" readonly></td>
-                    <td><input type="text" class="form-control" name="" value="<?php echo $data['Komunikasi']; ?>" readonly></td>
-                </tr>
-                <?php
-                    }
-                ?>
-            </tbody>
-        </table>
     </div>
     <div class="p-3">
         <a href="dataJumlah" class="btn btn-primary">Selanjutnya</a>
