@@ -66,6 +66,10 @@ if (!isset($_SESSION)) {
                     <a href="formTambahPoinNilai" class="p-3 nav justify-content-center btn btn-dark btnIndex">
                     Poin Penilaian
                     </a>
+                    <br />
+                    <a href="dataanggota" class="p-3 nav justify-content-center btn btn-dark btnIndex">
+                    Hapus Anggota
+                    </a>
                 </div>
             </div>
             <div class="col-4"></div>

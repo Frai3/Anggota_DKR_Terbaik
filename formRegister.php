@@ -16,23 +16,26 @@
     $queryGetIDAdmin= mysqli_query($koneksi, "SELECT count(ID_Admin) as ID FROM administrator");
     $cekGetIDAdmin = mysqli_num_rows($queryGetIDAdmin);
     $dataIDAdmin = mysqli_fetch_array($queryGetIDAdmin);
+
+    echo $dataIDAnggota['ID'];
+    echo $dataIDAdmin['ID'];
+
     if($dataIDAdmin['ID']==3){
-        $Kode = "anggota";
+        $_POST['Kode'] = "anggota";
         echo "<script>
 		alert('Role Administrator Sudah Penuh! Hanya dapat input anggota');
 		</script>";
-    }elseif ($dataIDAnggota['ID']==19) {
-        $Kode = "admin";
+    }elseif($dataIDAnggota['ID']==19) {
+        $_POST['Kode'] = "admin";
         echo "<script>
 		alert('Anggota Sudah Penuh! Hanya dapat input administrator');
 		</script>";
-    }elseif ($dataIDAdmin['ID']==3 && $dataIDAdmin['ID']==19){
+    }elseif($dataIDAdmin['ID']==3 && $dataIDAdmin['ID']==19){
         echo "<script>
 		alert('Seluruh akses sudah penuh! Silahkan hapus yang masa jabatannya sudah habi');
 		window.location='indexAdministrator'
 		</script>";
     }
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -113,7 +116,7 @@
                             <select style="width: 100%" name="cmbRole">
                                 <option value=" ">Isi Role</option>
                                 <?php
-                                if($Kode = "anggota"){
+                                if($_POST['Kode'] == "anggota"){
                                     $pilihan = array("Anggota");
                                     foreach ($pilihan as $nilai) {
                                         if ($dataLevel==$nilai) {
@@ -123,7 +126,7 @@
                                         }
                                         echo "<option value='$nilai'  $cek>$nilai</option>";
                                     }
-                                }elseif($Kode = "admin"){
+                                }elseif($_POST['Kode'] == "admin"){
                                     $pilihan = array("Administrator");
                                     foreach ($pilihan as $nilai) {
                                         if ($dataLevel==$nilai) {
@@ -155,8 +158,8 @@
             </div>
             <div class="col-2"></div>
         </div>
+    <br />
+    <br />
     </div>
-    <br />
-    <br />
 </body> 
 </html>

@@ -116,8 +116,8 @@ $dataNamaAnggota = mysqli_fetch_array($queryGetNamaAnggota);
             </div>
             <div class="col-2"></div>
         </div>
+    <br />
+    <br />
     </div>
-    <br />
-    <br />
 </body> 
 </html>

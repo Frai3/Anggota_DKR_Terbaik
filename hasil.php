@@ -5,9 +5,21 @@
     hasilNilai();
 
     // $nama = $_POST['nama'];
-    $nilai1 = $_POST['nilai1'];
-    $nilai2 = $_POST['nilai2'];
-    $kode = $_POST['kode'];
+    if(empty($_POST['nilai1'])){
+        $nilai1 = 0;
+        $kode = '0';
+    }else{
+        $nilai1 = $_POST['nilai1'];
+        $kode = $_POST['kode'];
+    }
+
+    if(empty($_POST['nilai2'])){
+        $nilai2 = 0;
+        $kode = '0';
+    }else{
+        $nilai2 = $_POST['nilai2'];
+        $kode = $_POST['kode'];
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -54,8 +66,10 @@
                                 <?php
                                     if($kode == '1'){
                                         echo "Peringkat 1";
-                                    }else{
+                                    }elseif($kode == '2'){
                                         echo 'Peringkat 2';
+                                    }else{
+                                        echo 'Nilai Kosong';
                                     }
                                 ?>
                             </p>
@@ -75,8 +89,10 @@
                                 <?php
                                     if($kode == '2'){
                                         echo "Peringkat 1";
-                                    }else{
+                                    }elseif($kode == '1'){
                                         echo 'Peringkat 2';
+                                    }else{
+                                        echo 'Nilai Kosong';
                                     }
                                 ?>
                             </p>

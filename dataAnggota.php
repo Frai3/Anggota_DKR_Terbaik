@@ -10,10 +10,12 @@ if (!isset($_SESSION)) {
     }
 }
 
-$queryGetAdministrator = mysqli_query($koneksi, "SELECT Nama_User, MasaBakti FROM administrator");
+$ID_User = $_SESSION['ID_Akses'];
+
+$queryGetAdministrator = mysqli_query($koneksi, "SELECT * FROM administrator");
 $cekGetAdministrator = mysqli_num_rows($queryGetAdministrator);
 
-$queryGetAnggota = mysqli_query($koneksi, "SELECT Nama_User, MasaBakti FROM anggota");
+$queryGetAnggota = mysqli_query($koneksi, "SELECT * FROM anggota");
 $cekGetAnggota = mysqli_num_rows($queryGetAnggota);
 
 ?>
@@ -40,7 +42,7 @@ $cekGetAnggota = mysqli_num_rows($queryGetAnggota);
 
 <div class="row">
     <div class="col-5">
-        <p class="font">Data Akses Anggota</p>
+        <p class="font">Data Anggota</p>
     </div>
     <div class="col-6 d-flex justify-content-end p-5">
         <img src='gambar/DKR.PNG'  style="width: 200px;"/>
@@ -65,8 +67,14 @@ $cekGetAnggota = mysqli_num_rows($queryGetAnggota);
                 <td><?php echo $dataAdministrator['Nama_User']; ?></td>
                 <td><?php echo $dataAdministrator['MasaBakti']; ?></td>
                 <td class="text-center">
-                    <a href="hapusAnggota?Nama_User=<?php echo $dataAdministrator['Nama_User']; ?>&Role=administrator">Hapus</a>
+                <?php
+                    if($dataAdministrator['ID_Akses'] != $ID_User){
+                ?>
+                    <a class="btn btn-warning" href="hapusAnggota?Nama_User=<?php echo $dataAdministrator['Nama_User']; ?>&Role=administrator">Hapus</a>
                 </td>
+                <?php                     
+                    }
+                ?>
             </tr>
             <?php
             }
@@ -91,7 +99,14 @@ $cekGetAnggota = mysqli_num_rows($queryGetAnggota);
                 <td><?php echo $dataAnggota['Nama_User']; ?></td>
                 <td><?php echo $dataAnggota['MasaBakti']; ?></td>
                 <td class="text-center">
-                    <a href="hapusAnggota?Nama_User=<?php echo $dataAnggota['Nama_User']; ?>&Role=anggota">Hapus</a>
+                <?php
+                    if($dataAnggota['ID_Akses'] != $ID_User){
+                ?>
+                    <a class="btn btn-warning" href="hapusAnggota?Nama_User=<?php echo $dataAnggota['Nama_User']; ?>&Role=administrator">Hapus</a>
+                </td>
+                <?php                     
+                    }
+                ?>
                 </td>
             </tr>
             <?php

@@ -11,6 +11,22 @@ include 'koneksi.php';
 
 $ID_User = $_SESSION['ID_Akses'];
 $Periode = date('Y');
+
+$queryGetKandidat = mysqli_query($koneksi, "SELECT COUNT(ID_Kandidat) as ID FROM kandidat WHERE Periode = '$Periode';");
+$dataKandidat = mysqli_fetch_array($queryGetKandidat);
+
+if($dataKandidat['ID'] != 2 ){
+    if($_SESSION['Kode'] == 'Administrator'){
+        echo "<script>alert('Kandidat belum ditentukan!');
+        window.location='indexAdministrator';
+        </script>";
+    }else{
+        echo "<script>alert('Kandidat belum ditentukan!');
+        window.location='indexUser';
+        </script>";
+    }
+}
+
 $queryGetNilai = mysqli_query($koneksi, "SELECT COUNT(*) as ID FROM nilai WHERE ID_User = '$ID_User' AND Periode = '$Periode';");
 $cekGetNilai = mysqli_num_rows($queryGetNilai);
 $dataNilai = mysqli_fetch_array($queryGetNilai);
